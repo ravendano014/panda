@@ -1,0 +1,175 @@
+<script>window.PAGE_TITLE = 'UI Elements | Labels and Ribbons'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Labels &amp; Ribbons</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">Labels &amp; Ribbons</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Badge</div>
+    <p class="text-muted">
+        Use class <code>.badge</code> to create badges. Use <code>accent</code> classes, <code>.soft-**</code> or <code>.normal-**</code> color classes to create colorized badges.
+    </p>
+    <div class="mt-4">
+        <span class="badge">Badge</span>
+        <span class="badge primary">Badge</span>
+        <span class="badge secondary">Badge</span>
+        <span class="badge info">Badge</span>
+        <span class="badge warning">Badge</span>
+        <span class="badge alert">Badge</span>
+        <span class="badge success">Badge</span>
+        <span class="badge dark">Badge</span>
+        <span class="badge soft-emerald">Badge</span>
+        <span class="badge normal-brown">Badge</span>
+    </div>
+
+    <p class="text-muted">
+        Use badges inside in elements.
+    </p>
+    <div class="mt-4">
+        <button class="shortcut">
+            <span class="icon"><span class="mif-email"></span></span>
+            <span class="badge">10</span>
+        </button>
+        <button class="button">
+            <span class="mif-email icon"></span>
+            <span class="caption">Unread</span>
+            <span class="badge alert">10</span>
+        </button>
+        <button class="button">
+            <span class="mif-email icon"></span>
+            <span class="caption">Unread</span>
+            <span class="badge corner alert">10</span>
+        </button>
+        <button class="button">
+            <span class="mif-email icon"></span>
+            <span class="caption">Unread</span>
+            <span class="badge corner-outside alert">10</span>
+        </button>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Tag</div>
+    <p class="text-muted">
+        Tag is used by the <code>select</code> and <code>tag-input</code> components, but you can also use the tag element classes at your discretion.
+        Use <code>accent</code> classes, <code>.soft-**</code> or <code>.normal-**</code> color classes to create colorized badges.
+        Unlike chips, it doesn't contain an icon.
+    </p>
+    <div class="mt-4">
+        <span class="tag">
+            <span class="title">Tag</span>
+            <span class="action">&times;</span>
+        </span>
+        <span class="tag primary">
+            <span class="title">Tag</span>
+            <span class="action">&times;</span>
+        </span>
+        <span class="tag secondary">
+            <span class="title">Tag</span>
+            <span class="action">&times;</span>
+        </span>
+        <span class="tag info">
+            <span class="title">Tag</span>
+            <span class="action">&times;</span>
+        </span>
+        <span class="tag warning">
+            <span class="title">Tag</span>
+            <span class="action">&times;</span>
+        </span>
+        <span class="tag alert">
+            <span class="title">Tag</span>
+            <span class="action">&times;</span>
+        </span>
+        <span class="tag success">
+            <span class="title">Tag</span>
+            <span class="action">&times;</span>
+        </span>
+        <span class="tag dark">
+            <span class="title">Tag</span>
+            <span class="action">&times;</span>
+        </span>
+        <span class="tag soft-emerald">
+            <span class="title">Tag</span>
+            <span class="action">&times;</span>
+        </span>
+        <span class="tag normal-brown">
+            <span class="title">Tag</span>
+            <span class="action">&times;</span>
+        </span>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Chips</div>
+    <p class="text-muted">
+        Create chips with <code>chip</code> structure. Use class <code>.disabled</code> to disable them.
+    </p>
+    <div class="mt-4">
+        <div class="chip">
+            <span class="action"></span>
+            <div class="icon"><span class="mif-rocket"></span></div>
+            <div class="label">Rocket</div>
+        </div>
+        <div class="chip disabled">
+            <span class="action"></span>
+            <div class="icon"><span class="mif-rocket"></span></div>
+            <div class="label">Rocket</div>
+        </div>
+    </div>
+
+    <p class="text-muted">
+        Use accent classes or <code>.soft-**</code> colors to create colorized chips.
+    </p>
+    <div class="mt-4">
+        <div class="chip alert">
+            <span class="action"></span>
+            <div class="icon"><span class="mif-rocket"></span></div>
+            <div class="label">Rocket</div>
+        </div>
+        <div class="chip soft-emerald">
+            <span class="action"></span>
+            <div class="icon"><span class="mif-rocket"></span></div>
+            <div class="label">Rocket</div>
+        </div>
+    </div>
+
+    <p class="text-muted">
+        Add class <code>.pill-chip</code> to create rounded chips.
+    </p>
+    <div class="mt-4">
+        <div class="chip pill-chip">
+            <span class="action"></span>
+            <div class="icon"><span class="mif-rocket"></span></div>
+            <div class="label">Rocket</div>
+        </div>
+    </div>
+</div>
+
+<div class="box container-query">
+    <div class="box-title">Ribbon</div>
+    <div class="ribbon ribbon-crimson right"><span class="icon mif-notifications ani-ring"></span>New</div>
+    <p class="text-muted">
+        Create ribbons with <code>.ribbon</code> class. You can create <code>left</code> and <code>right</code> ribbons and colorize them with <code>.ribbon-***</code> class (where *** is a color name).
+    </p>
+    <div class="row">
+        <div class="cell-md-4">
+            <div class="box" style="height: 200px;">
+                <div class="ribbon"><span class="icon mif-rocket"></span>Left Side</div>
+            </div>
+        </div>
+        <div class="cell-md-4">
+            <div class="box" style="height: 200px;">
+                <div class="ribbon ribbon-cyan right"><span class="icon mif-rocket"></span>Right Side</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<script>window.PAGE_TITLE = 'Widgets | Chat'</script>
+
+<div class="h-100 d-flex flex-center">
+    <div id="chat"
+         data-role="chat, draggable"
+         data-width="640"
+         data-height="860"
+         data-title="Direct chat"
+         data-random-color="true"
+         data-welcome="Welcome to the chat!"
+         data-on-send="sendMessage"
+         data-on-message="onMessage"
+         data-avatar="<span>рџ‘¦</span>"
+         data-welcome-avatar="<span>рџ“Ћ</span>"
+         data-readonly="false"
+    ></div>
+</div>
+
+<script>
+    var messages = [
+        "Confucius says: vision and om."
+        , "Be unconditional."
+        , "Scholars, winds, and inward lovers will always protect them."
+        , "The meditation of hurting yogis is closest."
+        , "One mediocre silence i give you: meet each other."
+        , "You have to preach, and love blessing by your rising."
+        , "Acceptance, resurrection and a boundless great unknown."
+        , "Demissios mori, tanquam gratis buxum."
+        , "Aye, ah."
+        , "Stutter calmly like a salty dubloon."
+        , "Devastation at the holodeck was the rumour of faith, avoided to a solid planet."
+        , "Solitudos volare, tanquam brevis torquis."
+        , "When mashing small shrimps, be sure they are room temperature."
+        , "Try fluffing cheesecake garnished with cocktail sauce, blended with onion powder."
+        , "You have to sit, and know core by your balancing."
+        , "Gar, mighty lubber. you won't crush the pacific ocean."
+    ];
+
+    var opponent = {
+        name: "Wolfy",
+        avatar:  "<span>рџђє</span>",
+    };
+
+    function onMessage(msg, el){
+    }
+
+    function sendMessage(msg){
+        var chat = Metro.getPlugin("#chat", "chat");
+        setTimeout(function(){
+            var _m = {
+                name: opponent.name,
+                avatar: opponent.avatar,
+                time: (new Date()),
+                text: messages[$.random(0, messages.length - 1)],
+                position: "left"
+            };
+            chat.add(_m);
+        }, $.random(1000, 3000));
+    }
+</script>

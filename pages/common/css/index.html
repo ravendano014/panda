@@ -1,0 +1,397 @@
+<script>window.PAGE_TITLE = 'Metro UI | Common CSS'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Common CSS</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Metro UI</a></li>
+            <li class="active"><a href="#">Common</a></li>
+            <li class="active"><a href="#">CSS</a></li>
+        </ul>
+    </div>
+</div>
+
+<style>
+    .demo-box, .demo-box2 {
+        width: 200px;
+        height: 100px;
+        background: var(--default-background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-color: var(--border-color);
+        border-width: 4px;
+        position: relative;
+    }
+
+    .demo-box2 {
+        width: 100px;
+        height: 100px;
+        border-width: 1px;
+    }
+</style>
+
+<div class="box">
+    <div class="box-title">What is Common CSS?</div>
+
+    Common CSS is a collection of utility classes that are part of the Metro UI framework. These classes allow you to:
+
+    <ul>
+        <li>Apply common styling patterns directly in your HTML</li>
+        <li>Create responsive layouts with minimal custom CSS</li>
+        <li>Maintain consistent spacing, typography, and colors across your application</li>
+        <li>Quickly prototype and build interfaces</li>
+    </ul>
+    
+    
+    <p class="text-muted">
+        Metro UI contains a lot of common CSS classes that you can use in your projects. These are classes for flexbox, alignment, shadows, and more.
+        And yourself:
+    </p>
+    <ul class="inline-list d-flex flex-wrap gap-1">
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Base theme, media, and z-index vars</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Animations</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Border</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Cursor</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Display</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Embed</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">FlexBox</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Floating</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Images</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Lists</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Overlay</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Positioning</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Sizing and Spacing</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Typography</li>
+        <li class="pt-1 pb-1 pl-2 pr-2 border bd-default border-radius-4">Utils</li>
+    </ul>
+</div>
+
+<div class="box">
+    <div class="box-title">Simple Animations</div>
+    <div class="mt-4">
+        <div class="d-flex flex-row gap-4 enlarge-3">
+            <span class="mif-spinner ani-spin"></span>
+            <span class="mif-spinner5 ani-spin-reverse"></span>
+            <span class="mif-propeller ani-pulse"></span>
+            <span class="mif-wrench ani-spanner"></span>
+            <span class="mif-notifications ani-ring"></span>
+            <span class="mif-email ani-vertical"></span>
+            <span class="mif-email ani-horizontal"></span>
+            <span class="mif-report ani-flash"></span>
+            <span class="mif-location ani-bounce"></span>
+            <span class="mif-location ani-float"></span>
+            <span class="mif-favorite ani-heartbeat"></span>
+            <span class="mif-child ani-shake"></span>
+            <span class="mif-skull-and-bones ani-shuttle"></span>
+            <span class="mif-bike ani-pass"></span>
+            <span class="mif-skull-and-bones ani-ripple"></span>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Border</div>
+    <p class="text-muted">
+        Use classes <code>.border</code>, <code>.border-top</code>, <code>.border-right</code>, <code>.border-bottom</code>, <code>.border-left</code> to set
+        border.
+        With classes <code>.border-solid</code>, <code>.border-dashed</code>, <code>.border-dotted</code>, <code>.border-double</code>,
+        <code>.border-groove</code>, <code>.border-inset</code>, <code>.border-outset</code>, and <code>.border-ridge</code>, you can set border style.
+    </p>
+    <div class="mt-4 d-flex flex-row flex-wrap gap-2">
+        <div class="demo-box border border-solid">border-solid</div>
+        <div class="demo-box border border-dashed">border-dashed</div>
+        <div class="demo-box border border-dotted">border-dotted</div>
+        <div class="demo-box border border-double">border-double</div>
+        <div class="demo-box border border-groove">border-groove</div>
+        <div class="demo-box border border-inset">border-inset</div>
+        <div class="demo-box border border-outset">border-outset</div>
+        <div class="demo-box border border-ridge">border-ridge</div>
+    </div>
+
+    <p class="text-muted">
+        With classes <code>.border-size-1</code>...<code>.border-size-20</code>, you can set border size.
+        With classes <code>.border-radius-1</code>...<code>.border-size-20</code>, you can set border radius.
+    </p>
+    <div class="mt-4 d-flex flex-row gap-2">
+        <div class="demo-box border border-size-10"></div>
+        <div class="demo-box border border-radius-10"></div>
+    </div>
+
+    <p class="text-muted">
+        To change border color, use classes <code>.bd-color_name</code>.
+    </p>
+    <div class="mt-4 d-flex flex-row gap-2">
+        <div class="demo-box border border-size-4 border-radius-10 bd-red"></div>
+    </div>
+
+    <p class="text-muted">
+        With classes <code>.animated-border</code>, <code>.animated-border-hover</code>, and <code>.animated-border-[color]</code> you can add special border to
+        elements.
+    </p>
+    <div class="mt-4 d-flex flex-row gap-2">
+        <div class="demo-box animated-border"></div>
+        <div class="demo-box animated-border-hover">Hover Me</div>
+        <div class="demo-box animated-border-red"></div>
+    </div>
+
+    <p class="text-muted">
+        To remove border, use class <code>.border-none</code>.
+    </p>
+
+    <p class="text-muted">
+        More information about borders in Metro UI: <a href="https://v5.metroui.org.ua/common-css/border/">Borders</a>
+    </p>
+    
+</div>
+
+<div class="box">
+    <div class="box-title">Cursor</div>
+    <p class="text-muted">
+        Use classes <code>.c-cursor_name</code> to set a cursor type.
+    </p>
+    <div class="mt-4 d-flex flex-row flex-wrap gap-2">
+        <div class="demo-box2 border bd-default c-help">help</div>
+        <div class="demo-box2 border bd-default c-pointer">pointer</div>
+        <div class="demo-box2 border bd-default c-progress">progress</div>
+        <div class="demo-box2 border bd-default c-wait">wait</div>
+        <div class="demo-box2 border bd-default c-cell">cell</div>
+        <div class="demo-box2 border bd-default c-crosshair">crosshair</div>
+        <div class="demo-box2 border bd-default c-text">text</div>
+        <div class="demo-box2 border bd-default c-text-vertical">text vertical</div>
+        <div class="demo-box2 border bd-default c-alias">alias</div>
+        <div class="demo-box2 border bd-default c-copy">copy</div>
+        <div class="demo-box2 border bd-default c-move">move</div>
+        <div class="demo-box2 border bd-default c-no-drop">no-drop</div>
+        <div class="demo-box2 border bd-default c-not-allowed">not-allowed</div>
+        <div class="demo-box2 border bd-default c-all-scroll">all scroll</div>
+        <div class="demo-box2 border bd-default c-col-resize">col resize</div>
+        <div class="demo-box2 border bd-default c-row-resize">row resize</div>
+        <div class="demo-box2 border bd-default c-n-resize">n resize</div>
+        <div class="demo-box2 border bd-default c-e-resize">e resize</div>
+        <div class="demo-box2 border bd-default c-ne-resize">ne resize</div>
+        <div class="demo-box2 border bd-default c-nw-resize">nw resize</div>
+        <div class="demo-box2 border bd-default c-zoom-in">zoom in</div>
+        <div class="demo-box2 border bd-default c-zoom-out">zoom out</div>
+        <div class="demo-box2 border bd-default c-grab">grab</div>
+        <div class="demo-box2 border bd-default c-grabbing">grabbing</div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Display</div>
+    <p class="text-muted">
+        Use classes <code>.d-block</code>, <code>.d-inline</code>, <code>.d-inline-block</code>, <code>.d-flex</code>, <code>.d-grid</code>,
+        <code>.d-table</code>, <code>.d-table-cell</code>, <code>.d-none</code>, <code>.visible</code>, <code>.no-visible</code> to set display property for an
+        element.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Embed Containers</div>
+    <p class="text-muted">
+        Use class <code>.embed-container</code> to embed a video or other content. You can set an aspect ratio using additional classes <code>.size-21x9</code>, <code>.size-16x9</code>, <code>.size-4x3</code>, and <code>.size-1x1</code>.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">FlexBox</div>
+    <p class="text-muted">
+        You can use built-in classes to create a flexbox layout.
+        With these classes, you can set flexbox container and flexbox items.
+        All classes you can find in the <a href="https://github.com/olton/metroui/blob/master/source/common-css/flex.less">Metro UI Flexbox</a>
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Floating</div>
+    <p class="text-muted">
+        Use classes <code>.float-left</code>, <code>.float-right</code>, <code>.float-none</code> to set float property for an element.
+    </p>
+    <div class="mt-4">
+        <div class="clear">
+            <div class="demo-box float-left border bd-default">float-left</div>
+            <div class="demo-box float-right border bd-default">float-right</div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Images</div>
+    <p class="text-muted">
+        You can create image containers with different sizes and fit options. To create an image container, use classes <code>.img-container</code>, <code>.img-fluid</code> <code>.img-thumbnail</code>.
+        You can add an overlay to the image using the <code>.img-overlay</code> class.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-4">
+                <div class="img-container">
+                    <img src="/images/tiger.jpg" alt=""/>
+                    <div class="image-overlay">
+                        <h3>Tiger</h3>
+                        <p>The tiger (Panthera tigris) is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell-ld-4">
+                <div class="img-container thumbnail">
+                    <img src="/images/tiger.jpg" alt=""/>
+                    <div class="image-overlay">
+                        <h3>Tiger</h3>
+                        <p>The tiger (Panthera tigris) is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell-ld-4">
+                <div class="img-container thumbnail">
+                    <img src="/images/tiger.jpg" alt=""/>
+                    <div class="title">Tiger</div>
+                    <div class="description">
+                        The tiger (Panthera tigris) is a large cat and a member of the genus Panthera native to Asia. It has a powerful, muscular body with a large head and paws, a long tail and orange fur with black, mostly vertical stripes.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <p class="text-muted">
+        Use classes <code>.fit-cover</code>, <code>.fit-contain</code>, <code>.fit-fill</code>,
+        <code>.fit-none</code>, <code>.fit-scale-down</code> to set image size and fit.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Lists</div>
+    <p class="text-muted">
+        Use classes <code>.step-list</code>, <code>.feed-list</code>, <code>.items-list</code>, <code>.group-list</code>, <code>.inline-list</code>, and <code>.unstyled-list</code> to create different types of lists. 
+    </p>
+    
+    <div class="mt-4">
+        <div class="box-title-secondary">Step List</div>
+        <div class="row">
+            <div class="cell-ld-4">                
+                <div class="mt-4">
+                    <ul class="step-list">
+                        <li>
+                            <div class="text-bold">First Step</div>
+                            <div class="step-description">Description of the first step</div>
+                        </li>
+                        <li>
+                            <div class="text-bold">Second Step</div>
+                            <div class="step-description">Description of the second step</div>
+                        </li>
+                        <li>
+                            <div class="text-bold">Third Step</div>
+                            <div class="step-description">Description of the third step</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <div class="box-title-secondary">Items List</div>
+        <div class="row">
+            <div class="cell-ld-4">                
+                <div class="mt-4">
+                    <ul class="items-list">
+                        <li>
+                            <img src="/images/alex.png" class="avatar" alt=""/>
+                            <span class="label">Alex Frost</span>
+                            <span class="second-label">CEO</span>
+                            <span class="second-action mif-alarm"></span>
+                        </li>
+                        <li>
+                            <img src="/images/mark.png" class="avatar" alt=""/>
+                            <span class="label">Mark Voles</span>
+                            <span class="second-label">Senior Manager</span>
+                            <span class="second-action mif-notifications"></span>
+                        </li>
+                        <li>
+                            <img src="/images/norma.png" class="avatar" alt=""/>
+                            <span class="label">Norma House</span>
+                            <span class="second-label">Manager</span>
+                            <span class="second-action mif-email"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <div class="box-title-secondary">Feed List</div>
+        <div class="row">
+            <div class="cell-ld-6">
+                <ul class="feed-list">
+                    <li class="title">Feed title</li>
+                    <li>
+                        <img class="avatar" src="/images/tiger.jpg" alt="">
+                        <span class="label">There were some sings of a calm at noon</span>
+                        <span class="second-label">10 min</span>
+                    </li>
+                    <li>
+                        <img class="avatar" src="/images/puma.jpg" alt="">
+                        <span class="label">There were some sings of a calm at noon</span>
+                        <span class="second-label">10 min</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cell-ld-6">
+                <ul class="feed-list">
+                    <li class="title">Feed title</li>
+                    <li>
+                        <img class="avatar on-right" src="/images/tiger.jpg" alt="">
+                        <span class="label">There were some sings of a calm at noon</span>
+                        <span class="second-label">10 min</span>
+                    </li>
+                    <li>
+                        <img class="avatar on-right" src="/images/puma.jpg" alt="">
+                        <span class="label">There were some sings of a calm at noon</span>
+                        <span class="second-label">10 min</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <div class="box-title-secondary">Group List</div>
+        <div class="row">
+            <div class="cell-ld-6">
+                <ul class="group-list">
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ul>
+            </div>
+            <div class="cell-ld-6">
+                <ul class="group-list horizontal">
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Positioning</div>
+    <p class="text-muted">
+        Use classes <code>.pos-relative</code>, <code>.pos-absolute</code>, <code>.pos-fixed</code>, <code>.pos-sticky</code>, <code>.pos-static</code>, <code>.fixed-top</code>, <code>.fixed-bottom</code> to set position property for an element.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Spacing &amp; Sizing</div>
+    <div class="mt-4">
+        The <code>spacing</code> module defines CSS classes for adding or removing space around elements using margin and padding properties. These utilities follow a consistent naming convention and scale, making it easy to apply spacing in a standardized way throughout your application.
+    </div>
+    <div class="mt-4">
+        The <code>sizing</code> module defines CSS classes for setting element dimensions using various units (percentages, viewport units) and constraints (min, max). These utilities make it easy to create responsive layouts with precisely sized elements.
+    </div>
+</div>

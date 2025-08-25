@@ -1,0 +1,169 @@
+<script>window.PAGE_TITLE = 'Dashboards | E-Commerce'</script>
+
+<div>
+    <div class="row">
+        <div class="cell-md-4">
+            <div class="more-info-box">
+                <div class="content">
+                    <div class="value">150</div>
+                    <div class="title">New Orders</div>
+                </div>
+                <div class="icon">
+                    <span class="mif-add-shopping-cart"></span>
+                </div>
+                <a href="#" class="more"> More info <span class="ml-2 mif-arrow-right"></span></a>
+            </div>
+        </div>
+        <div class="cell-md-4">
+            <div class="more-info-box">
+                <div class="content">
+                    <div class="value">50</div>
+                    <div class="title">New Customers</div>
+                </div>
+                <div class="icon">
+                    <span class="mif-add-person"></span>
+                </div>
+                <a href="#" class="more"> More info <span class="ml-2 mif-arrow-right"></span></a>
+            </div>
+        </div>
+        <div class="cell-md-4">
+            <div class="more-info-box">
+                <div class="content">
+                    <div class="value">53%</div>
+                    <div class="title">Bounce Rate</div>
+                </div>
+                <div class="icon">
+                    <span class="mif-bar-chart"></span>
+                </div>
+                <a href="#" class="more"> More info <span class="ml-2 mif-arrow-right"></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Top Sales Managers:</div>
+    <div class="mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolores inventore maiores nam natus obcaecati reiciendis reprehenderit sint soluta tenetur?
+    </div>
+    <div class="row">
+        <div class="cell-ld-4">
+            <div class="icon-box4">
+                <div class="icon"><img src="/images/alex.png" alt=""></div>
+                <div class="content">
+                    <div class="value">Alex Surikatt</div>
+                    <div class="title">Manager</div>
+                </div>
+                <div class="chart ml-auto">
+                    <div data-role="donut" data-value="55" data-size="64" class="donut-red"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cell-ld-4">
+            <div class="icon-box4">
+                <div class="icon"><img src="/images/igor.png" alt=""></div>
+                <div class="content">
+                    <div class="value">Igor Taran</div>
+                    <div class="title">Manager</div>
+                </div>
+                <div class="chart ml-auto">
+                    <div data-role="donut" data-value="65" data-size="64" class="donut-orange"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cell-ld-4">
+            <div class="icon-box4">
+                <div class="icon"><img src="/images/sergey.png" alt=""></div>
+                <div class="content">
+                    <div class="value">Sergey Krevetko</div>
+                    <div class="title">Senior Manager</div>
+                </div>
+                <div class="chart ml-auto">
+                    <div data-role="donut" data-value="75" data-size="64" class="donut-green"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-6">
+    <div class="row">
+        <div class="cell-md-12">
+            <div class="box">
+                <div class="row">
+                    <div class="cell-ld-4">
+                        <div class="info-box2">
+                            <div class="title">Title</div>
+                            <div class="value">
+                                <div class="primary-value">$159,000</div>
+                                <div class="secondary-value fg-red"><span class="text-muted text-upper reduce-2">Debt:</span> $19,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell-ld-4">
+                        <div class="info-box2">
+                            <div class="title">Title</div>
+                            <div class="value">
+                                <div class="primary-value">$159,000</div>
+                                <div class="secondary-value fg-green"><span class="text-muted text-upper reduce-2">Over:</span> $19,000</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell-ld-4">
+                        <div class="info-box2">
+                            <div class="title">Title</div>
+                            <div class="value">$159,000</div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="box-title">Last Orders:</div>
+                <p class="text-muted mb-4">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                <table class="table striped table-border"
+                       data-role="table"
+                       data-cls-table-top="row"
+                       data-cls-search="cell-ld-8"
+                       data-cls-rows-count="cell-ld-4"
+                       data-rows="10"
+                       data-rows-steps="5, 10, 25"
+                       data-show-activity="false"
+                       data-source="/data/orders.json"
+                       data-horizontal-scroll="true"
+                       data-on-draw-cell="drawCellOrders"
+                ></table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var payments = {
+        1: ['Credit Card', 'bg-cyan fg-white'],
+        2: ['Check', 'bg-amber fg-white'],
+        3: ['PayPal', 'bg-dark-blue fg-white'],
+        4: ['Bank Transfer', 'bg-violet fg-white']
+    };
+
+    var statuses = {
+        1: ['Pre-order', 'bg-pink fg-white'],
+        2: ['Payed', 'bg-green fg-white'],
+        3: ['Payment Error', 'bg-red fg-white'],
+        4: ['Delivered', 'bg-teal fg-white'],
+        5: ['Preparing', 'bg-yellow fg-dark'],
+        6: ['Awaiting payment', 'bg-cyan fg-white'],
+        7: ['Shipped', 'bg-light-green fg-dark']
+    };
+    
+    function drawCellOrders(td, value, index, head, item){
+        if (head.name === 'payment') {
+            $(td).addClass('text-left').html(`<code class="${payments[value][1]}">${payments[value][0]}</code>`);
+        }
+        if (head.name === 'status') {
+            var span = $("<code>").html(statuses[value][0]).addClass(statuses[value][1]);
+            $(td).html(span);
+        }
+    }
+</script>

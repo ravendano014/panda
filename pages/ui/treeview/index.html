@@ -1,0 +1,181 @@
+<script>window.PAGE_TITLE = 'UI Elements | Treeview'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-center">
+        <h1>Treeview</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-center"> 
+        <ul class="breadcrumbs default">
+            <li><a href="/">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">Treeview</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        You can transform an unnumbered list (<code>ul</code>) to <code>treeview</code> component with role <code>data-role="treeview"</code>.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-4">
+                <div class="box">
+                    <div class="h5">Treeview</div>
+                    <ul data-role="treeview">
+                        <li data-icon="<span class='mif-star-full fg-red'>" data-caption="Favorites">
+                            <ul>
+                                <li data-icon="<span class='mif-library fg-green'>" data-caption="Projects"></li>
+                                <li data-icon="<span class='mif-download fg-cyan'>" data-caption="Downloads"></li>
+                                <li data-icon="<span class='mif-apps'>" data-caption="Desktop"></li>
+                            </ul>
+                        </li>
+                        <li data-icon="<span class='mif-cloud'>" data-caption="OneDrive">
+                            <ul>
+                                <li data-caption="Documents"></li>
+                                <li data-caption="Projects" data-icon="<span class='mif-apps'>">
+                                    <ul>
+                                        <li data-caption="Web"></li>
+                                        <li data-caption="Android"></li>
+                                        <li data-caption="Windows" data-icon="<span class='mif-windows'>" data-collapsed="true">
+                                            <ul>
+                                                <li data-caption="Windows 95"></li>
+                                                <li data-caption="Windows 98"></li>
+                                                <li data-caption="Windows XP"></li>
+                                                <li data-caption="Windows ME"></li>
+                                            </ul>
+                                        </li>
+                                        <li data-caption="iOS" data-icon="<span class='mif-apple'>"></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-icon="<span class='mif-github'>" data-caption="GitHub" data-link="https://github.com/olton/metroui" data-badge="new:alert"
+                            data-secondary="Repos"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="box">
+                    <div class="h5">Treeview from Object</div>
+                    <ul data-role="treeview" data-leaves="leaves"></ul>
+                </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="box">
+                    <div class="h5">Manual Treeview</div>
+                    <ul id="tv" data-role="treeview"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Options Tree</div>
+    <p class="text-muted">
+        With <code>Treeview</code> component you can create an option tree.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-4">
+                <div class="box">
+                    <ul data-role="treeview" id="tv1">
+                        <li>
+                            <input type="checkbox" data-role="checkbox" data-append="Play video" title="" data-three-state="true">
+                            <ul>
+                                <li><input type="checkbox" data-role="checkbox" data-append="AVI" title=""></li>
+                                <li><input type="checkbox" data-role="checkbox" data-append="MPEG" title=""></li>
+                                <li><input type="checkbox" data-role="checkbox" data-append="MP4" title=""></li>
+                                <li>
+                                    <input type="checkbox" data-role="checkbox" data-append="DIV-X" title="">
+                                    <ul>
+                                        <li data-type="checkbox" data-name="divx" data-checked="true" data-value="divx" data-caption="DIVx"></li>
+                                        <li data-type="checkbox" data-name="xvid" data-checked="true" data-value="xvid" data-caption="xVID"></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox" data-role="checkbox" data-append="Play audio" title=""></li>
+                        <li>
+                            <input type="checkbox" data-role="checkbox" data-append="Subtitles" title="">
+                            <ul>
+                                <li><input type="checkbox" data-role="checkbox" data-append="English" title=""></li>
+                                <li><input checked type="checkbox" data-role="checkbox" data-append="Ukrainian" title=""></li>
+                                <li><input type="checkbox" data-role="checkbox" data-append="Dutch" title=""></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="box">
+                    <ul data-role="treeview" id="tv2">
+                        <li data-icon="<span class='mif-guitar'>" data-caption="Audio Type">
+                            <ul>
+                                <li data-type="radio" data-name="audio" data-checked="true" data-value="stereo" data-caption="Stereo"></li>
+                                <li data-type="radio" data-name="audio" data-value="mono" data-caption="Mono"></li>
+                                <li data-type="checkbox" data-name="divx" data-checked="true" data-value="divx" data-caption="DIVx"></li>
+                                <li data-type="checkbox" data-name="xvid" data-checked="true" data-value="xvid" data-caption="xVID"></li>
+                                <li data-type="input" data-value="" data-placeholder="Enter remark..." data-caption=""></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Methods</div>
+    <p class="text-muted">
+        With component methods, you can add or remove nodes in runtime.
+    </p>
+</div>
+
+<script>
+    var leaves = [
+        {
+            icon: "<span class='mif-github'>",
+            caption: "GitHub",
+            link: "#",
+            items: [
+                {
+                    icon: "<span class='mif-vpn-publ'>",
+                    caption: "Metro UI",
+                    actions: [
+                        {icon: "<span class='mif-git-fork'>", caption: "Fork", },
+                        {icon: "<span class='mif-star-empty'>", caption: "Star",},
+                    ],
+                    current: true,
+                },
+                {icon: "<span class='mif-vpn-lock'>", caption: "Panda Templates",},
+            ]
+        },
+        {
+            icon: "<span class='mif-cloud'>",
+            caption: "Cloud",
+            link: "#",
+        },
+    ]
+
+    setTimeout(() => {
+        const tv = Metro.getPlugin("#tv", "treeview");
+
+        function fillTree(items, node = null) {
+            for (const item of items) {
+                const new_node = tv.addTo(node, {
+                    ...item,
+                    type: item.items ? "node" : "item"
+                });
+                if (item.items) {
+                    fillTree(item.items, new_node);
+                }
+            }
+        }
+
+        fillTree(leaves);
+    }, 1000);
+</script>

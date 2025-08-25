@@ -1,0 +1,171 @@
+<script>window.PAGE_TITLE = 'ToDo App'</script>
+
+<style>
+    #tasks {
+        td {
+            text-align: left;
+        }
+    }
+</style>
+
+<div class="h-100" style="background: var(--default-background);">
+    <div class="text-center h1 m-4">ToDo App</div>
+    <hr class="thin"/>
+    <div class="d-flex gap-1 flex-wrap flex-center p-4 container-query">
+        <input id="task" type="text" data-role="input" placeholder="Enter task..." class="w-100-sm w-50-md"/>
+        <div>
+            <button class="primary button-add"><span class="mif-plus"></span> ADD TASK</button>
+            <button class="button-reload" title="Reload Tasks (Ctrl+F9)" data-hotkey="ctrl+f9"><span class="mif-refresh"></span></button>
+            <button class="button-print" title="Print Tasks (Alt+Ctrl+P)" data-hotkey="alt+ctrl+p"><span class="mif-print"></span></button>
+            <button class="button-clear alert" title="Clear Tasks (Alt+Ctrl+D)" data-hotkey="alt+ctrl+d"><span class="mif-clear-all"></span></button>
+        </div>
+    </div>
+    
+    <div class="p-4">
+        <div class="table-component">
+        <table class="table striped border bd-default responsive-ld">
+            <thead>
+            <tr>
+                <th style="width: 30px"></th>
+                <th style="width: 200px">Date</th>
+                <th>Task</th>
+                <th style="width: 100px">Status</th>
+                <th style="width: 120px">Actions</th>
+            </tr>
+            </thead>
+            <tbody id="tasks"></tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    var taskInput = $('#task');
+    var taskList = $('#tasks');
+    
+    function loadTasks(){
+        const tasks = Metro.storage.getItem('panda:tasks', []);
+        const taskList = $('#tasks');
+        taskList.empty();
+        tasks.sort( (a, b) => b.id - a.id ).forEach(task => {
+            const state = task.done === -1 
+                ? '<span data-role="bull" data-type="fail"></span>'
+                : task.done === 0 
+                    ? '<span data-role="bull" data-type="pending"></span>'
+                    : '<span data-role="bull" data-type="success"></span>';
+            const status = task.done === -1 
+                ? '<span class="badge alert">Epic Fail</span>'
+                : task.done === 0 
+                    ? '<span class="badge warning">Pending...</span>'
+                    : '<span class="badge success">Done</span>';
+            
+            const tr = $("<tr>")
+            tr.html(`
+                <tr>
+                    <td>${state}</td>
+                    <td>${datetime(+task.id).format("DD/MM/YYYY HH:mm")}</td>
+                    <td>${task.name}</td>
+                    <td>${status}</td>
+                    <td>
+                        <button title="Set as complete" class="square small task-done button-soft-green" data-task-id="${task.id}"><span class="mif-checkmark"></span></button>
+                        <button title="Set as wrong" class="square small task-wrong button-soft-coral" data-task-id="${task.id}"><span class="mif-clear"></span></button>
+                        <button title="Delete task" class="square small task-delete alert" data-task-id="${task.id}"><span class="mif-bin"></span></button>                        
+                    </td>
+                </tr>
+            `).appendTo(taskList);
+        });
+    }
+    
+    function addTask(){
+        const val = taskInput.val().trim()
+        if (val === '') {
+            return;
+        }
+        const task = {
+            id: Date.now(),
+            name: val,
+            done: 0
+        }
+        const tasks = Metro.storage.getItem('panda:tasks', []);
+        tasks.push(task);
+        Metro.storage.setItem('panda:tasks', tasks);
+        loadTasks();
+        taskInput.val('');
+    }
+
+    $('.button-print').on('click', printTasks);
+    $(".button-add").on("click", addTask)
+    $(".button-reload").on("click", loadTasks)
+    $(".button-clear").on("click", function (){
+        const tasks = Metro.storage.getItem('panda:tasks', []);
+        if (tasks.length === 0) {
+            return;
+        }
+        Metro.dialog.create({
+            title: "Clear Tasks",
+            content: "Are you sure you want to clear all tasks?",
+            defaultActions: false,
+            customButtons: [
+                {
+                    text: "Yes",
+                    cls: "primary js-dialog-close",
+                    onclick: function () {
+                        Metro.storage.delItem('panda:tasks');
+                        $('#tasks').empty();
+                        loadTasks()
+                    },
+                },
+                {
+                    text: "No",
+                    cls: "js-dialog-close",
+                }
+            ]
+        })
+    })
+    
+    taskInput.on('keyup', function(e){
+        if(e.keyCode === 13){
+            addTask();
+        }
+    });
+    
+    function printTasks(){
+        window.print();
+    }
+    
+    taskList.on("click", ".task-delete", function (){
+        const taskId = $(this).data("task-id");
+        const tasks = Metro.storage.getItem('panda:tasks', []);
+        const newTasks = tasks.filter(task => +task.id !== +taskId);
+        Metro.storage.setItem('panda:tasks', newTasks);
+        loadTasks()
+    })
+    
+    taskList.on("click",".task-done",  function (){
+        const taskId = $(this).data("task-id");
+        const tasks = Metro.storage.getItem('panda:tasks', []);
+        const newTasks = tasks.map(task => {
+            if (+task.id === +taskId) {
+                task.done = 1;
+            }
+            return task;
+        });
+        Metro.storage.setItem('panda:tasks', newTasks);
+        loadTasks()
+    })
+    
+    taskList.on("click",".task-wrong",  function (){
+        const taskId = $(this).data("task-id");
+        const tasks = Metro.storage.getItem('panda:tasks', []);
+        const newTasks = tasks.map(task => {
+            if (+task.id === +taskId) {
+                task.done = -1;
+            }
+            return task;
+        });
+        Metro.storage.setItem('panda:tasks', newTasks);
+        loadTasks()
+    })
+    
+    loadTasks()
+</script>

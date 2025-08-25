@@ -1,0 +1,90 @@
+<script>window.PAGE_TITLE = 'Forms | Layouts'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Form Layouts</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="/">Panda 1.0</a></li>
+            <li><a href="#">Forms</a></li>
+            <li class="active"><a href="#">Layouts</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Form Elements Containers</div>
+    <p class="text-muted">
+        You can use next container classes for elements: <code>.form-group</code> and <code>.form-actions</code>.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Default Layout</div>
+    <p class="text-muted">
+        In the default layout, form elements are placed in columns.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-6">
+                <form>
+                    <div class="form-group">
+                        <input type="text" data-role="input" placeholder="Enter name..." data-label="Name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-role="input" placeholder="Enter password..." data-label="Password" />
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                        <button type="reset" class="button">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Inline Layout</div>
+    <p class="text-muted">
+        In the inline layout, form elements are placed in a row. To use inline layout, add class <code>.inline-form</code> to the <code>&lt;form&gt;</code> element.
+    </p>
+    <div class="mt-4">
+        <form class="inline-form">
+            <div class="form-group">
+                <input type="text" data-role="input" placeholder="Enter name..." data-label="Name" />
+            </div>
+            <div class="form-group">
+                <input type="text" data-role="input" placeholder="Enter password..." data-label="Password" />
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="button primary">Submit</button>
+                <button type="reset" class="button">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Grid Layout</div>
+    <p class="text-muted">
+        In the inline layout, form elements are placed in a grid. To use grid layout, add class <code>.grid-form</code> to the <code>&lt;form&gt;</code> element.
+        To change <b>gap size</b>, set CSS variable <code>--form-gap-size</code> to required value.
+        Min column size in the form grid - <code>200px</code>, to change this value, set CSS variable <code>--form-column-min-width</code> to required value.
+    </p>
+    <div class="mt-4">
+        <form class="grid-form">
+            <div class="form-group">
+                <input type="text" data-role="input" placeholder="Enter name..." data-label="Name" />
+            </div>
+            <div class="form-group">
+                <input type="text" data-role="input" placeholder="Enter password..." data-label="Password" />
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="button primary">Submit</button>
+                <button type="reset" class="button">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<script>window.PAGE_TITLE = 'UI Widgets | Media'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Media</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">Widgets</a></li>
+            <li class="active"><a href="#">Media</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        UI Media Metro is a set of components to display media content such as images, videos and audio. 
+        These components allow you to easily integrate media content into your web application while providing adaptive design and convenient user interface.    
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Audio Button</div>
+    <div class="mt-4">
+        <button data-role="audio-button" data-audio-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" onclick="$(this).toggleClass('loading animated-border-cyan')">
+            <span class="loader ani-spin">
+                <span class="mif-disc"></span>
+            </span>
+            <span class="caption">Play</span>
+        </button>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Audio Player</div>
+    <div class="mt-4">
+        <audio data-role="audio-player" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Video Player</div>
+    <div class="mt-4">
+        <video data-role="video-player" data-src="/pages/widgets/media/ocean.mp4" data-full-screen-mode="window"></video>
+    </div>
+</div>

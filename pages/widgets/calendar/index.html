@@ -1,0 +1,76 @@
+<script>window.PAGE_TITLE = 'UI Elements | Calendar'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Calendar</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">Calendar</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        Create <code>calendar</code> with role <code>data-role="calendar"</code>.
+    </p>
+    <div class="mt-4 d-flex flex-row gap-2 flex-align-items-start">
+        <div data-role="calendar" data-buttons="today"></div>
+        <div data-role="calendar" data-wide="true" data-buttons="today" data-show="1972/12/21" data-preset="1972/12/21"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Compact Mode</div>
+    <p class="text-muted">
+        Use attribute <code>data-compact="true"</code> to set compact mode.
+    </p>
+    <div class="mt-4 d-flex flex-row gap-2 flex-align-items-start">
+        <div data-role="calendar" data-compact="true"></div>
+        <div data-role="calendar" data-wide="true" data-compact="true" data-buttons="today"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Week Start</div>
+    <p class="text-muted">
+        The Calendar can draw week start from Sunday or Monday. This option sets automatically based on the current locale. For <code>lang=en</code> week starts from Sunday, for <code>lang=ua</code> week starts from Monday.
+        Also, you can use attribute <code>data-week-start="0"</code> to set week start from Sunday or <code>data-week-start="1"</code> to set week start from Monday.
+    </p>
+    <div class="mt-4 d-flex flex-row gap-2 flex-align-items-start">
+        <div data-role="calendar" data-compact="true"></div>
+        <div data-role="calendar" data-compact="true" data-week-start="1"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">i18n</div>
+    <p class="text-muted">
+        The Calendar can be localized to different languages. The default language is English. You can set the language using the <code>lang</code> attribute.
+    </p>
+    <div class="mt-4 d-flex flex-row gap-2" lang="ua">
+        <div data-role="calendar" data-compact="true" data-wide="true"></div>
+    </div>
+</div>
+
+
+<div class="box">
+    <div class="box-title">Show Time</div>
+    <p class="text-muted">
+        Use attribute <code>data-show-time="true"</code> to show time.
+    </p>
+    <div class="mt-4 d-flex flex-row gap-2">
+        <div data-role="calendar" data-show-time="true"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Calendar Options</div>
+    <p class="text-muted">
+        You have many options for displaying and selecting date(s) on the calendar. For more information, see the <a href="https://metroui.org.ua">Metro UI</a> documentation.
+    </p>
+</div>

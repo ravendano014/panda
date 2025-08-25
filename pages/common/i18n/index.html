@@ -1,0 +1,148 @@
+<script>window.PAGE_TITLE = 'Internationalization (i18n)'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Internationalization</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li class="active"><a href="#">i18n</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About <span class="text-weight-9">i18n</span></div>
+    <p class="text-muted">
+        Internationalization (i18n) is the process of designing and preparing your app to be usable in different languages.
+        In this section, you can find examples of how to use i18n in your app.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Metro UI i18n module</div>
+    <p class="text-muted">
+        Metro UI has a built-in i18n module that helps you to easily translate your app into different languages and switch between defined languages.
+        Locales out from box - <code>en</code>, <code>ua</code>. Available built-in labels you can see in Metro UI <a href="https://github.com/olton/Metro-UI-CSS/blob/dev/source/i18n/en.js">source code</a> on GitHub.
+    </p>
+    
+    <div class="box-title-secondary">Methods</div>
+    <p class="text-muted">
+        You can use the following methods to work with the i18n module (<code>Metro.i18n</code> scope):
+    </p>
+    <ul>
+        <li><code>load(lang = 'en')</code> - load language file to current locale</li>
+        <li><code>add(lang, data)</code> - add locale</li>
+        <li><code>get(key, lang)</code> - get specified label from locale</li>
+        <li><code>updateUI(context, lang)</code> - update labels for specified context and language, by default, this method uses <b>document</b> as context and attr <b>lang</b> from <b>html</b> tag</li>
+        <li><code>extend(data)</code> - extend locales with custom labels</li>
+    </ul>
+    
+    <div class="box-title-secondary">Properties</div>
+    <ul>
+        <li><code>Metro.i18n.language</code> - current language ID</li>
+        <li><code>Metro.locales</code> - available locales</li>
+        <li><code>Metro.locale</code> - current locale - is an object contains pairs key, value</li>
+    </ul>
+</div>
+
+<div class="box">
+    <div class="box-title">How it works</div>
+    <p class="text-muted">
+        When Metro UI is initialized, it loads the language, defined in attr <b>lang</b> from <b>html</b> tag or <code>en</code> if attribute is not specified.
+        Each Metro UI component hash a property <code>strings</code>, which contains labels for the current loaded language.
+        You can use attr <code>lang</code> for any HTML element to specify the language for this element and its children.
+    </p>
+    
+    <div class="box-title-secondary">Extends</div>
+    <p class="text-muted">
+        You can extend the Metro UI i18n module with custom labels for your app.
+        To do this, you need to call the <code>Metro.i18n.extend(data)</code> method and pass an object with custom labels.
+    </p>
+    
+    <div class="box-title-secondary">Update UI</div>
+    <p class="text-muted">
+        To set i18n labels, add attr <code>data-i18n</code> to the HTML element and specify the label key.
+        To update labels for the specified context and language, you need to call the <code>Metro.i18n.updateUI(context, lang)</code> method.
+        By default, this method uses <b>document</b> as context and attr <b>lang</b> from <b>html</b> tag.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Example</div>
+    <p class="text-muted">
+        In this example, you can see how to use the Metro UI i18n module in your app.
+    </p>
+    <div class="mt-4">
+        <div class="box">
+            <div class="row">
+                <div class="cell-md-9">
+                    <div class="box-title" data-i18n="label_form_example">Form Example</div>
+                </div>
+                <div class="cell-md-3">
+                    <select id="lang-select" data-role="select" data-prepend="<span class='mif-language mif-2x'>" onchange="changeLanguage(this.value)">
+                        <option value="uk">РЈРєСЂР°С—РЅСЃСЊРєР°</option>
+                        <option value="en">English</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+            </div>
+            <form>
+                <div class="form-group">
+                    <input type="text" data-role="input" data-label="<span data-i18n='label_user_name'>User Name:</span>" />
+                </div>
+                <div class="form-group">
+                    <input type="text" data-role="input" data-label="<span data-i18n='label_user_email'>User Email:</span>" />
+                </div>
+                <div class="form-group">
+                    <input type="text" data-role="input" data-label="<span data-i18n='label_password'>Password:</span>" />
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="button primary" data-i18n="label_submit">Submit</button>
+                    <button type="reset" class="button" data-i18n="label_reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    (() => {
+        Metro.i18n.extend({
+            "en": {
+                "label_title": "i18n  Demo",
+                "label_welcome": "Welcome to Metro UI",
+                "label_user_name": "User Name",
+                "label_user_email": "User Email",
+                "label_password": "Password",
+                "label_form_example": "Form Example",
+            },
+            "uk": {
+                "label_title": "i18n  Р”РµРјРѕ",
+                "label_welcome": "Р›Р°СЃРєР°РІРѕ РїСЂРѕСЃРёРјРѕ РґРѕ Metro UI",
+                "label_user_name": "Р†Рј'СЏ РєРѕСЂРёСЃС‚СѓРІР°С‡Р°",
+                "label_user_email": "Email РєРѕСЂРёСЃС‚СѓРІР°С‡Р°",
+                "label_password": "РџР°СЂРѕР»СЊ",
+                "label_form_example": "РџСЂРёРєР»Р°Рґ С„РѕСЂРјРё",
+            },
+            "de": {
+                "label_title": "i18n  Demo",
+                "label_welcome": "Willkommen bei Metro UI",
+                "label_user_name": "Benutzername",
+                "label_user_email": "Benutzer-E-Mail",
+                "label_password": "Passwort",
+                "label_form_example": "Formularbeispiel",
+                "label_submit": "Einreichen",
+                "label_reset": "ZurГјcksetzen"
+            }
+        })
+
+        globalThis.changeLanguage = (lang) => {
+            Metro.i18n.updateUI(document, lang);
+        }
+
+        Metro.i18n.updateUI(document);
+        $("#lang-select").val(Metro.i18n.language);
+    })();
+</script>

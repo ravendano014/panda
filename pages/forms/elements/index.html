@@ -1,0 +1,454 @@
+<script>window.PAGE_TITLE = 'Forms | Elements'</script>
+
+<script>
+    var inputCustomButtons = [
+        {
+            text: `<span class="mif-run">`,
+            onclick: () => alert(`Custom button 1`)
+        },
+        {
+            text: `<span class="mif-bin">`,
+            cls: `alert`,
+            onclick: () => alert(`Custom button 2`)
+        },
+    ]
+</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Form Elements</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="/">Panda 1.0</a></li>
+            <li><a href="#">Forms</a></li>
+            <li class="active"><a href="#">Elements</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About Form Elements</div>
+    <p class="text-muted">
+        Panda uses a more powerful input component provided by the Metro UI library.
+        This component turns a regular input into a multipurpose user input tool.
+        You can use <code>text inputs</code>, <code>checkboxes</code>, <code>radio buttons</code>, <code>text area</code>, and other input types.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Inputs</div>
+    <p class="text-muted">
+        Use standard HTML input.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-6">
+                <form action="">
+                    <label class="label-for-input">Default input</label>
+                    <input type="text" placeholder="Enter text..." />
+                    <div class="mt-4">
+                        <input type="button" value="Buttons" >
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-title-secondary">
+        Extended Inputs
+    </div>
+    <p class="text-muted">
+        Use standard HTML input with attribute <code>data-role="input"</code> to create input control with extended features.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Text"/>
+            </div>
+            <div class="cell-ld-6">
+                <input type="password" placeholder="Enter text..." data-role="input" data-label="Password"/>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Prepend and Append" data-prepend="Prepend:" data-append=".append"/>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Prepend and Append Options" data-prepend-options="http://,https://" data-append-options=".com,.net,.org"/>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Custom buttons" data-custom-buttons="inputCustomButtons"/>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Search mode" data-search-button="true"/>
+                <div class="reduce-2">
+                    You can use built-in search button.
+                </div>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="Generate Password" data-random-button="true"/>
+                <div class="reduce-2">
+                    You can use built-in randomizer button.
+                </div>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" placeholder="Enter text..." data-role="input" data-label="History mode" data-history="true"
+                       data-history-preset="Value 1|Value 2|Value 3"/>
+                <div class="reduce-2">
+                    <div>Use <kbd>Enter</kbd> to store value, and <kbd>Up</kbd>, <kbd>Down</kbd> to access to history</div>
+                </div>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" placeholder="Enter country name..." data-role="input" data-label="Autocomplete"
+                       data-autocomplete="Ukraine, USA, Canada, Marokko, Singapur"/>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" placeholder="ШЈШЇШ®Щ„ Ш§Щ„Щ†Шµ..." data-role="input" data-label="ШЇШ№Щ… Ш§Щ„ЩѓШЄШ§ШЁШ© Щ…Щ† Ш§Щ„ЩЉЩ…ЩЉЩ† ШҐЩ„Щ‰ Ш§Щ„ЩЉШіШ§Ш±" dir="rtl"/>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text"
+                       data-role="input, input-mask"
+                       data-mask="__/__/____"
+                       data-mask-pattern="\d"
+                       value=""
+                       data-label="Input Mask"
+                       class="mono"
+                />
+            </div>
+            <div class="cell-ld-6">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Checkboxes and Radio Buttons</div>
+    <p class="text-muted">
+        Use standard HTML input to create stylized controls, add class <code>checkbox-***</code> or <code>radio-***</code> (where *** is color name) to change control color.
+    </p>
+    
+    <div class="box-title-secondary">Checkboxes</div>
+    <div class="mt-4">
+        <input type="checkbox" />
+        <input type="checkbox" checked/>
+        <input type="checkbox" disabled/>
+        <input type="checkbox" checked disabled/>
+        <input type="checkbox" checked class="checkbox-red" />
+    </div>
+    
+    <div class="box-title-secondary">Extended Checkboxes</div>
+    <p class="text-muted">
+        Use attribute <code>data-role="checkbox"</code> to create stylized controls with extended options.
+    </p>
+    <div class="mt-4">
+        <input type="checkbox" data-role="checkbox" data-prepend="Two State"/>
+        <input type="checkbox" data-role="checkbox" checked data-three-state="true" data-prepend="Three State"/>
+        <input type="checkbox" data-role="checkbox" data-three-state="true" data-state="0" data-prepend="Indeterminate"/>
+    </div>
+
+    <div class="box-title-secondary">Custom Checkboxes</div>
+    <p class="text-muted">
+        Use attribute <code>data-role="custom-checkbox"</code> to create stylized controls with extended options.
+    </p>
+    <div class="mt-4 d-flex flex-align-items-center gap-2">
+        <input type="checkbox" data-role="custom-checkbox"/>
+        <input type="checkbox" data-role="custom-checkbox" data-state-off="<span class='mif-star-empty'>" data-state-on="<span class='mif-star-full fg-orange'>"/>
+        <input type="checkbox" data-role="custom-checkbox" data-state-off="<span class='mif-vpn-publ'>" data-state-on="<span class='mif-vpn-lock fg-blue'>"  data-caption-off="unlocked" data-caption-on="locked"/>
+    </div>
+    
+    <div class="box-title-secondary">Radio Buttons</div>
+    <div class="mt-4">
+        <input name="r1" type="radio" />
+        <input name="r1" type="radio" checked/>
+        <input name="r1" type="radio" disabled/>
+        <input name="r2" type="radio" checked disabled/>
+        <input name="r3" type="radio" class="radio-red" checked/>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Switch</div>
+    <p class="text-muted">
+        Use standard HTML input with attribute <code>data-role="switch"</code> to create stylized controls.
+    </p>
+    <div class="mt-4">
+        <input type="checkbox" data-role="switch"/>
+        <input type="checkbox" data-role="switch" checked/>
+        <input type="checkbox" data-role="switch" checked class="switch-red"/>
+        <input type="checkbox" data-role="switch" data-onoff="true"/>
+        <input type="checkbox" data-role="switch" disabled/>
+        <input type="checkbox" data-role="switch" checked disabled/>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Textarea</div>
+    <div class="box-title-secondary">Default</div>
+    <div class="row">
+        <div class="cell-ld-6">
+            <label class="label-for-input">Default textarea</label>
+            <textarea></textarea>
+        </div>
+    </div>
+    
+    <div class="box-title-secondary">Extended</div>
+    <p class="text-muted">
+        Use role <code>textarea</code> to extend standard HTML textarea element.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-6">
+                <textarea data-role="textarea" placeholder="Enter text..." data-label="Textarea"></textarea>
+            </div>
+            <div class="cell-ld-6">
+                <textarea data-role="textarea" placeholder="Enter text..." data-label="Textarea" data-prepend="<span class='mif-book-reference'>"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Select</div>
+    <div class="box-title-secondary">Default</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-6">
+                <label class="label-for-input">Default select</label>
+                <select>
+                    <option value="1">Value 1</option>
+                    <option value="2">Value 2</option>
+                    <option value="3">Value 3</option>
+                    <option value="4">Value 4</option>
+                    <option value="5">Value 5</option>
+                </select>
+            </div>
+            <div class="cell-ld-6">
+                <label class="label-for-input">Default multiple</label>
+                <select multiple style="height: 100px">
+                    <option value="1">Value 1</option>
+                    <option value="2" selected>Value 2</option>
+                    <option value="3" selected>Value 3</option>
+                    <option value="4">Value 4</option>
+                    <option value="5">Value 5</option>
+                </select>
+            </div>
+        </div>        
+    </div>
+    
+    <div class="box-title-secondary">Extended</div>
+    <p class="text-muted">
+        Use role <code>select</code> to extend standard HTML select element.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Default">
+                    <option value="1">Value 1</option>
+                    <option value="2">Value 2</option>
+                    <option value="3">Value 3</option>
+                    <option value="4">Value 4</option>
+                    <option value="5">Value 5</option>
+                </select>
+            </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Grouped Options">
+                    <optgroup label="Group 1">
+                        <option value="1">Value 1</option>
+                        <option value="2">Value 2</option>
+                    </optgroup>
+                    <optgroup label="Group 2">
+                        <option value="3">Value 3</option>
+                        <option value="4">Value 4</option>
+                    </optgroup>
+                    <optgroup label="Group 3">
+                        <option value="5">Value 5</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Multiple" multiple>
+                    <option value="1" selected>Value 1</option>
+                    <option value="2" selected>Value 2</option>
+                    <option value="3">Value 3</option>
+                    <option value="4">Value 4</option>
+                    <option value="5">Value 5</option>
+                </select>
+            </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Iconic Options">
+                    <option value="1" data-icon="<span class='mif-rocket'>">Rocket</option>
+                    <option value="2" data-icon="<span class='mif-florist'>" selected>Florist</option>
+                </select>
+            </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Iconic Options" multiple>
+                    <option value="1" data-icon="<span class='mif-rocket'>" selected>Rocket</option>
+                    <option value="2" data-icon="<span class='mif-florist'>" selected>Florist</option>
+                </select>
+            </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Group tag" data-show-group-name="true">
+                    <optgroup label="Group 1">
+                        <option value="2" data-icon="<span class='mif-florist'>" selected>Florist</option>
+                    </optgroup>
+                    <option value="1" data-icon="<span class='mif-rocket'>">Rocket</option>
+                </select>
+            </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Group tag" multiple data-show-group-name="true">
+                    <optgroup label="Group 1">
+                        <option value="1" data-icon="<span class='mif-rocket'>" selected>Rocket</option>
+                    </optgroup>
+                    <optgroup label="Group 2">
+                        <option value="2" data-icon="<span class='mif-florist'>" selected>Florist</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="cell-ld-4">
+                <select data-role="select" data-label="Options Filter" data-filter="true">
+                    <option value="1">USA</option>
+                    <option value="2">Ukraine</option>
+                    <option value="3">Germany</option>
+                    <option value="4">France</option>
+                    <option value="5">Italy</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="box-title-secondary">Double Select Box</div>
+    <div class="mt-4">
+        <div data-role="double-select-box">
+            <select>
+                <option value="ie" data-icon="<span class='mif-ie'>">IE</option>
+                <option value="chrome" data-icon="<span class='mif-chrome'>">Chrome</option>
+                <option value="firefox" data-icon="<span class='mif-firefox'>">Firefox</option>
+            </select>
+
+            <select>
+                <option value="safari" data-icon="<span class='mif-safari'>">Safari</option>
+                <option value="firefox" data-icon="<span class='mif-opera'>">Opera</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div class="box" id="datetime">
+    <div class="box-title">Date &amp; Time</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-4">
+                <input type="text" data-role="calendarpicker" data-label="Calendar Picker"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="datepicker" data-label="Date Picker"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="timepicker" data-label="Time Picker"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box" id="color-picker">
+    <div class="box-title">Color Picker</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-4">
+                <input type="text" data-role="color-picker" data-label="Color Picker"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Tag Input</div>
+    <div class="mt-4">
+        <input type="text" data-role="tag-input" data-random-color="true" value="Metro UI,the,best,css3,javascript,html5,framework"/>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Spinner</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-4">
+                <input type="text" data-role="spinner" data-label="Spinner"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="spinner" data-label="Spinner" data-buttons-position="left"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="spinner" data-label="Spinner" data-buttons-position="right"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Keypad</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-4">
+                <input type="text" data-role="keypad" data-label="Keypad"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="keypad" data-label="Shuffle Buttons" data-shuffle="true"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="password" data-role="keypad" data-label="Hidden input"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box" id="slider">
+    <div class="box-title">Slider</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-4">
+                <input type="text" data-role="slider" data-label="Slider" data-value="50"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="slider" data-label="With Buffer" data-value="35" data-buffer="75"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="slider" data-label="With Hint" data-value="35" data-hint="true" data-hint-always="true"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Double Slider (Range Slider)</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-6">
+                <input type="text" data-role="double-slider" data-label="Slider" data-value-min="15" data-value-max="65"/>
+            </div>
+            <div class="cell-ld-6">
+                <input type="text" data-role="double-slider" data-label="Slider" data-value-min="15" data-value-max="65" data-hint="true"
+                       data-hint-always="true" data-show-min-max="true"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box" id="rating">
+    <div class="box-title">Rating</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-ld-4">
+                <input type="text" data-role="rating" data-label="Rating" data-value="3.2"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="rating" data-label="Static Rating" data-value="3.5" data-static="true" data-message="(avg 3.5 from 3856)"/>
+            </div>
+            <div class="cell-ld-4">
+                <input type="text" data-role="rating" data-label="Custom Symbol, Color, Count" data-on-color="#FFA500" data-value="3.5" data-symbol="вЂ"
+                       data-round-func="none" data-stars="10"/>
+            </div>
+        </div>
+    </div>
+</div>

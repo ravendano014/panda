@@ -1,0 +1,464 @@
+<script>window.PAGE_TITLE = 'Samples | Ticket List'</script>
+
+<div class="box landing p-0 container-query" style="height: 100%; overflow-y: auto">
+    <nav data-role="app-bar" data-expand-point="xl">
+        <a href="#" class="app-bar-item-static">
+            <div class="text-leader text-weight-9">Help<span class="fg-crimson">Center</span></div>
+        </a>
+
+        <ul class="app-bar-menu ml-auto">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Faq</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid mb-6 mt-6 d-flex flex-row">
+        <ul class="breadcrumbs">
+            <li><a href="#"><span class="mif-home"></span></a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">#1 Lorem ipsum dolor sit amet.</a></li>
+        </ul>
+        
+        <div class="ml-auto">
+            <div class="dropdown-button">
+                <button class="medium no-dropdown-caret"><span class="mif-tag"></span>Labels <span class="value">0</span></button>
+                <ul class="d-menu no-icon checked-list" data-role="dropdown" data-stay-on-click="true" style="min-width: 100%">
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                  data-caption="<span class='button mini cycle bg-red mr-1'></span> bug"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                  data-caption="<span class='button mini cycle bg-green mr-1'></span> feature"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                  data-caption="<span class='button mini cycle bg-yellow mr-1'></span> enhancement"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                  data-caption="<span class='button mini cycle bg-blue mr-1'></span> documentation"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                  data-caption="<span class='button mini cycle bg-purple mr-1'></span> help wanted"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                  data-caption="<span class='button mini cycle bg-orange mr-1'></span> priority"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                  data-caption="<span class='button mini cycle bg-cyan mr-1'></span> question"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                  data-caption="<span class='button mini cycle bg-brown mr-1'></span> invalid"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                  data-caption="<span class='button mini cycle bg-pink mr-1'></span> duplicate"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                  data-caption="<span class='button mini cycle bg-gray mr-1'></span> wontfix"></a></li>
+
+                </ul>
+            </div>
+
+            <div class="dropdown-button">
+                <button class="medium no-dropdown-caret"><span class="mif-layout"></span>Projects <span class="value">0</span></button>
+                <ul class="d-menu no-icon checked-list" data-role="dropdown" data-stay-on-click="true" style="min-width: 100%">
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="Project 1"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="Project 2"></a></li>
+                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="Project 3"></a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown-button">
+                <button class="medium no-dropdown-caret"><span class="mif-milestone2"></span>Milestone <span class="value"></span></button>
+                <ul class="d-menu default-list" data-role="dropdown" data-stay-on-click="true" style="min-width: 100%">
+                    <li><a class="c-pointer" data-value="">none</a></li>
+                    <li class="divider"></li>
+                    <li><a class="c-pointer" data-value="1.0.0"><span class="icon mif-milestone"></span>1.0.0</a></li>
+                    <li><a class="c-pointer" data-value="2.0.0"><span class="icon mif-milestone"></span>2.0.0</a></li>
+                    <li><a class="c-pointer" data-value="3.0.0"><span class="icon mif-milestone"></span>3.0.0</a></li>
+                    <li class="menu-title">Closed</li>
+                    <li><a class="c-pointer" data-value="0.1.0"><span class="icon mif-milestone"></span>0.1.0</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="cell-md-8">
+                <div class="">
+                    <div class="reply">
+                        <div class="github-box">
+                            <div class="box-header">
+                                <div class="author">vasya</div>
+                                <div class="time" data-role="eval">opened at {{ datetime().format('MMM DD, YYYY') }}</div>
+                                <div class="attributes">
+                                    <div class="prc">Creator</div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, at aut beatae commodi
+                                error eum explicabo fuga, ipsum iusto laborum libero minima omnis porro quos recusandae repudiandae sed sunt veniam.
+                            </div>
+                        </div>
+                        <ul class="reply-options">
+                            <li><span class="mif-image icon"></span> Added image <a href="#">image_1.jpg</a></li>
+                            <li><span class="mif-layout icon"></span> Applied to project <a href="#">Metro UI</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cutter mt-4 mb-4">
+                        <div class="content">Discus</div>
+                    </div>
+                    
+                    <div class="reply">
+                        <div class="github-box box-cyan">
+                            <div class="box-header">
+                                <div class="author">olton</div>
+                                <div class="time" data-role="eval">replied at {{ datetime().format('MMM DD, YYYY') }}</div>
+                                <div class="attributes">
+                                    <div class="prc">Support</div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, at aut beatae commodi
+                                error eum explicabo fuga, ipsum iusto laborum libero minima omnis porro quos recusandae repudiandae sed sunt veniam.
+                            </div>
+                        </div>
+                        <ul class="reply-options">
+                            <li><span class="mif-tag icon"></span> Added label(s) <span class="badge badge-red">Bug</span> <span class="badge badge-indigo">Investigate</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="reply">
+                        <div class="github-box box-orange">
+                            <div class="box-header">
+                                <div class="author">olton</div>
+                                <div class="time" data-role="eval">replied at {{ datetime().format('MMM DD, YYYY') }}</div>
+                                <div class="attributes">
+                                    <div class="prc">Internal</div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, at aut beatae commodi
+                                error eum explicabo fuga, ipsum iusto laborum libero minima omnis porro quos recusandae repudiandae sed sunt veniam.
+                                
+                                <p><b>Use the code snippet below:</b></p>
+                                <pre><code class="language-html">&lt;div class="box"&gt;
+    &lt;ul class="reply-options"&gt;
+        &lt;li&gt;
+            &lt;span class="mif-tag icon"&gt;&lt;/span&gt; 
+            Added label(s) 
+            &lt;span class="badge badge-green"&gt;Fixed&lt;/span&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;                                     
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reply">
+                        <div class="github-box box-steel">
+                            <div class="box-header">
+                                <div class="author">olton</div>
+                                <div class="time" data-role="eval">replied at {{ datetime().format('MMM DD, YYYY') }}</div>
+                                <div class="attributes">
+                                    <div class="prc">Draft</div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, at aut beatae commodi
+                                error eum explicabo fuga, ipsum iusto laborum libero minima omnis porro quos recusandae repudiandae sed sunt veniam.
+                            </div>
+                        </div>
+                        <ul class="reply-options">
+                            <li><span class="mif-person icon"></span> Assigned to <a href="#" class="text-bold">olton</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="reply">
+                        <div class="github-box">
+                            <div class="box-header">
+                                <div class="author">vasya</div>
+                                <div class="time" data-role="eval">replied at {{ datetime().format('MMM DD, YYYY') }}</div>
+                                <div class="attributes">
+                                    <div class="prc">Creator</div>
+                                </div>
+                            </div>
+                            <div class="box-content">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, at aut beatae commodi
+                                error eum explicabo fuga, ipsum iusto laborum libero minima omnis porro quos recusandae repudiandae sed sunt veniam.
+                            </div>
+                        </div>
+                        <ul class="reply-options">
+                            <li><span class="mif-checkmark icon"></span> Closed as completed</li>
+                        </ul>
+                    </div>
+
+                    <div class="cutter mt-4 mb-4">
+                        <div class="content">Add Reply</div>
+                    </div>
+
+                    <div>
+                        <textarea data-role="textarea" data-initial-height="200" placeholder="Type your reply here..."></textarea>
+                        <div class="text-small text-right">
+                            You can use <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">GitHub Flavored Markdown</a> here
+                        </div>
+                        <div class="d-flex flex-row flex-nowrap flex-center gap-1 mt-4">
+                            <button class="button primary"><span class="mif-replay icon"></span>Reply</button>
+                            <button class="button"><span class="mif-floppy-disk icon"></span>Draft</button>
+                            <button class="button warning"><span class="mif-eye icon"></span>Internal</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="cell-md-4">
+                <div class="box">
+                    <div class="box-title">Ticket Details</div>
+                    <table class="table compact striped">
+                        <tbody>
+                        <tr>
+                            <td>Created:</td>
+                            <td>Jul 24, 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Client:</td>
+                            <td>Vasya Pupkin</td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><a href="mailto:">vasya@domain.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>Subscription:</td>
+                            <td>Enterprise</td>
+                        </tr>
+                        <tr>
+                            <td>Product:</td>
+                            <td>Metro UI</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="box">
+                    <div class="box-subtitle text-bold">Attachments:</div>
+                    <div class="d-flex flex-row flex-nowrap flex-center gap-1">
+                        <input type="file" data-role="file" data-mode="drop">
+                    </div>
+                    <ul class="reduce-1">
+                        <li><a href="#">image1.png</a></li>
+                        <li><a href="#">image2.png</a></li>
+                    </ul>
+                </div>
+                
+                <div class="box">
+                    <div class="row">
+                        <div class="cell-6 border-right bd-default">
+                            <div class="box-subtitle text-bold">Category:</div>
+                            <div class="dropdown-button no-dropdown-caret mt-2">
+                                <button class="small">Technical</button>
+                                <ul class="d-menu no-icon" data-role="dropdown" style="max-height: 300px">
+                                    <li><a href="#">Technical</a></li>
+                                    <li><a href="#">Finance</a></li>
+                                    <li><a href="#">General</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cell-6">
+                            <div class="box-subtitle text-bold">Status:</div>
+                            <div class="dropdown-button no-dropdown-caret mt-2">
+                                <button class="small success">Solved</button>
+                                <ul class="d-menu no-icon" data-role="dropdown" style="max-height: 300px">
+                                    <li><a href="#">New</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Solved</a></li>
+                                    <li><a href="#">Reviewed</a></li>
+                                    <li><a href="#">Todo</a></li>
+                                    <li><a href="#">Next Update</a></li>
+                                    <li><a href="#">Pending</a></li>
+                                    <li><a href="#">Closed</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="thin mt-4 mb-2">
+
+                    <div class="box-subtitle text-bold">Assigned to:</div>
+                    <ul class="unstyled-list mt-2">
+                        <li><input checked class="small" type="checkbox" data-role="checkbox" data-caption="Serhii Pimenov"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="John Smith"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Michael Anderson"></li>
+                        <li><input checked class="small" type="checkbox" data-role="checkbox" data-caption="David Wilson"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Robert Taylor"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="James Miller"></li>
+                    </ul>
+
+                    <div class="box-subtitle text-bold">Watchers:</div>
+                    <ul class="unstyled-list mt-2 mb-0">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Serhii Pimenov"></li>
+                        <li><input checked class="small" type="checkbox" data-role="checkbox" data-caption="John Smith"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Michael Anderson"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="David Wilson"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Robert Taylor"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="James Miller"></li>
+                    </ul>
+                </div>
+                
+                <div class="box">
+                    <h5 class="border-bottom bd-default pb-4">History:</h5>
+                    <ul class="timeline">
+                        <li>
+                            <span class="time">2023-03-26 16:51</span>
+                            <div class="data">
+
+                                Assigned to: <span class="text-weight-5">supportman</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="time">2023-03-27 14:10</span>
+                            <div class="data">
+
+                                Status changed to: <span class="text-weight-5">Reviewed</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="time">2023-03-27 14:10</span>
+                            <div class="data">
+
+                                Assigned to: <span class="text-weight-5">olton</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="time">2023-04-10 19:41</span>
+                            <div class="data">
+
+                                Status changed to: <span class="text-weight-5">Solved</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="wavy-top bg-bronze pt-20 mt-20 w-100">
+        <div class="p-20 d-flex flex-column flex-center">
+            <ul class="h-menu bg-transparent fg-white">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="fg-white">
+                Copyright &copy; 2025. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</div>
+
+<style>
+    .github-box {
+        &::after, &::before {
+            content: 'в”ѓ';
+            display: block;
+            color: var(--github-box-border-color);
+            position: absolute;
+            top: 100%;
+            left: 20px;
+        }
+    }
+    
+    .reply:not(:first-child) {
+        .github-box {
+            &::before {
+                top: auto;
+                bottom: 100%;
+            }
+        }
+    }
+    
+    .reply + .reply {
+        margin-top: 14px;
+    }
+    
+    .cutter + .reply {
+        .github-box::before {
+            display: none;
+        }
+    }
+    
+    .reply-options {
+        list-style: none;
+        padding: 0;
+        margin: 14px 0 0 24px;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        
+        .icon {
+            margin-right: 5px;
+            width: 16px;
+            height: 16px;
+            object-fit: cover;            
+        }
+        
+        li {
+            margin-top: -3px;
+            &::before {
+                content: 'в”њв”Ђ';
+                display: inline-block;
+                height: 12px;
+                margin-right: 10px;
+                color: var(--github-box-border-color);
+            }
+        }
+    }
+    
+    .reply:first-child, .reply:last-child {
+        .reply-options {
+            li {
+                &:last-child::before {
+                    content: 'в””в”Ђ';
+                }
+            }
+        }
+    }
+    
+    .box-content {
+        p {
+            margin-top: 10px;
+        }
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>
+    (() => {
+        function waitForSyntaxHighlighter() {
+            if (typeof hljs === "undefined") {
+                setTimeout(waitForSyntaxHighlighter, 100);
+            } else {
+                hljs.highlightAll();
+            }
+        }
+        
+        waitForSyntaxHighlighter();
+        
+        $(".checked-list").on("click", ".checkbox", function () {
+            const item = $(this)
+            const list = item.closest("ul")
+            const value = list.find("input:checked")
+            const target = list.siblings("button").find(".value")
+            target.text(value.length)
+        })
+
+        $(".default-list").on("click", "a", function () {
+            const item = $(this)
+            const list = item.closest("ul")
+            const value = item.attr("data-value")
+            const target = list.siblings("button").find(".value")
+            target.text(value)
+        })
+    })()
+</script>

@@ -1,0 +1,63 @@
+<script>window.PAGE_TITLE = 'UI Elements | Notify & Toast'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-center">
+        <h1>Notify & Toast</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-end-md flex-align-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">Notification</a></li>
+            <li class="active"><a href="#">Notify & Toast</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Notify</div>
+    <p class="text-muted">
+        You can create notify message for user with method <code>Metro.notify.create(message, title, {options})</code>
+    </p>
+    <div class="mt-4">
+        <button onclick="Metro.notify.create('Notify message', 'Title')">Create Notify</button>
+    </div>
+    <div class="mt-4">
+        <pre><code class="language-javascript">
+            Metro.notify.create('Notify message', 'Title')
+        </code></pre>
+    </div>
+    
+    
+    <p class="text-muted">
+        You can change notify visibility time with <code>timeout</code> option. 
+        To change notify style you can use <code>clsNotify</code> option or set CSS vars: <code>--notify-background</code>, <code>--notify-color</code>, <code>--notify-border-color</code>.
+    </p>
+    <div class="mt-4">
+        <button class="alert" onclick="Metro.notify.create('Notify message', 'Title', {timeout: 5000, clsNotify: 'alert'})">Create Notify</button>
+    </div>
+    <div class="text-muted">
+        You can use callback functions: <code>onNotifyCreate</code>, <code>onClick</code>, <code>onClose</code>, <code>onShow</code>, and <code>onAppend</code>  to handle notify events.
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Toast</div>
+    <p class="text-muted">
+        You can create toast message for user with method <code>Metro.toast.create(message, {options})</code>
+    </p>
+    <div class="mt-4">
+        <button onclick="Metro.toast.create('Toast message')">Create Toast</button>
+    </div>
+
+    <p class="text-muted">
+        You can change notify visibility time with <code>timeout</code> option. 
+        To change notify style you can use <code>clsToast</code> option or set CSS vars: <code>--toast-background</code>, <code>--toast-color</code>.
+        Also, you can change toast position with <code>data-position="..."</code> option (available values: <code>top</code>, <code>bottom</code>, and <code>center</code>, ).
+    </p>
+    <div class="mt-4">
+        <button class="info" onclick="Metro.toast.create('Toast message', {timeout: 5000, clsToast: 'bg-blue fg-white', position: 'top'})">Create Toast</button>
+    </div>
+    <div class="text-muted">
+        You can use callback function: <code>callback</code> to handle toast close event.
+    </div>
+</div>

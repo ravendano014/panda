@@ -1,0 +1,78 @@
+<script>window.PAGE_TITLE = 'Authentication | Lock Screen'</script>
+
+<style>
+    .lock-form {
+        width: 300px;
+        max-width: 90%;
+        margin: 0 auto;
+        aspect-ratio: 1/1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--default-background);
+            overflow: hidden;
+            border: 2px solid #ffffff;
+        }
+    }
+    
+    .login-button {
+        background: #fff;
+    }
+    
+    .dark-side {
+        .login-button {
+            background: #2c2d2e;
+        }
+    }
+</style>
+
+<script>
+    var inputCustomButtons = [
+        {
+            text: `<span class="mif-arrow-right">`,
+            onclick: function(e){
+                $("#form").submit();
+            }
+        },
+    ]
+    
+    function submitForm(form){
+        $("#form").addClass("ani-horizontal");
+        setTimeout(function(){
+            $("#form").removeClass("ani-horizontal");
+        }, 1000)
+    }
+</script>
+
+<div class="h-100 d-flex flex-align-center flex-justify-center">
+    <div class="lock-form">
+        <div class="h4 mb-20"><span class="mif-lock mr-2"></span>App Locked</div>
+        <div class="avatar shadow-normal">
+            <img src="/images/norma.png" alt="Norma"/>
+        </div>
+        <div class="h4 text-weight-9 mt-2 mb-4 user-name">Norma Winter</div>
+        <form action="javascript:" id="form" onsubmit="submitForm(this)">
+            <div class="form-group">
+                <input type="password" class=" animated-border"
+                       data-role="input" 
+                       placeholder="Enter password..." 
+                       data-reveal-button="false" 
+                       data-clear-button="false" 
+                       data-prepend="<span class='mif-lock'>" 
+                       data-custom-buttons="inputCustomButtons"/>
+            </div>
+        </form>
+        <div class="reduce-4 text-muted mt-1">Enter your password to retrieve your session</div>
+        <div class="mt-20 mb-4"><a href="#" class="login-button button pill-button rainbow-border">or log in as different user</a></div>
+        <div class="mt-10 reduce-4 text-muted text-center">
+            Copyright &copy; <span data-role="eval">{{ new Date().getFullYear() }}</span>
+            by Panda Template.<br/>All rights reserved.
+        </div>
+    </div>
+</div>

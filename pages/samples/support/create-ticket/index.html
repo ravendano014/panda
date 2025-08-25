@@ -1,0 +1,150 @@
+<script>window.PAGE_TITLE = 'Samples | Create Ticket'</script>
+
+<div class="box landing p-0 container-query" style="height: 100%; overflow-y: auto">
+    <nav data-role="app-bar" data-expand-point="xl">
+        <a href="#" class="app-bar-item-static">
+            <div class="text-leader text-weight-9">Help<span class="fg-crimson">Center</span></div>
+        </a>
+
+        <ul class="app-bar-menu ml-auto">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Faq</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <div class="container mt-10">
+        <div class="box">
+            <div class="box-title">Create Ticket</div>
+            <div class="box-content">
+                <form action="javascript:" data-role="validator">
+                    <div class="form-group">
+                        <input type="text" data-role="input" data-validate="required" placeholder="Title" data-label="Add a title for your ticket *">
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea data-role="textarea" data-initial-height="300" placeholder="Type your description here..." data-label="Add a description"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="file" id="file-input" class="d-none">
+                        <span class="button flat small" onclick="$('#file-input')[0].click()"><span class="mif-attachment"></span> Paste, drop, or click to add files</span>
+                        <div class="d-flex flex-row gap-2 mt-2">
+                            <div class="dropdown-button">
+                                <button class="medium no-dropdown-caret"><span class="mif-group"></span>Assignee <span class="value">0</span></button>
+                                <ul class="d-menu no-icon checked-list" data-value="assignee" data-role="dropdown" data-stay-on-click="true" data-open-mode="up" style="min-width: 100%">
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="olton"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="john_doe"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="sarah_smith"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="mike_jones"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="emily_brown"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="david_wilson"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="lisa_miller"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="james_taylor"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="anna_white"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="peter_black"></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="dropdown-button">
+                                <button class="medium no-dropdown-caret"><span class="mif-tag"></span>Labels <span class="value">0</span></button>
+                                <ul class="d-menu no-icon checked-list" data-role="dropdown" data-stay-on-click="true" data-open-mode="up" style="min-width: 100%">
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" 
+                                                           data-caption="<span class='button mini cycle bg-red mr-1'></span> bug"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                                           data-caption="<span class='button mini cycle bg-green mr-1'></span> feature"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                                           data-caption="<span class='button mini cycle bg-yellow mr-1'></span> enhancement"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                                           data-caption="<span class='button mini cycle bg-blue mr-1'></span> documentation"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                                           data-caption="<span class='button mini cycle bg-purple mr-1'></span> help wanted"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                                           data-caption="<span class='button mini cycle bg-orange mr-1'></span> priority"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                                           data-caption="<span class='button mini cycle bg-cyan mr-1'></span> question"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                                           data-caption="<span class='button mini cycle bg-brown mr-1'></span> invalid"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                                           data-caption="<span class='button mini cycle bg-pink mr-1'></span> duplicate"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1"
+                                                           data-caption="<span class='button mini cycle bg-gray mr-1'></span> wontfix"></a></li>
+
+                                </ul>
+                            </div>
+                            
+                            <div class="dropdown-button">
+                                <button class="medium no-dropdown-caret"><span class="mif-layout"></span>Project <span class="value">0</span></button>
+                                <ul class="d-menu no-icon checked-list" data-role="dropdown" data-stay-on-click="true" data-open-mode="up" style="min-width: 100%">
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="Project 1"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="Project 2"></a></li>
+                                    <li><a><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="Project 3"></a></li>                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="dropdown-button">
+                                <button class="medium no-dropdown-caret"><span class="mif-milestone2"></span>Milestone <span class="value"></span></button>
+                                <ul class="d-menu default-list" data-role="dropdown" data-stay-on-click="true" data-open-mode="up" style="min-width: 100%">
+                                    <li><a class="c-pointer" data-value="">none</a></li>
+                                    <li class="divider"></li>
+                                    <li><a class="c-pointer" data-value="1.0.0"><span class="icon mif-milestone"></span>1.0.0</a></li>
+                                    <li><a class="c-pointer" data-value="2.0.0"><span class="icon mif-milestone"></span>2.0.0</a></li>
+                                    <li><a class="c-pointer" data-value="3.0.0"><span class="icon mif-milestone"></span>3.0.0</a></li>
+                                    <li class="menu-title">Closed</li>
+                                    <li><a class="c-pointer" data-value="0.1.0"><span class="icon mif-milestone"></span>0.1.0</a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions flex-justify-content-end">
+                        <button>Cancel</button>
+                        <button class="success">Create Ticket</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="wavy-top bg-bronze pt-20 mt-20 w-100">
+        <div class="p-20 d-flex flex-column flex-center">
+            <ul class="h-menu bg-transparent fg-white">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="fg-white">
+                Copyright &copy; 2025. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    (() => {
+        $(".checked-list").on("click", ".checkbox", function () {
+            const item = $(this)
+            const list = item.closest("ul")
+            const value = list.find("input:checked")
+            const target = list.siblings("button").find(".value")
+            target.text(value.length)
+        })
+
+        $(".default-list").on("click", "a", function () {
+            const item = $(this)
+            const list = item.closest("ul")
+            const value = item.attr("data-value")
+            const target = list.siblings("button").find(".value")
+            target.text(value)
+        })
+    })()
+</script>

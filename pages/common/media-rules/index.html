@@ -1,0 +1,96 @@
+<script>window.PAGE_TITLE = 'Panda 1.0 | Media Rules'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Media Rules</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li class="active"><a href="#">Media Rules</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Media Rules</div>
+    <p class="text-muted">
+        Metro UI is designed as a <code>mobile-first</code> system. We use <code>min-width</code> property for building media queries.
+    </p>
+    <div class="box-title-secondary">Breakpoints:</div>
+    <table class="table striped table-border cell-border">
+        <thead>
+        <tr>
+            <th>BREAKPOINT</th>
+            <th>RULE</th>
+            <th>SIZE PX</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>fs</td>
+            <td>min-width</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>sx</td>
+            <td>min-width</td>
+            <td>360</td>
+        </tr>
+        <tr>
+            <td>sm</td>
+            <td>min-width</td>
+            <td>576</td>
+        </tr>
+        <tr>
+            <td>ld</td>
+            <td>min-width</td>
+            <td>640</td>
+        </tr>
+        <tr>
+            <td>md</td>
+            <td>min-width</td>
+            <td>768</td>
+        </tr>
+        <tr>
+            <td>lg</td>
+            <td>min-width</td>
+            <td>992</td>
+        </tr>
+        <tr>
+            <td>xl</td>
+            <td>min-width</td>
+            <td>1200</td>
+        </tr>
+        <tr>
+            <td>xxl</td>
+            <td>min-width</td>
+            <td>1400</td>
+        </tr>
+        <tr>
+            <td>xxxl</td>
+            <td>min-width</td>
+            <td>2000</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="box">
+    <div class="box-title">Using Media Rules</div>
+    <p class="text-muted indent-letter">
+        1 You can use media rules to create responsive layouts with a grid system.
+        To use media rules, add class <code>.cell-BP-SIZE</code>, <code>.col-BP-SIZE</code>, or <code>.cell-BP-SIZE</code> (for query container) to the element.
+        Where <code>BP</code> - breakpoint, and <code>SIZE</code> - size of the cell.
+    </p>
+
+    <p class="text-muted indent-letter">
+        2 You can use media rules in components with attribute <code>data-expand-point="*"</code>.
+        <br/>Where <code>*</code> - breakpoint. More details in the documentation for the components on the <a href="https://metroui.org.ua">official website</a>.
+    </p>
+
+    <p class="text-muted indent-letter">
+        3 With utility function <code>Metro.utils.mediaExist(BP)</code> and <code>Metro.utils.inMedia(BP)</code>.
+        <br/>Where <code>BP</code> - is breakpoint..
+    </p>
+</div>

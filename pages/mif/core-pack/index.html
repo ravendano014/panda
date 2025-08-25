@@ -1,0 +1,149 @@
+<script>window.PAGE_TITLE = 'Metro UI | Core Icons Set'</script>
+
+<style>
+    #icon-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #icon-list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 220px;
+        color: #676767;
+        cursor: pointer;
+
+        .icon {
+            font-size: 22px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            padding: 4px;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--default-color);
+        }
+
+        .label {
+            margin-left: 1rem;
+            font-size: 14px;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                color: var(--default-color-hover);
+            }
+        }
+
+        @media (hover: hover) {
+            &:active {
+                color: var(--default-color-hover);
+            }
+        }
+    }
+</style>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Core Icons Set</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li class="active"><a href="#">Icons</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About Icons</div>
+    <p class="text-muted">
+        Panda 1.0 uses <a href="https://metroui.org.ua">Metro UI Icons</a>. 
+        Metro Icons is an open source SVG icon library featuring over 800+ glyphs and distributed as a font file.
+        You can include icons in your project either using a CDN or using your favorite bundler.
+    </p>
+    <p class="text-muted">
+        To use icons, you need to add class `mif-icon_name` to the HTML element.
+    </p>
+    <div class="mt-4">
+        <span class="mif-rocket mif-10x"></span>
+    </div>
+    <p class="text-muted">
+        To change color, use classes <code>fg-***</code> (where *** is color name).
+    </p>
+    <div class="mt-4">
+        <span class="mif-rocket fg-red mif-10x"></span>
+    </div>
+    <p class="text-muted">
+        You cna use any icon size by adding <code>mif-Nx</code> class (where N is a number from 1 to 10).
+    </p>
+    <div class="mt-4">
+        <span class="mif-home mif-1x"></span>
+        <span class="mif-home mif-2x"></span>
+        <span class="mif-home mif-3x"></span>
+        <span class="mif-home mif-4x"></span>
+        <span class="mif-home mif-5x"></span>
+        <span class="mif-home mif-6x"></span>
+        <span class="mif-home mif-7x"></span>
+        <span class="mif-home mif-8x"></span>
+        <span class="mif-home mif-9x"></span>
+        <span class="mif-home mif-10x"></span>
+    </div>
+</div>
+
+<div class="box">
+    <div class="row">
+        <div class="cell-md-12">
+            <div class="box-title">Icons List ( <small id="icon-count">0</small> )</div>
+            <div class="text-muted small d-flex flex-row flex-align-center">
+                <div>
+                    Click icon item to copy icon name to clipboard.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <div id="icon-search"></div>
+    </div>
+    <div id="icon_list_wrapper" class="mt-4">
+        <ul class="unstyled-list list icon-list"
+            id="icon-list"
+            data-search-wrapper="#icon-search"
+            data-show-search="true"
+            data-sort-target="li"
+            data-sort-class="label"
+            data-sort-dir="asc"
+            data-list-search-title="Search icon:"
+            data-filter-class="--filter"
+        ></ul>
+    </div>
+</div>
+
+<script>
+    (async () => {
+        const res = await fetch('/pages/mif/core-pack/selection.json')
+        if (!res.ok) {
+            return
+        }
+        const icons = (await res.json()).icons
+        $("#icon-count").html(icons.length);
+        const list = $("#icon-list")
+        for (let item of icons) {
+            const li = $("<li>").html(`
+                    <span class='icon mif-${item.properties.name}'></span>
+                    <span class='label'>${item.properties.name}</span>
+                    <span class="--filter d-none">${item.icon.tags.join(' ')}</span>
+                `)
+            li.attr('data-copy-to-clipboard', "mif-"+item.properties.name)
+            li.appendTo(list)
+        }
+        Metro.makePlugin(list, 'list')
+    })()
+</script>

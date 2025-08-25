@@ -1,0 +1,233 @@
+<script>window.PAGE_TITLE = 'UI Elements | Tabs & Page Control'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Tabs</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">Tabs</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Tabs</div>
+    <p class="text-muted">
+        Top and Bottom tabs are viewed as collapsed. 
+    </p>
+    <div class="mt-4">
+        <ul data-role="tabs">
+            <li><a href="#">Tab 1</a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+        </ul>
+    </div>
+
+    <p class="text-muted">
+        You can expand tabs on the specified breakpoint. 
+    </p>
+    
+    <div class="mt-4">
+        <ul data-role="tabs" data-expand-point="fs">
+            <li><a href="#">Tab 1</a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Linked Content</div>
+    <p class="text-muted">
+        You can link content to tabs or use <code>href</code> attribute to create anchor tab.
+    </p>
+
+    <div class="mt-4">
+        <ul data-role="tabs" data-expand-point="fs">
+            <li><a href="#tab1">Tab 1</a></li>
+            <li><a href="#tab2">Tab 2</a></li>
+            <li><a href="#tab3">Tab 3</a></li>
+            <li><a href="https://pimenov.com.ua">Author <span class="mif-external"></span></a></li>
+        </ul>
+
+        <div>
+            <div id="tab1" class="p-4">
+                <h3>Tab1</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, reiciendis.
+            </div>
+            <div id="tab2" class="p-4">
+                <h3>Tab2</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quas?
+            </div>
+            <div id="tab3" class="p-4">
+                <h3>Tab3</h3>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quae.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Linked Tabs</div>
+    <p class="text-muted">
+        You can link two or more tabs to synchronize content.
+    </p>
+    <div class="row">
+        <div class="cell-md-6">
+            <ul id="tabs1" data-role="tabs" data-link="engine" data-expand="true">
+                <li><a href="#npm_1"><span class="mif-npm"></span>npm</a></li>
+                <li><a href="#pnpm_1"><span class="mif-pnpm"></span>pnpm</a></li>
+                <li><a href="#yarn_1"><span class="mif-yarn"></span>yarn</a></li>
+                <li><a href="#bun_1"><span class="mif-bun"></span>bun</a></li>
+            </ul>
+            <div>
+                <div id="npm_1">NPM</div>
+                <div id="pnpm_1">PNPM</div>
+                <div id="yarn_1">YARN</div>
+                <div id="bun_1">BUN</div>
+            </div>
+        </div>
+        <div class="cell-md-6">
+            <ul id="tabs2" data-role="tabs" data-link="engine" data-expand="true">
+                <li><a href="#npm_2"><span class="mif-npm"></span>npm</a></li>
+                <li><a href="#pnpm_2"><span class="mif-pnpm"></span>pnpm</a></li>
+                <li><a href="#yarn_2"><span class="mif-yarn"></span>yarn</a></li>
+                <li><a href="#bun_2"><span class="mif-bun"></span>bun</a></li>
+            </ul>
+            <div>
+                <div id="npm_2">NPM</div>
+                <div id="pnpm_2">PNPM</div>
+                <div id="yarn_2">YARN</div>
+                <div id="bun_2">BUN</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Submenu</div>
+    <p class="text-muted">
+        You can create tabs with submenu. 
+    </p>
+    <div class="mt-4">
+        <ul data-role="tabs" data-type="default" data-expand="true">
+            <li><a href="#">Tab 1</a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+            <li class="ml-auto">
+                <a href="#" class="dropdown-toggle">Dropdown</a>
+                <ul class="d-menu" data-role="dropdown">
+                    <li><a href="#">Submenu 1</a></li>
+                    <li><a href="#">Submenu 2</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Submenu 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Tabs Position</div>
+    <p class="text-muted">
+        You can set tabs position.
+    </p>
+    <div class="row mt-4">
+        <div class="cell-ld-6">
+            <div class="box-title-secondary">Top</div>
+            <div class="mt-4">
+                <ul data-role="tabs" data-expand-point="fs" data-position="top">
+                    <li><a href="#">Tab 1</a></li>
+                    <li><a href="#">Tab 2</a></li>
+                    <li><a href="#">Tab 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="cell-ld-6">
+            <div class="box-title-secondary">Bottom</div>
+            <div class="mt-4">
+                <ul data-role="tabs" data-expand-point="fs" data-position="bottom">
+                    <li><a href="#">Tab 1</a></li>
+                    <li><a href="#">Tab 2</a></li>
+                    <li><a href="#">Tab 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Tabs Type</div>
+    <p class="text-muted">
+        You can change tabs type: <code>default</code>, <code>pills</code>, <code>text</code>, or <code>group</code> to change tabs type.
+    </p>
+    
+    <div class="box-title-secondary">Default</div>
+    <div class="mt-4">
+        <ul data-role="tabs" data-type="default" data-expand="true">
+            <li><a href="#"><span class="icon"><span class="mif-rocket"></span></span> <span class="caption">Tab 1</span></a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+        </ul>
+    </div>
+
+    <div class="box-title-secondary">Pills</div>
+    <div class="mt-4">
+        <ul data-role="tabs" data-type="pills" data-expand="true">
+            <li><a href="#"><span class="icon"><span class="mif-rocket"></span></span> <span class="caption">Tab 1</span></a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+        </ul>
+    </div>
+
+    <div class="box-title-secondary">Text</div>
+    <div class="mt-4">
+        <ul data-role="tabs" data-type="text" data-expand="true">
+            <li><a href="#"><span class="icon"><span class="mif-rocket"></span></span> <span class="caption">Tab 1</span></a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+        </ul>
+    </div>
+
+    <div class="box-title-secondary">Group</div>
+    <div class="mt-4">
+        <ul data-role="tabs" data-type="group" data-expand="true">
+            <li><a href="#"><span class="icon"><span class="mif-rocket"></span></span> <span class="caption">Tab 1</span></a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Tabs Align</div>
+    <p class="text-muted">
+        You can change tabs type. Use this functionality with tabs type <code>default</code>, <code>pills</code>, or <code>text</code>.
+    </p>
+    
+    <div class="box-title-secondary">Default</div>
+    <div class="mt-4">
+        <ul data-role="tabs" data-type="default" data-expand="true">
+            <li><a href="#">Tab 1</a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+        </ul>
+    </div>
+    <div class="mt-4">
+        <ul data-role="tabs" data-type="default" data-expand="true" data-align="center">
+            <li><a href="#">Tab 1</a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+        </ul>
+    </div>
+    <div class="mt-4">
+        <ul data-role="tabs" data-type="default" data-expand="true" data-align="right">
+            <li><a href="#">Tab 1</a></li>
+            <li><a href="#">Tab 2</a></li>
+            <li><a href="#">Tab 3</a></li>
+        </ul>
+    </div>
+</div>

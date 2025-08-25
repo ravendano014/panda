@@ -1,0 +1,388 @@
+<script>window.PAGE_TITLE = 'Samples | Create Order'</script>
+
+<div class="box landing p-0 container-query" style="height: 100%; overflow-y: auto; overflow-x: hidden;">
+    <nav class="bg-dark fg-white" data-role="app-bar" data-expand="true" style="--appbar-item-color: #fff; --appbar-item-background-hover: var(--color-indigo); --appbar-item-color-hover: var(--color-white);">
+        <div class="app-bar-container">
+            <button class="button-crimson" id="catalog-toggle" onclick="$('#stack-menu').toggleClass('open')">
+                <span class="mif-apps icon"></span>
+            </button>
+
+            <a href="#" class="app-bar-item-static">
+                <div class="text-leader text-weight-9 fg-white">Shop<span class="fg-crimson">Demo</span></div>
+            </a>
+        </div>
+
+        <div class="app-bar-container dark-side d-none d-flex-md ml-auto">
+            <input type="text" data-role="input" class="" data-search-button="true" data-cls-search-button="button-crimson" placeholder="Search..." data-search-button-icon="<span class='mif-search'>">
+        </div>
+
+        <div class="app-bar-container ml-auto d-none d-flex-ld">
+            <a href="#" class="app-bar-item"><span class="mif-user-settings enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-justice enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-favorite-outline enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-shopping-cart enlarge-9"></span></a>
+        </div>
+
+        <!--        <a href="/pages/fullscreen/showcase.html" target="_blank" class="app-bar-item ml-auto ml-10-md"><span class="mif-external enlarge-9"></span></a>-->
+    </nav>
+
+    <div id="stack-menu" class="pos-absolute" style="top: 52px; height: calc(100% - 52px);"
+         data-role="stack-menu"
+         data-root-title="Main Menu"
+         data-back-button-icon="<span class='mif-chevron-left'>"
+         data-size="320"
+
+    >
+        <div class="d-flex pr-3">
+            <div class="title"></div>
+            <button class="cycle ml-auto" onclick="$('#stack-menu').removeClass('open')"><span class="mif-cross"></span></button>
+        </div>
+        <ul>
+            <li><a href="#"><span class="mif-user-settings icon"></span> Enter to profile</a></li>
+            <li>
+                <a href="#" class="fg-crimson"><span class="mif-apps icon"></span> Product Catalog</a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Xiaomi_RED.svg" class="icon" loading="lazy">
+                            Xiaomi
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Smartphones</a>
+                                <ul>
+                                    <li><a href="#">Xiaomi 15</a></li>
+                                    <li><a href="#">Xiaomi 14T</a></li>
+                                    <li><a href="#">Readmi Note 14</a></li>
+                                    <li><a href="#">Readmi 13</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Health and sports</a></li>
+                            <li><a href="#">Tablets</a></li>
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Smart house</a></li>
+                            <li><a href="#">Multimedia</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Scooter.svg" class="icon" loading="lazy">
+                            Transport and cycling
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_1.svg" class="icon" loading="lazy">
+                            Smartphones and phones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_2.svg" class="icon" loading="lazy">
+                            TV and Multimedia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_3.svg" class="icon" loading="lazy">
+                            Home Appliances
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_4.svg" class="icon" loading="lazy">
+                            Laptops, PCs and Tablets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_16.svg" class="icon" loading="lazy">
+                            Gaming Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_5.svg" class="icon" loading="lazy">
+                            Smartwatches and Gadgets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_6.svg" class="icon" loading="lazy">
+                            Audio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_7.svg" class="icon" loading="lazy">
+                            Sports and Health
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_8.svg" class="icon" loading="lazy">
+                            Tourism and Fishing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_9.svg" class="icon" loading="lazy">
+                            Repair and Equipment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_10.svg" class="icon" loading="lazy">
+                            Cottage, Home and Garden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_11.svg" class="icon" loading="lazy">
+                            Pet Supplies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_12.svg" class="icon" loading="lazy">
+                            Children's Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_13.svg" class="icon" loading="lazy">
+                            Auto and Moto Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/trumaj_zarjad_black.svg" class="icon" loading="lazy">
+                            Keep Charged
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_14.svg" class="icon" loading="lazy">
+                            Clothing and Accessories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_15.svg" class="icon" loading="lazy">
+                            Perfumes, Care, Jewelry
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="mif-favorite-outline icon"></span> Favorites</a></li>
+            <li><a href="#"><span class="mif-justice icon"></span> Comparing</a></li>
+            <li><a href="#"><span class="mif-tag-sale icon"></span> Sales</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid mb-6 mt-6" id="product-about">
+        <ul class="breadcrumbs">
+            <li><a href="#"><span class="mif-home"></span></a></li>
+            <li><a href="#">Shopping Cart</a></li>
+            <li><a href="#">Crate Order</a></li>
+        </ul>
+    </div>
+    
+    <div class="container-fluid">
+        <h2 class="m-4">Create Order</h2>
+        
+        <div class="row">
+            <div class="cell-md-8">
+                <div class="box border-none">
+                    <div class="box-title-secondary text-weight-8">Contact</div>
+                    <div class="box p-3 mt-4 d-flex flex-row flex-align-center">
+                        <span class="mif-person-outline enlarge-9"></span>
+                        <div class="ml-4 enlarge-2">Vasya Pupkin</div>
+                        <div class="ml-auto">
+                            <button class="link fg-blue text-bold">Change</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="box border-none">
+                    <div class="box-title-secondary text-weight-8">Location</div>
+                    <div class="box p-3 mt-4 d-flex flex-row flex-align-center">
+                        <span class="mif-location enlarge-9"></span>
+                        <div class="ml-4 enlarge-2">
+                            <div>Kyiv, Ukraine</div>
+                            <div class="reduce-2 text-muted">Hreshatik str. 10-32</div>
+                        </div>
+                        <div class="ml-auto">
+                            <button class="link fg-blue text-bold">Change</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box border-none">
+                    <div class="d-flex flex-row flex-align-center">
+                        <div>
+                            <div class="box-title-secondary text-weight-8 m-0">Order Details</div>
+                            <div>Seller: <span>My Great Shop</span></div>
+                        </div>
+                        <div class="order-sum ml-auto text-right">
+                            <div>in the amount:</div>
+                            <div class="enlarge-3 text-bold">$150</div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="cart-items">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td style="width: 100px"><div class="item-image"><img src="/images/396379084.webp"/></div></td>
+                                    <td>
+                                        <div class="item-name">
+                                            <a href="#">
+                                                <span class="fg-default text-bold">Multipic TEFAL Easy Fry&Grill Window</span>
+                                            </a>
+                                        </div>
+                                        <div class="item-desc reduce-2">
+                                            Tefal Easy Fry & Grill Window Ey506810 and Grill for cooking with or without oil use, as well as perfect grilled cooking.
+                                        </div>
+                                        <div class="border-top bd-default pt-2 mt-2 text-bold">
+                                            <span>$150</span> x <span>1</span> <small>unit(s)</small>
+                                        </div>
+                                    </td>
+                                    <td style="width: 160px">
+                                        <div class="item-price text-bold text-right">
+                                            $150
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="d-flex flex-justify-content-end">
+                                <button class="link fg-blue text-bold">Edit goods</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="delivery mt-6">
+                        <div class="box-title-secondary text-weight-8 m-0">Delivery</div>
+                        <div class="box">
+                            <div class="d-flex flex-row flex-align-center">
+                                <span class="mif-truck-delivery enlarge-9 mr-4"></span>
+                                <div>
+                                    <div class="text-bold">Nova Poshta Branch #156</div>
+                                    <div class="text-small">15 Shevchenka Street</div>
+                                    <div class="text-small">Kyiv, 01001</div>
+                                </div>
+                                <div class="ml-auto mr-auto">
+                                    Free
+                                </div>
+                                <div class="ml-auto">
+                                    <button class="link fg-blue text-bold">Change</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment mt-6">
+                        <div class="box-title-secondary text-weight-8 m-0">Payment Method</div>
+                        <div class="box">
+                            <ul class="unstyled-list">
+                                <li>
+                                    <input name="r1" type="radio" data-role="radio" data-caption="Payment while receiving the item">
+                                    <div class="description remark warning">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, sint.
+                                    </div>
+                                </li>
+                                <li>
+                                    <input checked name="r1" type="radio" data-role="radio" data-caption="Pay by card now">
+                                    <div class="description remark warning">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, sint.
+                                    </div>
+                                </li>
+                                <li>
+                                    <input name="r1" type="radio" data-role="radio" data-caption="Pay the bill in the bank">
+                                    <div class="description remark warning">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, sint.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cell-md-4">
+                <div class="box border-none">
+                    <div class="d-flex flex-row flex-align-center">
+                        <div>Promo-codes</div>
+                        <div class="ml-auto">
+                            <button class="link fg-blue text-bold"><span class="icon mif-plus"></span> Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="box border-none mt-4 mb-4">
+                    <button class="flat medium square place-right"><span class="mif-printer"></span></button>
+                    <div class="box-title-secondary text-weight-8 m-0">Total</div>
+                    
+                    <div class="mt-6">
+                        <div class="d-flex flex-row flex-align-center">
+                            <div>1 item on the amount</div>
+                            <div class="ml-auto text-right text-bold">$150</div>
+                        </div>
+                        <div class="d-flex flex-row flex-align-center">
+                            <div>Delivery cost</div>
+                            <div class="ml-auto text-right text-bold">Free</div>
+                        </div>
+                        <hr class="thin mt-2 mb-2"/>
+                        <div class="d-flex flex-row flex-align-center">
+                            <div>To pay</div>
+                            <div class="ml-auto text-right text-bold enlarge-5">$150</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 d-flex gap-2">
+                        <button class="success w-100">I confirm the order</button>
+                    </div>
+                    
+                    <div>
+                        <ul class="reduce-2">
+                            <li><a href="#" class="fg-default">Processing and Personal Data Protection Regulations</a></li>
+                            <li><a href="#" class="fg-default">User agreements</a></li>
+                        </ul>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<style>
+    .landing {
+        background: #f5f5f5;
+    }
+    
+    .dark-side {
+        .landing {
+            background: #222;
+        }
+    }
+    
+    .payment {
+        li {
+            padding: 1rem;
+            .description {
+                display: none;
+            }
+        }
+        li:has(input:checked) {
+            border: 1px solid var(--color-green);
+            border-radius: 6px;
+            .description {
+                display: block;
+            }
+        }
+    }
+</style>

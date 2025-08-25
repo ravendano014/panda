@@ -1,0 +1,126 @@
+<script>window.PAGE_TITLE = 'UI Elements | Tabs & Page Control'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-center">
+        <h1>Page Control</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-end-md flex-align-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">Page Control</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Page Control</div>
+    <p class="text-muted">
+        You can create tabbed control with <code>page control</code> component. For example, you can create a query editor. Press <code>+</code> button to create new tab.
+    </p>
+    <div class="mt-4">
+        <ul data-role="page-control" id="pc"
+            data-append-button="true"
+            data-tabs-actions="tabActions"
+            data-ref-control="true"
+            data-default-new-tab-icon="mif-database"
+            data-on-append-button-click="createQueryEditor"
+        ></ul>
+    </div>
+
+    <div id="tabs-content"></div>
+</div>
+
+<style>
+    #tabs-content {
+        padding: 8px 0;
+        z-index: 1;
+    }
+    .sql-editor {
+        height: 300px;
+        border: 1px solid var(--border-color);
+        
+        .sql-editor-content {
+            height: 100%;
+            padding: 1rem 0;
+        }
+    }
+</style>
+
+<script>
+    const createScript = src => {
+        const script = document.createElement('script');
+        return (src && (script.src = src), script);
+    }
+
+    const injectScript = script => document.body.appendChild(script)
+    
+    const monacoVer = "0.52.2"
+    const config = {
+        paths: {
+            vs: `https://cdn.jsdelivr.net/npm/monaco-editor@${monacoVer}/min/vs`,
+        },
+    }
+
+    const configurator = () => {
+        const require = window.require;
+        require.config(config);
+        require(
+            ['vs/editor/editor.main'],
+            function(monaco) {
+            },
+            function(error) {
+            },
+        );
+    }
+
+    const getMonaco = (configurator, error = () => {}) => {
+        const loaderScript = createScript(`${config.paths.vs}/loader.js`)
+        injectScript(loaderScript)
+        loaderScript.onload = () => configurator()
+        loaderScript.onerror  = error()
+    }
+    
+    getMonaco(configurator)
+
+    let pageIndex = 0;
+    
+    function createQueryEditor(tab){
+        pageIndex++
+        
+        const id = `content${pageIndex}`
+        
+        $(tab).data("ref", "#"+id)
+        
+        $("<div>")
+            .id(id)
+            .addClass("content-window")
+            .html(`
+                <div class="sql-editor">
+                    <div class="sql-editor-content" id="editor${pageIndex}"></div>
+                </div>
+            `)
+            .appendTo("#tabs-content")
+        
+        monaco.editor.create($(`#editor${pageIndex}`)[0], {
+            value: "",
+            language: 'sql',
+            automaticLayout: true,
+            stickyScroll: {
+                enabled: false,
+            }
+        })
+
+        this.pageIndex++
+    }
+    
+    function tabActions(){
+        return [
+            {
+                title: "User Action",
+                icon: "mif-user",
+                onclick: () => alert(1)
+            }
+        ]
+    }
+</script>

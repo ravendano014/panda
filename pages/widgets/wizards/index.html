@@ -1,0 +1,63 @@
+<script>window.PAGE_TITLE = 'UI Widgets | Wizard'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Wizard</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">Widgets</a></li>
+            <li class="active"><a href="#">Wizard</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        The Wizard component provides a step-by-step interface for guiding users through a process with multiple stages. It includes navigation controls and visual indicators for completed steps.
+    </p>
+</div>
+
+<div class="box container-query">
+    <div class="box-title">Wizard</div>
+    <div data-role="wizard" data-icon-next="в†’" data-icon-prev="в†ђ" class="wizard-wide-sm" style="--wizard-next-h: 100;">
+        <section><div class="page-content">Page 1</div></section>
+        <section><div class="page-content">Page 2</div></section>
+        <section><div class="page-content">Page 3</div></section>
+        <section><div class="page-content">Page 4</div></section>
+        <section><div class="page-content">Page 5</div></section>
+        <section><div class="page-content">Page 6</div></section>
+        <section><div class="page-content">Page 7</div></section>
+        <section><div class="page-content">Page 8</div></section>
+        <section><div class="page-content">Page 9</div></section>
+        <section><div class="page-content">Page 10</div></section>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Master</div>
+    <div data-role="master" data-control-next="в†’" data-control-prev="в†ђ">
+        <div class="page">Page 1</div>
+        <div class="page">Page 2</div>
+        <div class="page">Page 3</div>
+        <div class="page">Page 4</div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Wizard Classic</div>
+    <div data-role="wizard-classic" 
+         data-cls-page="d-flex flex-center" 
+         data-on-help="alert('Help Pressed!')"
+         data-on-cancel="alert('Cancel Pressed!')"
+         data-on-finish="alert('Finish Pressed!')"
+         data-icon-help="<span class='mif-help'>"
+    >
+        <div class="page">Page 1</div>
+        <div class="page">Page 2</div>
+        <div class="page">Page 3</div>
+        <div class="page">Page 4</div>
+    </div>
+</div>

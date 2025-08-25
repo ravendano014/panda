@@ -1,0 +1,159 @@
+<script>window.PAGE_TITLE = 'UI Elements | Tiles'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Tiles</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">Tiles</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About Tiles</div>
+    <p class="text-muted">
+        Metro UI contains classes to create tiles such as application tiles in Windows 8/10. 
+        To create a tile, you can add role tile to an element with attribute data-role.
+    </p>
+    <div class="mt-4">
+        <div class="tiles-grid">
+            <div data-role="tile" data-size="small"></div>
+            <div data-role="tile" data-size="small"></div>
+            <div data-role="tile" data-size="small" class="col-1 row-2"></div>
+            <div data-role="tile" data-size="small" class="col-2 row-2"></div>
+            <div data-role="tile" data-size="medium"></div>
+            <div data-role="tile" data-size="wide"></div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Tiles Grid</div>
+    <p class="text-muted">
+        For position tiles, you must use a special container with class <code>.tiles-grid</code>.
+        The grid is divided into cells of size <code>70x70</code> with an interval of <code>10px</code> without limitation to height or width. 
+        You can limit the size of the grid with subclasses <code>.size-*</code> from <code>1</code> to <code>10</code>. 
+        One size is equivalent to a small tile. 
+        All sizes include a gap.
+    </p>
+    
+    <div class="box-title-secondary">Position in a grid</div>
+    <p class="text-muted">
+        You can place a tile to a specified position in grid with special classes <code>.col-*</code> and <code>.row-*</code>. 
+        These classes defined from 1 to 12 and allow you to place the tile in the specified column and row.
+    </p>
+
+    <div class="box-title-secondary">Grouping tiles</div>
+    <p class="text-muted">
+        To grouping tiles, you can use special class <code>.tiles-group</code>. To set group fixed size, add one of classes:
+        <code>.size-half</code>, <code>.size-1</code>, <code>.size-2</code>,  <code>.size-3</code>, <code>.size-4</code>, <code>.size-5</code>,
+        <code>.size-6</code>, <code>.size-7</code>, <code>.size-8</code>, <code>.size-9</code>, <code>.size-10</code>.
+    </p>
+
+    <p class="text-muted">
+        Also, you can use media breakpoints for change size:
+        <code>.size-{media}-half</code>,
+        <code>.size-{media}-1</code>,
+        <code>.size-{media}-2</code>,
+        <code>.size-{media}-3</code>,
+        <code>.size-{media}-4</code>,
+        <code>.size-{media}-5</code>,
+        <code>.size-{media}-6</code>,
+        <code>.size-{media}-7</code>,
+        <code>.size-{media}-8</code>,
+        <code>.size-{media}-9</code>,
+        <code>.size-{media}-10</code>.
+        Where <code>{media}</code> is a breakpoint: <code>fs</code>, <code>xs</code>, <code>sm</code>, <code>ld</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, <code>xxl</code>, and <code>xxxl</code>.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Tile Size</div>
+    <p class="text-muted">
+        You can use <code>5</code> sizes for your tiles: <code>app</code>, <code>small</code>, <code>medium</code>, <code>wide</code> and <code>large</code>.
+        To set tile size use attribute <code>data-size</code>. The default size is <code>medium</code>.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Tile Content</div>
+    
+    <div class="box-title-secondary">Icon</div>
+    <p class="text-muted">
+        To add icon to tile, you can use <code>.icon</code> class. You can use image or icon class.
+    </p>
+    <div class="mt-4">
+        <div data-role="tile">
+            <span class="icon mif-rocket"></span>
+        </div>
+    </div>
+    
+    <div class="box-title-secondary">Branding Bar</div>
+    <p class="text-muted">
+        The branding bar is a text on the bottom left of the tile. To add a branding bar, you can use <code>.branding-bar</code> class. 
+    </p>
+    <div class="mt-4">
+        <div data-role="tile">
+            <span class="branding-bar">The Rocket</span>
+        </div>
+    </div>
+
+    <div class="box-title-secondary">Badge</div>
+    <p class="text-muted">
+        You can add a badge to tile. Use classes <code>.badge-top</code> and <code>.badge-bottom</code> to add a badge.
+    </p>
+    <div class="mt-4 tiles-grid">
+        <div data-role="tile">
+            <span class="badge-top">10</span>
+        </div>
+        <div data-role="tile">
+            <span class="badge-bottom">10</span>
+        </div>
+    </div>
+    
+    <div class="box-title-secondary">Image</div>
+    <p class="text-muted">
+        You can add cover image to tile. Use attribute <code>data-cover</code> to add an image.
+    </p>
+    <div class="mt-4">
+        <div data-role="tile" data-cover="https://picsum.photos/200">
+            <span class="branding-bar fg-white">The Rocket</span>
+        </div>
+    </div>
+    
+    <div class="box-title-secondary">Image Set</div>
+    <p class="text-muted">
+        You can use live wide tile with <code>image set</code> effect. 
+        To create this tile, add attribute <code>data-effect="image-set"</code> and add images inside tile.
+    </p>
+    <div class="mt-4">
+        <div data-role="tile" data-size="wide" data-effect="image-set">
+            <img src="https://picsum.photos/200?random=1" alt=""/>
+            <img src="https://picsum.photos/200?random=2" alt=""/>
+            <img src="https://picsum.photos/200?random=3" alt=""/>
+            <img src="https://picsum.photos/200?random=4" alt=""/>
+            <img src="https://picsum.photos/200?random=5" alt=""/>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Tile Color</div>
+    <p class="text-muted">
+        You can change the background color of tile with built-in background color classes or inline CSS.
+    </p>
+    <div class="mt-4">
+        <div class="tiles-grid">
+            <div data-role="tile" data-size="small" class="bg-red"></div>
+            <div data-role="tile" data-size="small" class="bg-amber"></div>
+            <div data-role="tile" data-size="small" class="bg-green col-1 row-2"></div>
+            <div data-role="tile" data-size="small" class="bg-pink col-2 row-2"></div>
+            <div data-role="tile" data-size="medium" class="bg-orange"></div>
+            <div data-role="tile" data-size="wide" style="background-color: #4a00b3"></div>
+        </div>
+    </div>
+</div>

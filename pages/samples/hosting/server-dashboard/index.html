@@ -1,0 +1,522 @@
+<script>window.PAGE_TITLE = 'Samples | Server Dashboard'</script>
+
+<div class="box p-0" style="height: 100%; overflow-y: auto">
+    <nav data-role="app-bar" data-expand-point="md" class="border-bottom bd-default" style="z-index: 1031">
+        <a href="#" class="app-bar-item-static">
+            <div class="text-leader text-weight-9">Host<span class="fg-orange">Ready</span></div>
+        </a>
+        <div class="app-bar-container ml-4">
+            <div class="dropdown-button">
+                <button class="medium dropdown-toggle bg-light-orange bd-orange">Service</button>
+                <ul class="d-menu" data-role="dropdown" style="min-width: 100%; max-height: 300px; overflow-y: auto;">
+                    <li class="menu-title">Hosting</li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 1</a></li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 2</a></li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 3</a></li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 4</a></li>
+
+                    <li class="menu-title">eVPS</li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 1</a></li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 2</a></li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 3</a></li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 4</a></li>
+
+                    <li class="menu-title">Servers</li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 1</a></li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 2</a></li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 3</a></li>
+                    <li><a href="#"><span class="icon mif-cog"></span>Service 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="app-bar-container ml-auto">
+            <ul class="app-bar-menu ml-auto mr-1">
+                <li><a href="#">Domains</a></li>
+                <li><a href="#">Hosting</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+            <div class="app-bar-container gap-1">
+                <button class="small square flat warning"><span class="mif-user-settings"></span></button>
+                <button class="small square flat alert"><span class="mif-exit"></span></button>
+            </div>
+            <button class="medium link no-decor">
+                <span class="mif-shopping-cart mif-2x"></span>
+                <span class="badge corner">2</span>
+            </button>
+        </div>
+    </nav>
+    
+    <section class="bg-light-orange" style="
+        --appbar-background: var(--color-light-orange);
+        --appbar-item-color: #000;
+        --appbar-item-background-hover: #fff;
+    ">
+        <nav data-role="app-bar" data-expand-point="md">
+            <ul class="app-bar-menu">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+
+            <div class="ml-auto app-bar-container gap-4">
+                <div>
+                    <a href="#" class="fg-dark"><small>Client ID:</small> <span class="text-bold" id="client-id">100 517 306</span></a>
+                </div>
+                <div>
+                    <a href="#" class="fg-dark"><small>Balance:</small> <span class="text-bold" id="user-balance">$2,500.69</span></a>
+                </div>
+            </div>
+        </nav>
+    </section>
+    
+    <div class="layout-sidenav" style="height: calc(100% - 54px)">
+        <div>
+            <ul data-role="sidenav" data-expand-point="lg" data-toggle="#sidenav-toggler">
+                <li class="bg-default gradient-border animated-border-orange"><a href="#">
+                    <span class="icon mif-add-shopping-cart"></span>
+                    <span class="caption">New Service</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon mif-connected-data"></span>
+                    <span class="caption">All Services</span>
+                    <span class="badge">3</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon mif-earth-net"></span>
+                    <span class="caption">Hosting</span>
+                    <span class="badge">0</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon mif-server"></span>
+                    <span class="caption">eVPS</span>
+                    <span class="badge">1</span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon mif-server-rack"></span>
+                    <span class="caption">Dedicated Servers</span>
+                    <span class="badge">0</span>
+                </a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        <span class="icon mif-cloud-hosting"></span>
+                        <span class="caption">Cloud</span>
+                        <span class="badge">2</span>
+                    </a>
+                    <ul class="d-menu" data-role="dropdown">
+                        <li><a href="#">
+                            <span class="icon mif-cloud-server"></span>
+                            <span class="caption">Servers</span>
+                            <span class="badge">2</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="icon mif-drive2"></span>
+                            <span class="caption">Disks</span>
+                            <span class="badge">0</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="icon mif-justice"></span>
+                            <span class="caption">Balancers</span>
+                            <span class="badge">0</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="icon mif-settings-ethernet"></span>
+                            <span class="caption">IP Addresses</span>
+                            <span class="badge">0</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="icon mif-security"></span>
+                            <span class="caption">Private Networks</span>
+                            <span class="badge">0</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="icon mif-fire"></span>
+                            <span class="caption">Firewalls</span>
+                            <span class="badge">0</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="icon mif-key2"></span>
+                            <span class="caption">SSH Keys</span>
+                            <span class="badge">2</span>
+                        </a></li>
+                        <li><a href="#">
+                            <span class="icon mif-person-card"></span>
+                            <span class="caption">Certificates</span>
+                            <span class="badge">0</span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">
+                    <span class="icon mif-stream-server"></span>
+                    <span class="caption">Streaming Servers</span>
+                    <span class="badge">0</span>
+                </a></li>
+            </ul>
+        </div>
+        
+        <div>
+            <div class="p-4">
+                <div class="row flex-align-center gap-4">
+                    <div class="cell-md-6">
+                        <div class="h1 m-0 d-flex">
+                            <button id="sidenav-toggler" class="flat square"><span class="mif-menu"></span></button>
+                            <span class="server-name ml-1">Big-Pig</span>
+                            <div class=" ml-2 d-flex flex-column flex-justify-end gap-1">
+                                <span class="button mini link"><span class="mif-pencil icon"></span>Edit Name</span>                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell-md-6 d-flex">
+                        <ul class="breadcrumbs ml-auto-md">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Cloud</a></li>
+                            <li><a href="#">Servers</a></li>
+                            <li class="active"><a href="#">Big-Pig</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <div class="row">
+                        <div class="cell-sm-6 cell-lg-3">
+                            <div class="info-box2">
+                                <div class="title">Image</div>
+                                <div class="value mono">
+                                    <span class="primary-value">Ubuntu</span>
+                                    <span class="secondary-value">24.04 LTS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-lg-3">
+                            <div class="info-box2">
+                                <div class="title">IPv4</div>
+                                <div class="value mono">
+                                    <div class="primary-value">
+                                        <span id="ipv4-value">127.0.0.1</span> 
+                                        <span class="mif-copy c-pointer" data-copy-to-clipboard="127.0.0.1"></span>
+                                    </div>
+                                    <span class="secondary-value">swimming</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-lg-3">
+                            <div class="info-box2">
+                                <div class="title">IPv6</div>
+                                <div class="value mono">
+                                    <div class="primary-value">
+                                        <span class="ipv6-value">2a02:2279:1236::25e</span>
+                                        <span class="mif-copy c-pointer" data-copy-to-clipboard="2a02:2279:1236::25e"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-lg-3">
+                            <div class="info-box2">
+                                <span data-role="bull" data-type="success" data-size="32" class="pos-absolute" style="top: 6px; right: 6px"></span>
+                                <div class="title">Status</div>
+                                <div class="value mono">
+                                    <span class="primary-value">Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <div class="row gap-2">
+                        <div class="cell-md-8 order-2-fs order-1-md">
+                            <div>
+                                <div class="row gap-2">
+                                    <div class="cell-fs-6 cell-ld-4">
+                                        <div class="icon-box">
+                                            <div class="icon"><span class="mif-cpu"></span></div>
+                                            <div class="content">
+                                                <div class="title">vCPU</div>
+                                                <div class="value">16</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell-fs-6 cell-ld-4">
+                                        <div class="icon-box">
+                                            <div class="icon"><span class="mif-ram"></span></div>
+                                            <div class="content">
+                                                <div class="title">RAM</div>
+                                                <div class="value">32 GB</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell-fs-6 cell-ld-4">
+                                        <div class="icon-box">
+                                            <div class="icon"><span class="mif-drive2"></span></div>
+                                            <div class="content">
+                                                <div class="title">Storage</div>
+                                                <div class="value">240 GB</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="box d-flex flex-wrap flex-center gap-2 mt-4">
+                                <h3 class="text-center w-100">Control Panel</h3>
+                                <button class="square" title="Power"><span class="mif-power icon"></span></button>
+                                <button class="square" title="Restore"><span class="mif-publish-changes icon"></span></button>
+                                <button class="square" title="Backups"><span class="mif-file-zip icon"></span></button>
+                                <button class="square" title="Reinstall"><span class="mif-construction icon"></span></button>
+                                <button class="square" title="Change Size"><span class="mif-enlarge2 icon"></span></button>
+                                <button class="square" title="Disks"><span class="mif-drive icon"></span></button>
+                                <button class="square" title="Firewall"><span class="mif-fire icon"></span></button>
+                                <button class="square" title="VPN"><span class="mif-security icon"></span></button>
+                                <button class="square" title="Event Log"><span class="mif-quickedit icon"></span></button>
+                                <button class="square" title="Resources"><span class="mif-gauge icon"></span></button>
+                                <button class="square alert" title="Delete Server"><span class="mif-skull-and-bones icon"></span></button>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <div class="row gap-2">
+                                    <div class="cell-fs-6 cell-sm-4">
+                                        <div class="box">
+                                            <div id="gauge-network-bandwidth"
+                                                 data-role="gauge"
+                                                 data-min="0"
+                                                 data-max="1000"
+                                                 data-label="Mbps"
+                                                 data-segments="10"
+                                                 data-theme="speed"
+                                                 data-values="11"
+                                            ></div>
+                                            <div class="text-center">Network Bandwidth</div>
+                                        </div>
+                                    </div>
+                                    <div class="cell-fs-6 cell-sm-4">
+                                        <div class="box">
+                                            <div id="gauge-cpu"
+                                                 data-role="gauge"
+                                                 data-min="0"
+                                                 data-max="100"
+                                                 data-label="%"
+                                                 data-segments="10"
+                                                 data-theme="load"
+                                                 data-label-min="Low"
+                                                 data-label-max="Extreme"
+                                                 data-values="11"></div>
+                                            <div class="text-center">CPU</div>
+                                        </div>
+                                    </div>
+                                    <div class="cell-fs-6 cell-sm-4">
+                                        <div class="box">
+                                            <div id="gauge-disk"
+                                                 data-role="gauge"
+                                                 data-min="0"
+                                                 data-max="100"
+                                                 data-label="%"
+                                                 data-segments="10"
+                                                 data-theme="load"
+                                                 data-label-min="Empty"
+                                                 data-label-max="Full"
+                                                 data-value="75"
+                                                 data-values="11"></div>
+                                            <div class="text-center">Disk Quota</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="box mt-4">
+                                <div class="box-title d-flex flex-align-center">
+                                    <span class="caption">Disks</span>
+                                    <button class="medium square flat ml-auto" title="Manage disks"><span class="mif-cog icon"></span></button>
+                                </div>
+                                <table class="table striped compact">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 30px"></th>
+                                        <th>Name</th>
+                                        <th>Size</th>
+                                        <th style="width: 100px">Used</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><span class="mif-drive"></span></td>
+                                        <td><span class="mono">/dev/sda1</span></td>
+                                        <td><span>240 GB</span></td>
+                                        <td><span>100 GB</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mif-drive"></span></td>
+                                        <td><span class="mono">/dev/sda2</span></td>
+                                        <td><span>240 GB</span></td>
+                                        <td><span>0 GB</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mif-usb-dongle"></span></td>
+                                        <td><span class="mono">/dev/sda3</span></td>
+                                        <td><span>128 GB</span></td>
+                                        <td><span>20 GB</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="box mt-4">
+                                <div class="box-title d-flex flex-align-center">
+                                    <span class="caption">IP Addresses</span>
+                                    <button class="medium square flat ml-auto" title="Manage IP Addresses"><span class="mif-cog icon"></span></button>
+                                </div>
+                                <table class="table striped compact">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 30px"></th>
+                                        <th>IP Address</th>
+                                        <th>Type</th>
+                                        <th>Reverse DNS</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><span class="mif-ethernet"></span></td>
+                                        <td><span class="mono">127.0.0.1</span></td>
+                                        <td><span>IPv4</span></td>
+                                        <td><span>78.27.236.44.mirohost.cloud</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="mif-ethernet"></span></td>
+                                        <td><span class="mono">2a02:2279:1236::25e</span></td>
+                                        <td><span>IPv6</span></td>
+                                        <td><span>2a02:2279:1236::25e.mirohost.cloud</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="cell-md-4 order-1-fs order-2-md">
+                            <div class="box">
+                                <div class="box-title">
+                                    <span class="icon mif-server mr-1"></span>
+                                    <span class="caption">Server Info</span>
+                                </div>
+                                <table class="table striped compact">
+                                    <tbody>
+                                    <tr>
+                                        <td>Service Code:</td>
+                                        <td class="text-right"><span class="text-bold">H-164685</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Datacenter:</td>
+                                        <td class="text-right"><span class="text-bold">EU-WAW-1</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="mt-2 mb-2 d-flex flex-align-center">
+                                    <button class="flat square" title="Server protection"><span class="icon mif-lock"></span></button>
+                                    <button class="flat square" title="VNC Console"><span class="icon mif-terminal2"></span></button>
+                                    <button class="flat square" title="VNC Log"><span class="icon mif-receipt"></span></button>
+                                    <input type="checkbox" data-role="switch" class="switch-red ml-auto" checked data-onoff="true" data-prepend="Power">
+                                </div>
+
+                                <hr class="thin">
+
+                                <div class="box-title mt-4 text-bold"><span class="mif-coin-outline mr-1"></span>Finance</div>
+                                <table class="table striped compact">
+                                    <tbody>
+                                    <tr>
+                                        <td>Balance:</td>
+                                        <td class="text-right">$<span class="text-bold">2,500.69</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Next paymet date:</td>
+                                        <td class="text-right"><span class="text-bold">01/01/2030</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <div class="mt-4 mb-6 d-flex flex-align-center">
+                                    <input type="checkbox" data-role="switch" data-append="Lock" data-onoff="true" class="switch-orange">
+                                    <div class="ml-auto d-flex flex-wrap gap-2">
+                                        <button class="small"><span class="icon mif-history"></span>History</button>
+                                        <button class="small success"><span class="icon mif-dollar2"></span>Top Up</button>
+                                    </div>
+                                </div>
+                                
+                                <table class="table striped compact">
+                                    <tbody>
+                                    <tr>
+                                        <td>Tariff:</td>
+                                        <td class="text-right"><span class="text-bold">dmh51</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Price:</td>
+                                        <td class="text-right"><span class="text-bold">$99/mo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paid to:</td>
+                                        <td class="text-right"><span class="text-bold">01/01/2030</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="mt-2 mb-2 d-flex flex-align-center">
+                                    <input type="checkbox" checked data-role="switch" data-append="Autorenew" data-onoff="true" class="switch-orange">
+                                    <button class="success small ml-auto" onclick="$(this).toggleClass('loading'); setTimeout(() => $(this).toggleClass('loading'), 2000)">
+                                        <span class="mif-spinner5 ani-spin loader"></span>
+                                        <span class="caption">Renew Now</span>
+                                    </button>
+                                </div>
+
+                                <hr class="thin">
+                                
+                                <div class="box-title mt-4 text-bold"><span class="mif-quickedit mr-1"></span>Event Log</div>
+                                <div class="mt-4 ml-1">
+                                    <ul class="timeline">
+                                        <li>
+                                            <span class="time">13.10.2023, 22:00:00</span>
+                                            <p class="data">Server Recreated</p>
+                                        </li>
+                                        <li>
+                                            <span class="time">13.10.2023, 21:06:31</span>
+                                            <p class="data">Server Stoped</p>
+                                        </li>
+                                        <li>
+                                            <span class="time">14.08.2023, 15:52:57</span>
+                                            <p class="data">Server Started</p>
+                                        </li>
+                                        <li>
+                                            <span class="time">14.08.2023, 15:52:31</span>
+                                            <p class="data">Server Created</p>
+                                        </li>
+                                        <li class="timeline-end">
+                                            <a href="#" class="time">View event log в†’</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (() => {
+        function updateGauges(){
+            const gNetworkBandwidth = Metro.getPlugin("#gauge-network-bandwidth", "gauge");
+            const vNetworkBandwidth = Math.floor(Math.random() * (gNetworkBandwidth.options.max - gNetworkBandwidth.options.min + 1) + gNetworkBandwidth.options.min); gNetworkBandwidth.val(vNetworkBandwidth);
+
+            const gCPU = Metro.getPlugin("#gauge-cpu", "gauge");
+            const vCPU = Math.floor(Math.random() * (gCPU.options.max - gCPU.options.min + 1) + gCPU.options.min); gCPU.val(vCPU);
+
+        }
+
+        function updateGaugeDisk(){
+            const gDisk = Metro.getPlugin("#gauge-disk", "gauge");
+            const vDISK = Math.floor(Math.random() * (gDisk.options.max - gDisk.options.min + 1) + gDisk.options.min); gDisk.val(vDISK);
+        }
+        
+        App.intervals.push(setInterval(updateGauges, 2000))
+        App.intervals.push(setInterval(updateGaugeDisk, 10000))
+    })()
+</script>

@@ -1,0 +1,166 @@
+<script>window.PAGE_TITLE = 'General | Grid System'</script>
+<style>
+    .demo {
+        margin: 20px 0;
+        [class*="cell-"], [class*="cell-"] {
+            height: 40px;
+            background: var(--default-background);
+            color: var(--default-color);
+            border: 1px solid var(--color-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+    }
+
+    .dark-side {
+        .demo {
+            [class*="cell-"], [class*="cell-"] {
+                background: var(--default-background);
+                color: var(--default-color);
+                border: 1px solid var(--border-color);
+            }
+        }
+    }
+</style>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Grid System</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li class="active"><a href="#">Grid System</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About Grid System</div>
+    <p class="text-muted">
+        You can create a grid with built-in grid system.
+        The grid system uses a series of containers, rows, and columns to layout and align content.
+        It is built with CSS container query, flexbox and is fully responsive. 
+    </p>
+    <p class="text-muted">
+        The following CSS classes are available for building a grid:
+        <code>.grid</code>,
+        <code>.row</code>,
+        <code>.cell-*</code>,
+        <code>.cell-*-*</code>,
+        <code>.cell-*-one-fifth</code>,
+        <code>.cell-*-two-fifth</code>,
+        <code>.cell-*-three-fifth</code>,
+        <code>.cell-*-four-fifth</code>,
+        <code>.offset-*</code>,
+        and <code>.offset-*-*</code>.
+    </p>
+
+    <p class="text-muted">
+        Grid uses <code>@container</code> queries and adapts depending on the size of the closest parent with the <code>.row</code> class.
+    </p>
+    
+    <div class="mt-4 table-scrollable">
+        <div class="box-title-secondary">Breakpoints:</div>
+        <table class="table striped border bd-default cell-border striped">
+            <thead>
+            <tr>
+                <th>Breakpoint</th>
+                <th>Size (px)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr><td>fs</td><td>&lt; 360</td></tr>
+            <tr><td>xs</td><td>&gt;= 360</td></tr>
+            <tr><td>sm</td><td>&gt;= 576</td></tr>
+            <tr><td>ld</td><td>&gt;= 640</td></tr>
+            <tr><td>md</td><td>&gt;= 768</td></tr>
+            <tr><td>lg</td><td>&gt;= 992</td></tr>
+            <tr><td>xl</td><td>&gt;= 1200</td></tr>
+            <tr><td>xxl</td><td>&gt;= 1400</td></tr>
+            <tr><td>xxxl</td><td>&gt;= 2000</td></tr>
+            </tbody>
+        </table>
+
+        <div class="box-title-secondary">Grid Features:</div>
+        <table class="table striped border bd-default cell-border">
+            <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td># of columns</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Gutter width</td>
+                <td>16px</td>
+            </tr>
+            <tr>
+                <td>Custom gutters</td>
+                <td>Yes, with CSS variable <code>--grid-gap</code></td>
+            </tr>
+            <tr>
+                <td>Nestable</td>
+                <td>Yes, <code>.row > .row > ...</code></td>
+            </tr>
+            <tr>
+                <td>Column ordering</td>
+                <td>Yes, with classes <code>order-*-*</code></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Grid Gutter Size</div>
+    <p class="text-muted">
+        Grid System used <code>--grid-gap</code> variable to set gutter width.
+        To set gutter width to <code>10px</code>, you can use the following code:
+    </p>
+</div>
+
+<div class="box" id="grid-example">
+    <div class="box-title">Grid Example</div>
+
+    <div class="grid demo">
+        <div class="row">
+            <div class="cell-md-1">cell-*-1</div>
+            <div class="cell-md-11">cell-*-11</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-2">cell-*-2</div>
+            <div class="cell-md-10">cell-*-10</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-3">cell-*-3</div>
+            <div class="cell-md-9">cell-*-9</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-4">cell-*-4</div>
+            <div class="cell-md-8">cell-*-8</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-5">cell-*-5</div>
+            <div class="cell-md-7">cell-*-7</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-6">cell-*-6</div>
+            <div class="cell-md-6">cell-*-6</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-one-fifth">cell-*-one-fifth</div>
+            <div class="cell-md-two-fifth">cell-*-two-fifth</div>
+            <div class="cell-md-two-fifth">cell-*-two-fifth</div>
+        </div>
+        <div class="row">
+            <div class="cell-md-12">cell-*-12</div>
+        </div>
+    </div>
+</div>

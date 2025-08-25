@@ -1,0 +1,48 @@
+
+<script>window.PAGE_TITLE = 'Widgets | Package Manager'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Package Manager</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="/">Panda 1.0</a></li>
+            <li><a href="#">Widgets</a></li>
+            <li class="active"><a href="#">Package Manager</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        The package manager component is designed to visualize the installation of a package from npm.
+        With Metro UI, you can create package manager simple and easy with role <code>package-manager</code>.
+        The package manager is ideal for displaying the installation of a package from npm.
+    </p>
+    
+    <div class="mt-10">
+        <div data-role="package-manager" data-package="@olton/metroui"></div>
+    </div>
+    <div class="mt-10">
+        <div data-role="package-manager" data-package="esbuild" data-deps="dev"></div>
+    </div>
+    <div class="mt-10">
+        <div data-role="package-manager" data-package="lodash" data-deps="peer"></div>
+    </div>
+    
+    <p class="text-muted">
+        All these components interconnected. To disable or change link, use the <code>data-link</code> attribute.  
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Default tab</div>
+    <p class="text-muted">
+        You can change a default tab with attribute <code>data-default</code> and value: <code>npm</code>, <code>pnpm</code>, <code>yarn</code>, or <code>bun</code>.
+    </p>
+    <div class="mt-10">
+        <div data-role="package-manager" data-package="@olton/metroui" data-link=""  data-default="yarn"></div>
+    </div>
+</div>

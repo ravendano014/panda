@@ -1,0 +1,54 @@
+<script>window.PAGE_TITLE = 'Panda 1.0 | Themes'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Themes</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li class="active"><a href="#">Themes</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Dark &amp; Light</div>
+    <div class="ribbon ribbon-crimson right"><span class="icon mif-notifications ani-ring"></span>New</div>
+    <p class="text-muted">
+        Metro UI supports out-of-the-box light and dark themes for components.
+        By default, the theme is set to <code>light</code>.
+        To change the theme, add class <code>.dark-side</code> to the <code>&lt;html&gt;</code> element for global or set this class to the <code>&lt;element&gt;</code> for local.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Theme according to the system</div>
+    <p class="text-muted">
+        You can use the <code>prefers-color-scheme</code> media feature to detect if the user has requested the system use a light or dark color theme.
+        To use this feature, add meta tag <code>metroui:theme</code> with content <code>auto</code> to the <code>page head</code>.
+        Also, you can use values <code>light</code> and <code>dark</code> to set the specific theme.
+    </p>
+    <div data-role="directive" data-directive="warning" data-show-icon="true" data-style="2">
+        The component <code>theme-switcher</code> will not work if this meta-tag is used!
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Theme Switcher</div>
+    <p class="text-muted">
+        You can use component <code>theme-switcher</code> to add control to switch between light and dark themes.
+        This component automatically sets theme class <code>.dark-side</code> to the specified in attribute <code>data-target</code> element (by default it is <code>&lt;html&gt;</code> element).
+        To use this component, add attribute <code>data-role="theme-switcher"</code> to the <code>&lt;input&gt;</code> element. 
+    </p>
+    
+    <div class="box-title-secondary">Switch Mode</div>
+    <div class="mt-4">
+        <input type="checkbox" data-role="theme-switcher"/>
+    </div>
+
+    <div class="box-title-secondary">Button Mode</div>
+    <div class="mt-4">
+        <input type="checkbox" data-role="theme-switcher" data-mode="button"/>
+    </div>
+</div>

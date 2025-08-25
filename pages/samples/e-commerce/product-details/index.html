@@ -1,0 +1,588 @@
+<script>window.PAGE_TITLE = 'Samples | Product'</script>
+
+<div class="box landing p-0 container-query" style="height: 100%; overflow-y: auto; overflow-x: hidden;">
+    <nav class="bg-dark fg-white" data-role="app-bar" data-expand="true" style="--appbar-item-color: #fff; --appbar-item-background-hover: var(--color-indigo); --appbar-item-color-hover: var(--color-white);">
+        <div class="app-bar-container">
+            <button class="button-crimson" id="catalog-toggle" onclick="$('#stack-menu').toggleClass('open')">
+                <span class="mif-apps icon"></span>
+            </button>
+
+            <a href="#" class="app-bar-item-static">
+                <div class="text-leader text-weight-9 fg-white">Shop<span class="fg-crimson">Demo</span></div>
+            </a>
+        </div>
+
+        <div class="app-bar-container dark-side d-none d-flex-md ml-auto">
+            <input type="text" data-role="input" class="" data-search-button="true" data-cls-search-button="button-crimson" placeholder="Search..." data-search-button-icon="<span class='mif-search'>">
+        </div>
+
+        <div class="app-bar-container ml-auto d-none d-flex-ld">
+            <a href="#" class="app-bar-item"><span class="mif-user-settings enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-justice enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-favorite-outline enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-shopping-cart enlarge-9"></span></a>
+        </div>
+
+<!--        <a href="/pages/fullscreen/showcase.html" target="_blank" class="app-bar-item ml-auto ml-10-md"><span class="mif-external enlarge-9"></span></a>-->
+    </nav>
+
+    <div id="stack-menu" class="pos-absolute" style="top: 52px; height: calc(100% - 52px);"
+         data-role="stack-menu"
+         data-root-title="Main Menu"
+         data-back-button-icon="<span class='mif-chevron-left'>"
+         data-size="320"
+
+    >
+        <div class="d-flex pr-3">
+            <div class="title"></div>
+            <button class="cycle ml-auto" onclick="$('#stack-menu').removeClass('open')"><span class="mif-cross"></span></button>
+        </div>
+        <ul>
+            <li><a href="#"><span class="mif-user-settings icon"></span> Enter to profile</a></li>
+            <li>
+                <a href="#" class="fg-crimson"><span class="mif-apps icon"></span> Product Catalog</a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Xiaomi_RED.svg" class="icon" loading="lazy">
+                            Xiaomi
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Smartphones</a>
+                                <ul>
+                                    <li><a href="#">Xiaomi 15</a></li>
+                                    <li><a href="#">Xiaomi 14T</a></li>
+                                    <li><a href="#">Readmi Note 14</a></li>
+                                    <li><a href="#">Readmi 13</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Health and sports</a></li>
+                            <li><a href="#">Tablets</a></li>
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Smart house</a></li>
+                            <li><a href="#">Multimedia</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Scooter.svg" class="icon" loading="lazy">
+                            Transport and cycling
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_1.svg" class="icon" loading="lazy">
+                            Smartphones and phones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_2.svg" class="icon" loading="lazy">
+                            TV and Multimedia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_3.svg" class="icon" loading="lazy">
+                            Home Appliances
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_4.svg" class="icon" loading="lazy">
+                            Laptops, PCs and Tablets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_16.svg" class="icon" loading="lazy">
+                            Gaming Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_5.svg" class="icon" loading="lazy">
+                            Smartwatches and Gadgets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_6.svg" class="icon" loading="lazy">
+                            Audio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_7.svg" class="icon" loading="lazy">
+                            Sports and Health
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_8.svg" class="icon" loading="lazy">
+                            Tourism and Fishing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_9.svg" class="icon" loading="lazy">
+                            Repair and Equipment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_10.svg" class="icon" loading="lazy">
+                            Cottage, Home and Garden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_11.svg" class="icon" loading="lazy">
+                            Pet Supplies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_12.svg" class="icon" loading="lazy">
+                            Children's Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_13.svg" class="icon" loading="lazy">
+                            Auto and Moto Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/trumaj_zarjad_black.svg" class="icon" loading="lazy">
+                            Keep Charged
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_14.svg" class="icon" loading="lazy">
+                            Clothing and Accessories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_15.svg" class="icon" loading="lazy">
+                            Perfumes, Care, Jewelry
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="mif-favorite-outline icon"></span> Favorites</a></li>
+            <li><a href="#"><span class="mif-justice icon"></span> Comparing</a></li>
+            <li><a href="#"><span class="mif-tag-sale icon"></span> Sales</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid mb-6 mt-6" id="product-about">
+        <ul class="breadcrumbs">
+            <li><a href="#"><span class="mif-home"></span></a></li>
+            <li><a href="#">Small appliances</a></li>
+            <li><a href="#">Multi-cookers and air grills</a></li>
+            <li><a href="#">Multipic TEFAL Easy Fry&Grill Window</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid pos-sticky z-absolute" style="top: 50px">
+        <div class="box p-1">
+            <ul class="h-menu product-menu">
+                <li class="active"><a href="#product-about">About</a></li>
+                <li><a href="#product-specification">Specification</a></li>
+                <li><a href="#product-reviews">Reviews</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <div class="cell-md-6">
+                <div class="box pos-sticky" style="top: 20px">
+                    <div data-role="image-carousel">
+                        <div class="badge -left bg-orange fg-white">
+                            TOP SELLERS
+                        </div>
+                        <img src="/images/396379084.webp" alt="">
+                        <img src="/images/395273680.webp" alt="">
+                        <img src="/images/395273681.webp" alt="">
+                        <img src="/images/395273682.webp" alt="">
+                        <img src="/images/395273683.webp" alt="">
+                        <img src="/images/395273684.webp" alt="">
+                        <img src="/images/395273685.webp" alt="">
+                        <img src="/images/395273686.webp" alt="">
+                        <img src="/images/395273687.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="cell-md-6">
+                <div class="box">
+                    <div class="box-title">Multipic TEFAL Easy Fry&Grill Window</div>
+                    <div class="d-flex">
+                        <div class="d-flex flex-center" style="--rating-on-color: var(--color-orange)">
+                            <input data-role="rating" data-static="true" data-value="4.5">
+                            <a class="no-decor" href="#"><span class="mif-chat-line mr-1"></span> 85 reviews</a>
+                        </div>
+                        <div class="ml-auto">
+                            Art: 412231971
+                        </div>
+                    </div>
+
+                    <div class="product-options mt-4">
+                        <div class="color-option">
+                            <div class="mb-2">Color: <span id="product-color-value" class="text-weight-8"></span></div>
+                            <div data-role="button-group" data-required-button="true" data-cls-active="color-button-active" data-on-button-click="changeColor">
+                                <button class="square small bg-orange" data-value="Orange"></button>
+                                <button class="square small bg-red" data-value="Red"></button>
+                                <button class="square small bg-blue" data-value="Blue"></button>
+                                <button class="square small bg-green" data-value="Green"></button>
+                                <button class="square small bg-steel" data-value="Steel"></button>
+                            </div>
+                        </div>
+
+                        <div class="color-option">
+                            <div class="mb-2">Memory: <span id="product-memory-value" class="text-weight-8"></span></div>
+                            <div data-role="button-group" data-required-button="true" data-cls-active="color-button-active" data-on-button-click="changeMemory">
+                                <button class="small" data-value="128 GB">128 GB</button>
+                                <button class="small" data-value="256 GB">256 GB</button>
+                                <button class="small" data-value="512 GB">512 GB</button>
+                                <button class="small" data-value="1 TB">1 TB</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="description mt-4">
+                        Tefal Easy Fry & Grill Window Ey506810 and Grill for cooking with or without oil use, as well as perfect grilled cooking.
+
+                        <span id="more-toggle" class="c-pointer no-user-select fg-crimson text-bold">More...</span>
+
+                        <div class="mt-4" data-role="collapse" data-collapsed="true" data-toggle-element="#more-toggle">
+                            <p> Enjoy the perfect results with a viewing window that allows you to monitor the cooking process. </p>
+                            <p>
+                                <b> Control while cooking </b>
+                                Watch the cooking process inside without opening the bowl, thanks to the window.
+                            </p>
+                            <p>
+                                <b> 2-in-1 </b>
+                                Multipic and grill in one device for universal and healthy eating.
+                            </p>
+                            <p>
+                                <b> Grill technology </b>
+                                For the perfect frying of any non-stick and built-in drainage products.
+                            </p>
+                            <p>
+                                <b> Extra crisp technology </b>
+                                Safe frying technology, which provides crispy golden results with or without oil, as well as 99 % less than added fat* (* 700 g of fresh fries made with 8 ml of oil, compared to traditional frying with 2 liters).
+                            </p>
+                            <p>
+                                <b> Accurate touch screen </b>
+                                2 manual features and 8 automatic programs, including fries, nuggets, fried chicken, pizza, meat, fish, vegetables and dessert.
+                            </p>
+                            <p>
+                                <b> Free App </b>
+                                Inspire with simple and delicious recipes in the application that will delight the whole family daily.
+                            </p>
+                            <p>
+                                <b> Quick preparation </b>
+                                Cook twice as fast as in the classic oven ** (** External cooking test was performed at 700 g of frozen fries compared to Moulinex/Tefal convection oven), with less energy consumed.
+                            </p>
+                            <p>
+                                <b> Volume XL </b>
+                                The volume of 4.5 liters is ideal for a large family up to 6 people.
+                            </p>
+                            <p>
+                                <b> 15 years of repair </b>
+                                Inexpensive and fast delivery of 6200 repair centers worldwide as part of our desire to protect the environment and reduce the amount of waste.
+                            </p>                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div>
+                        <span>Seller:</span>
+                        <span class="enlarge-3 text-weight-9"><img src="/images/tefal-logo.png" style="height: 32px" />TEFAL</span>
+                    </div>
+                    <hr class="thin mt-2 mb-2">
+                    <div>
+                        <div class="fg-green d-flex flex-align-center reduce-1">
+                            Ready to depart <span class="ml-1 mif-truck-delivery enlarge-4"></span>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex flex-align-center">
+                        <div>
+                            <div class="text-linethrough fg-gray">$280</div>
+                            <div class="fg-crimson enlarge-9 text-weight-8 mt-2-minus">$150</div>
+                        </div>
+                        <div class="ml-auto">
+                            <button class="square flat"><span class="mif-justice fg-blue enlarge-9"></span></button>
+                            <button class="square flat"><span class="mif-favorite-outline fg-orange enlarge-9"></span></button>
+                        </div>
+                    </div>
+                    <div class="mt-4 d-flex flex-center gap-2">
+                        <button class="success w-100"><span class="icon mif-add-shopping-cart"></span> Add to cart</button>
+                        <button class="outline info w-100"><span class="icon mif-bank"></span> Buy in credit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-query mt-12">
+            <div class="text-weight-8 h2 no-wrap">Similar goods</div>
+            <div class="d-flex">
+                <div data-role="remote-dataset"
+                     data-key-offset="skip"
+                     data-key-data="products"
+                     data-key-limit="limit"
+                     data-key-total="total"
+                     data-key-sort="sortBy"
+                     data-key-order="order"
+                     data-key-search="q"
+                     data-url='https://dummyjson.com/products'
+                     data-url-search='https://dummyjson.com/products/search'
+                     data-cls-body="similar-products"
+                     data-cls-pagination="mt-4 d-flex flex-justify-center"
+                     data-on-draw-entry="drawProductEntry"
+                     data-rows="10"
+                     data-rows-steps="10,20"
+                     data-show-service-block="false"
+                     data-show-pagination="false"
+                     data-show-more="false"
+                ></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid container-query mt-12" id="product-specification">
+        <div class="box">
+            <div class="box-title">Specification:</div>
+            <div>
+                <table class="table striped compact">
+                    <tbody>
+                    <tr>
+                        <td>Brand</td>
+                        <td>Tefal</td>
+                    </tr>
+                    <tr>
+                        <td>Model</td>
+                        <td>Easy Fry & Grill Window</td>
+                    </tr>
+                    <tr>
+                        <td>Capacity</td>
+                        <td>4.5 L</td>
+                    </tr>
+                    <tr>
+                        <td>Power</td>
+                        <td>1500W</td>
+                    </tr>
+                    <tr>
+                        <td>Temperature Range</td>
+                        <td>80-200В°C</td>
+                    </tr>
+                    <tr>
+                        <td>Timer</td>
+                        <td>60 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>Programs</td>
+                        <td>8 automatic programs</td>
+                    </tr>
+                    <tr>
+                        <td>Display</td>
+                        <td>Digital touch screen</td>
+                    </tr>
+                    <tr>
+                        <td>Material</td>
+                        <td>Stainless steel, plastic</td>
+                    </tr>
+                    <tr>
+                        <td>Dishwasher Safe Parts</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Warranty</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>5.2 kg</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid container-query mt-12" id="product-reviews">
+        <div class="text-weight-8 h2 no-wrap">Reviews</div>
+        <div class="d-flex" style="--rating-on-color: var(--color-orange)">
+            <div data-role="remote-dataset"
+                 data-key-offset="skip"
+                 data-key-data="comments"
+                 data-key-limit="limit"
+                 data-key-total="total"
+                 data-key-sort="sortBy"
+                 data-key-order="order"
+                 data-key-search="q"
+                 data-url='https://dummyjson.com/comments'
+                 data-cls-body="product-reviews"
+                 data-cls-pagination="mt-4 d-flex flex-justify-center"
+                 data-on-draw-entry="drawProductReview"
+                 data-rows="10"
+                 data-rows-steps="10,20"
+                 data-show-service-block="false"
+                 data-show-pagination="false"
+                 data-show-more="false"
+            ></div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark pt-20 mt-20 w-100">
+        <div class="p-20 d-flex flex-column flex-center">
+            <ul class="h-menu bg-transparent fg-white">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="fg-white">
+                Copyright &copy; 2025. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</div>
+<style>
+    .landing {
+        scroll-margin-top: 150px;
+    }
+    
+    .color-button-active {
+        border: 3px solid var(--color-gray);
+    }
+    
+    .dark-side {
+        .color-button-active {
+            border-color: var(--color-sand);
+        }
+    }
+
+    .product-card {
+        --product-card-font-size: 11px;
+        width: max(20%, 160px);
+        border: 1px solid var(--border-color);
+        border-radius: 0; 
+    }
+
+    .similar-products {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .product-reviews {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        
+        .product-review {
+            width: 180px;
+            border: 1px solid var(--border-color);
+            border-radius: 0; 
+            padding: 10px;
+            font-size: 12px;
+            height: 110px;
+        }
+    }
+    
+    .product-menu {
+        .active {
+            border-bottom: 2px solid var(--color-primary);
+        }
+    }
+</style>
+
+<script>
+    $(".product-menu").on("click", "a", function (e) {
+        e.preventDefault();
+        const target = $(($(this).attr("href")))[0];
+        const li = $(this).closest("li");
+        $(".product-menu li").removeClass("active");
+        li.addClass("active");
+        $(".landing")[0].scrollTo({
+            top: target.offsetTop - 100,
+            behavior: "smooth"       
+        });
+    })
+    
+    function changeColor(btn) {
+        const value = $(btn).attr("data-value");
+        $("#product-color-value").html(value);
+    }
+    function changeMemory(btn) {
+        const value = $(btn).attr("data-value");
+        $("#product-memory-value").html(value);
+    }
+    function drawProductEntry(entry, index, body) {
+        const statuses = [
+            "<div class='fg-green product-status'>Ready to depart <span class=\"mif-truck-delivery icon\"></span></div>",
+            "<div class='fg-blue product-status'>In stock <span class=\"mif-transport icon\"></span></div>",
+            "<div class='fg-coral product-status'>Waiting for stock <span class=\"mif-truck2 icon\"></span></div>",
+            "<div class='fg-red product-status'>Out of stock</div>",
+        ]
+
+        const status = statuses[Math.floor(Math.random() * statuses.length)];
+
+        return `
+            <div class="product-card h-100">
+                <div class="badge bg-transparent">
+                    <button class="square small flat"><span class="mif-favorite-outline enlarge-6 fg-orange"></span></button>
+                </div>
+                <div class="product-image">
+                    <img src="${entry.thumbnail}" alt="${entry.title}"/>                
+                </div>            
+                <div class="product-info">
+                    <a href="#" class="product-title fg-sat-green-hover">
+                        ${entry.description}
+                    </a>
+                    <div class="product-rating" style="--rating-on-color: #ffa500; --rating-star-size: 14px">
+                        <input class="small" data-role="rating" data-static="true" data-value="${entry.rating}" />
+                        <div class="d-flex flex-align-center mt-1 gap-1"><span class="mif-chat-line"></span> ${entry.reviews.length}</div>
+                    </div>            
+                    ${status}
+                </div>
+                <div class="product-footer mt-auto">
+                    <div class="product-price">
+                        ${entry.discountPercentage ? "<div class='-old'>$"+(entry.price)+"</div>" : ""}
+                        <div class="fg-red reduce-2">$${(entry.price - entry.price/100*entry.discountPercentage).toFixed(2)}</div>
+                    </div>
+                    <div class="ml-auto">
+                        <button class="square small flat"><span class="mif-add-shopping-cart enlarge-6 fg-green"></span></button>
+                    </div>
+                </div>
+            </div>        
+        `;
+    }
+    
+    function drawProductReview(entry, index, body) {
+        const card = `
+            <div class="product-review h-100">
+                <div>${entry.body}</div>
+                <div><input data-role="rating" data-static="true" data-value="${Math.random() * (5 - 3) + 3}"></div>
+                <div>${entry.user.fullName}</div>
+            </div>
+        `
+        $(body).append(card);
+    }
+</script>

@@ -1,0 +1,94 @@
+<script>window.PAGE_TITLE = 'UI Elements | Splitter'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Splitter</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">Splitter</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        You can create split blocks with component <code>splitter</code>. You can split block horizontally or vertically.
+        To create a splitter, you need to add attribute <code>data-role="splitter"</code> to the element and add child blocks.
+    </p>
+    
+    <div class="box-title-secondary">Vertical Split</div>
+    <div class="mt-4 border bd-default">
+        <div data-role="splitter" data-split="vertical" style="height: 200px">
+            <div class="d-flex flex-center">Block 1</div>
+            <div class="d-flex flex-center">Block 2</div>
+        </div>
+    </div>
+
+
+    <div class="box-title-secondary">Horizontal Split</div>
+    <div class="mt-4 border bd-default">
+        <div data-role="splitter" data-split="horizontal" style="height: 200px">
+            <div class="d-flex flex-center">Block 1</div>
+            <div class="d-flex flex-center">Block 2</div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Panels Sizes</div>
+    <p class="text-muted">
+        You can setup initial sizes for split panels with attribute <code>data-sizes="x, y"</code>.
+        The size of the first panel is <code>x</code> and the size of the second panel is <code>y</code>.
+        You can set sizes in percents or pixels. For example, <code>data-sizes="30%, 70%"</code> or <code>data-sizes="220,"</code> (set only first N elements size, and omit the rest).
+        To save state in storage, you need to add <code>id</code> to splitter and attribute <code>data-save-state="true"</code>.
+    </p>
+    <div class="mt-4 border bd-default">
+        <div data-role="splitter" data-split-sizes="30%" style="height: 200px">
+            <div class="d-flex flex-center">Block 1</div>
+            <div class="d-flex flex-center">Block 2</div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Gutter Size and Type</div>
+    <p class="text-muted">
+        You can setup gutter size and type with attribute <code>data-gutter-size="x"</code>. The size of the gutter can be in <code>pixels</code>.
+        To change the gutter type, you need add attribute <code>data-gutter-style="x"</code>. The type of the gutter can be <code>ribbed</code>, <code>dashed</code> or <code>dotted</code>.
+    </p>
+
+    <div class="box-title-secondary">Gutter Size</div>
+    <div class="mt-4 border bd-default">
+        <div data-role="splitter" data-gutter-size="10" style="height: 200px">
+            <div class="d-flex flex-center">Block 1</div>
+            <div class="d-flex flex-center">Block 2</div>
+        </div>
+    </div>
+    
+    <div class="box-title-secondary">Gutter Style</div>
+    <div class="text-bold mt-4 ">ribbed</div>
+    <div class="border bd-default">
+        <div data-role="splitter" data-gutter-size="10" data-gutter-style="ribbed" style="height: 100px">
+            <div class="d-flex flex-center">Block 1</div>
+            <div class="d-flex flex-center">Block 2</div>
+        </div>
+    </div>
+    <div class="text-bold mt-4 ">dashed</div>
+    <div class="border bd-default">
+        <div data-role="splitter" data-gutter-size="10" data-gutter-style="dashed" style="height: 100px">
+            <div class="d-flex flex-center">Block 1</div>
+            <div class="d-flex flex-center">Block 2</div>
+        </div>
+    </div>
+    <div class="text-bold mt-4 ">dotted</div>
+    <div class="border bd-default">
+        <div data-role="splitter" data-gutter-size="10" data-gutter-style="dotted" style="height: 100px">
+            <div class="d-flex flex-center">Block 1</div>
+            <div class="d-flex flex-center">Block 2</div>
+        </div>
+    </div>
+</div>

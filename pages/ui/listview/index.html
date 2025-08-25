@@ -1,0 +1,97 @@
+<script>window.PAGE_TITLE = 'UI Elements | ListView'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>ListView</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">ListView</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        If you need to create a list of items as in Windows Explorer, you can use the <code>listview</code> component. 
+        The listview component is designed to display a list of items in a simple and easy way.
+    </p>
+</div>
+
+<div class="box">
+
+    <div>
+        <div class="d-flex flex-center gap-4">
+            <input data-role="switch" data-append="Make selectable List" id="toggle-selectable"/>
+        </div>
+        <div class="d-flex flex-center gap-4 mt-4 border-top bd-default p-4">
+            <input type="radio" data-role="radio" name="r1" value="list" checked data-append="List" title=""/>
+            <input type="radio" data-role="radio" name="r1" value="table"  data-append="Table" title=""/>
+            <input type="radio" data-role="radio" name="r1" value="content"  data-append="Content" title=""/>
+            <input type="radio" data-role="radio" name="r1" value="tiles"  data-append="Tiles" title=""/>
+            <input type="radio" data-role="radio" name="r1" value="icons"  data-append="Icons" title=""/>
+            <input type="radio" data-role="radio" name="r1" value="icons-medium" data-append="Icons Medium" title=""/>
+            <input type="radio" data-role="radio" name="r1" value="icons-large" data-append="Icons Large" title=""/>
+        </div>
+    </div>
+
+    <div class="mt-4 border bd-default p-4">
+        <ul data-role="listview" data-selectable="false" data-view="list" id="listview" data-select-node="true" data-structure='{"date": true, "name": true}'>
+            <li data-icon="<span class='mif-folder fg-orange'>" data-caption="Video" data-date="2025/02/28" data-desc="Video library"></li>
+            <li data-icon="<span class='mif-folder fg-cyan'>" data-caption="Images" data-date="2025/02/28" data-desc="My images"></li>
+            <li data-icon="<span class='mif-folder fg-green'>" data-caption="Documents" data-date="2025/02/28" data-desc="My documents"></li>
+            <li data-icon="<span class='mif-folder-download fg-blue'>" data-caption="Downloads" data-date="2025/02/28" data-desc="System folder"></li>
+            <li data-icon="<span class='mif-folder'>" data-caption="Desktop" data-date="2025/02/28" data-desc="System folder"></li>
+            <li data-icon="<span class='mif-file-empty'>" data-caption="desktop.ini" data-date="2025/02/28"></li>
+            <li data-icon="<span class='mif-file-binary'>" data-caption="setup.exe" data-date="2025/02/28"></li>
+            <li data-caption="file1.dat" data-date="2025/02/28">
+                <div data-role="progress" data-value="35" data-small="true"></div>
+            </li>
+            <li id="l9" data-caption="file2.dat" data-date="2025/02/28"></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Grouped Items</div>
+    <div class="mt-4 border bd-default p-4">
+        <ul data-role="listview" data-selectable="false" data-view="icons" data-select-node="false">
+            <li data-caption="Folders">
+                <ul>
+                    <li data-icon="<span class='mif-folder fg-orange'>" data-caption="Video" data-date="2025/02/28" data-desc="Video library"></li>
+                    <li data-icon="<span class='mif-folder fg-cyan'>" data-caption="Images" data-date="2025/02/28" data-desc="My images"></li>
+                    <li data-icon="<span class='mif-folder fg-green'>" data-caption="Documents" data-date="2025/02/28" data-desc="My documents"></li>
+                    <li data-icon="<span class='mif-folder-download fg-blue'>" data-caption="Downloads" data-date="2025/02/28" data-desc="System folder"></li>
+                    <li data-icon="<span class='mif-folder'>" data-caption="Desktop" data-date="2025/02/28" data-desc="System folder"></li>
+                </ul>
+            </li>
+            <li data-caption="Disks & Drives">
+                <ul>
+                    <li data-icon="<img src='/images/disk-os.png' alt=''/>" data-caption="System (C:)" data-desc="System Disk"></li>
+                    <li data-icon="<img src='/images/disk.png' alt=''/>" data-caption="Data (D:)" data-desc="Data Disk"></li>
+                    <li data-icon="<img src='/images/disk-network.png' alt=''/>" data-caption="Network" data-desc="Network Disk"></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    (()=>{
+        $("#toggle-selectable").on("click", function(){
+            console.log("click");
+            Metro.getPlugin("#listview", "listview").toggleSelectable();
+        });
+
+        $("input[name=r1]").on("click", function(){
+            Metro.getPlugin("#listview", "listview").view(this.value);
+        });
+
+        setTimeout(function(){
+            $("input[name=r1]:checked").click();
+        }, 100)
+    })()
+</script>

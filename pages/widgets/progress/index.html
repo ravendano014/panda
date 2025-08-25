@@ -1,0 +1,185 @@
+<script>window.PAGE_TITLE = 'Widgets | Progress and Activities'</script>
+
+<style>
+    .activity-demo {
+        [class*=cell-] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 64px;
+        }
+    }
+</style>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Progress &amp; Activities</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">Widgets</a></li>
+            <li class="active"><a href="#">Progress</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Progress Bars</div>
+    <p class="text-muted">
+        Use <code>progress</code> component to create progress bars. To set value use attribute <code>data-value</code>.
+    </p>
+    <div class="mt-4">
+        <div data-role="progress" data-value="25"></div>
+    </div>
+    <p class="text-muted">
+        To create thin progress bar, add attribute <code>data-small="true"</code>.
+    </p>
+    <div class="mt-4">
+        <div data-role="progress" data-value="25" data-small="true"></div>
+    </div>
+    <p class="text-muted">
+        To change bar color use color classes <code>bg-***</code>, <code>soft-***</code>, or <code>normal-***</code> and attribute <code>data-cls-bar</code>.
+        Or use classes <code>.progress-***</code> where *** is color name or accent name.
+    </p>
+    <div class="mt-4">
+        <div data-role="progress" data-value="25" data-cls-bar="bg-cyan"></div>
+        <div data-role="progress" data-value="25" class="progress-brown mt-1"></div>
+        <div data-role="progress" data-value="25" class="progress-alert mt-1"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Animated Progress</div>
+    <div class="mt-4">
+        <div data-role="progress" data-type="load" data-value="35" data-buffer="75"></div>
+        <br/>
+        <div data-role="progress" data-type="load" data-value="35" data-buffer="75" data-small="true"></div>
+        <br/>
+        <div data-role="progress" data-type="line"></div>
+        <br/>
+        <div data-role="progress" data-type="line" data-small="true"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Segment Progress</div>
+    <div class="mt-4">
+        <div data-role="progress" data-type="segment" data-value="45" data-segment-size="10"></div>
+        <br/>
+        <div data-role="progress" data-type="segment" data-value="65" data-segment-size="10" data-small="true"></div>
+        <br/>
+        <div data-role="progress" data-type="segment" data-value="85" data-segment-size="20" style="--progress-bar-color: var(--color-blue)"></div>
+        <br/>
+        <div data-role="progress" data-type="segment" data-value="25" data-segment-size="20" class="bar-red"></div>
+        <br/>
+        <div data-role="progress" data-type="segment" data-value="65" data-segment-size="10" class="progress-sand"></div>        
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Donut</div>
+    <p class="text-muted">
+        Use <code>donut</code> component to create donut progress bars. To set value use attribute <code>data-value</code>.
+        To change color, use classes <code>.donut-***</code> where *** is color name or accent name.
+    </p>
+    <div class="mt-4">
+        <div data-role="donut" data-value="25" class="d-inline-flex"></div>
+        <div data-role="donut" data-value="65" class="d-inline-flex donut-green"></div>
+        <div data-role="donut" data-value="35" class="d-inline-flex donut-alert"></div>
+    </div>
+</div>
+
+
+<div class="box">
+    <div class="box-title">Activities</div>
+    <div class="mt-4 container-query activity-demo">
+        <div class="text-bold">Simple</div>
+        <div class="row">
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="simple"></div>
+            </div>
+            <div class="cell-md-4 dark-side bg-dark">
+                <div data-role="activity" data-type="simple"></div>
+            </div>
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="simple" data-style="color"></div>
+            </div>
+        </div>
+        <div class="text-bold">Ring</div>
+        <div class="row">
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="ring"></div>
+            </div>
+            <div class="cell-md-4 dark-side bg-dark">
+                <div data-role="activity" data-type="ring"></div>
+            </div>
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="ring" data-style="color"></div>
+            </div>
+        </div>
+        <div class="text-bold">Metro</div>
+        <div class="row">
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="metro"></div>
+            </div>
+            <div class="cell-md-4 dark-side bg-dark">
+                <div data-role="activity" data-type="metro"></div>
+            </div>
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="metro" data-style="color"></div>
+            </div>
+        </div>
+        <div class="text-bold">Square</div>
+        <div class="row">
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="square"></div>
+            </div>
+            <div class="cell-md-4 dark-side bg-dark">
+                <div data-role="activity" data-type="square"></div>
+            </div>
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="square" data-style="color"></div>
+            </div>
+        </div>
+        <div class="text-bold">Cycle</div>
+        <div class="row">
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="cycle"></div>
+            </div>
+            <div class="cell-md-4 dark-side bg-dark">
+                <div data-role="activity" data-type="cycle"></div>
+            </div>
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="cycle" data-style="color"></div>
+            </div>
+        </div>
+        <div class="text-bold">Atom</div>
+        <div class="row">
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="atom"></div>
+            </div>
+            <div class="cell-md-4 dark-side bg-dark">
+                <div data-role="activity" data-type="atom"></div>
+            </div>
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="atom" data-style="color"></div>
+            </div>
+        </div>
+        <div class="text-bold">Bars</div>
+        <div class="row">
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="bars"></div>
+            </div>
+            <div class="cell-md-4 dark-side bg-dark">
+                <div data-role="activity" data-type="bars"></div>
+            </div>
+            <div class="cell-md-4">
+                <div data-role="activity" data-type="bars" data-style="color"></div>
+            </div>
+        </div>
+        <p class="text-muted">
+            To change style use attribute <code>data-style</code> with value <code>color</code> or put activity in container with class <code>.dark-side</code> to get white style.
+        </p>
+    </div>
+</div>

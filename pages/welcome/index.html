@@ -1,0 +1,173 @@
+<script>window.PAGE_TITLE = 'Welcome to Panda 1.0'</script>
+
+<style>
+    .work-preview {
+        border: 1px solid var(--border-color);
+        transition: border-radius .3s;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+        border-radius: 16px;
+        &:hover {
+            border-bottom-right-radius: 120px;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: block;
+        color: #df6e68!important;
+        z-index: 0;
+    }
+
+    .work-preview:hover ~ .arrow {
+        opacity: 1;
+    }
+</style>
+
+<div>
+    <div data-role="directive" data-directive="info" data-style="2" data-title="">
+        <p>
+            Documentation is available on the <a href="https://metroui.org.ua" target="_blank">Metro UI</a> website, 
+            and contains a full description of all components, utilities, and styles.
+        </p>
+    </div>
+</div>
+
+<div class="mt-4 mb-4">
+    <h1 class="text-weight-10 text-center gradient gr-text-blue">Welcome to Panda 1.0</h1>
+</div>
+
+<div class="row">
+    <div class="box d-flex flex-align-center flex-column-fs flex-row-md p-4">
+        <div class="logo-container-big">
+            <img src="/images/panda.png" alt="Panda Logo" />
+        </div>
+        <div class="ml-5">
+            <p>
+                <b>Panda</b> вЂ“ is a set of templates for building sites of any purpose.
+                This set created with <a href="https://metroui.org.ua">Metro UI</a>, a great component library for building responsive web applications.
+                Set covered almost all the features of the Metro UI library.
+                The template contains different types of reusable and professional responsive components with different variations.
+            </p>
+            <p>
+                This set is built using only the <a href="https://metroui.org.ua">Metro UI</a> component library, excluding <a href="https://apexcharts.com/" target="_blank">ApexCharts</a>, a great tool for creating various <b>graphs and charts</b>.
+                All charts in Panda were created with ApexCharts.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="text-center text-upper">Includes</h2>
+</div>
+
+<div class="row">
+    <div class="cell-ld-4">
+        <div class="box h-100">
+            <div class="box-title">Common</div>
+            <div class="mt-4">
+                Brief description and demonstration of common CSS styles and JavaScript utilities.
+            </div>
+        </div>
+    </div>
+    <div class="cell-ld-4">
+        <div class="box h-100">
+            <div class="box-title">UI Elements</div>
+            <div class="mt-4">
+                Brief description and demonstration of Metro UI components.
+            </div>
+        </div>
+    </div>
+    <div class="cell-ld-4">
+        <div class="box h-100">
+            <div class="box-title">Samples</div>
+            <div class="mt-4">
+                Samples pages - ready to use HTML pages for any purposes.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-10">
+    <h2 class="text-center text-upper">Metro UI In Action</h2>
+    <div class="row">
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://metroui.org.ua">
+                    <img src="/images/metroui.jpg" alt="Metroui.org.ua"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://minataur.net">
+                    <img src="/images/minataur.jpg" alt="Minataur.net"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://korzh.com">
+                    <img src="/images/korzh.jpg" alt="Korzh.com"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://cryptoscamalert.com">
+                    <img src="/images/cryptoscamalert.jpg" alt="cryptoscamalert.com"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://reserveplus.mod.gov.ua/">
+                    <img src="/images/reserve-plus.jpg" alt="Reserve Plus"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://aiki.in.ua/">
+                    <img src="/images/aiki.png" alt="Aikido in Kyiv"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3">
+            <div class="work-preview">
+                <a href="https://dnmarket.com/">
+                    <img src="/images/dnmarket.png" alt="DNmarket.com"/>
+                </a>
+            </div>
+            <div class="arrow"><span class="mif-arrow-right mif-4x"></span></div>
+        </div>
+        <div class="cell-sm-3 border bd-default border-radius-16 no-overflow d-flex flex-column flex-center">
+            <div class="p-10">
+                Maybe your site will be next?...
+            </div>
+            <div class="">
+                <a href="#" class="button bg-default fg-default pill-button gradient-border animated-border">Get Panda <span class="mif-external"></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .work-preview {
+        height: 100%;
+        img {
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    }
+</style>

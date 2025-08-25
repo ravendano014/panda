@@ -1,0 +1,303 @@
+<script>window.PAGE_TITLE = 'Forms | Validating User Input'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Validating user input</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="/">Panda 1.0</a></li>
+            <li><a href="#">Forms</a></li>
+            <li class="active"><a href="#">Validating</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">General</div>
+    <p class="text-muted">
+        You can use a <a href="https://metroui.org.ua">Metro UI</a> validating system for validating user input. 
+        You can apply the validation system to any form elements, including <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;checkbox&gt;</code>, <code>&lt;radio&gt;</code>.
+        The validation system is based on the <a href="https://github.com/olton/guardian">Guardian</a> library, which is a lightweight validation library for JavaScript.
+    </p>
+    <p class="text-muted">
+        To enable the validation system, add attribute <code>data-role="validator"</code> to the <code>&lt;form&gt;</code> element.
+    </p>
+
+    <p class="text-muted">
+        To validate data, add attribute <code>data-validate="..."</code> to the form input element. 
+        To show invalid feedback, add element <code>&lt;span class="invalid_feedback"&gt;...&lt;/span&gt;</code> after the form input element.
+    </p>
+
+    <div class="mt-4">
+        <div class="box-title-secondary">Example form</div>
+        <div class="row">
+            <div class="cell-md-6 border bd-default p-4">
+                <form data-role="validator">
+                    <div class="form-group">
+                        <input id="input1" data-role="input" data-label="Label:" data-validate="required"/>
+                        <span class="invalid_feedback">Enter data in field.</span>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                        <button type="reset" class="button">Reset</button>
+                    </div>
+                </form>
+            </div>            
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Validating Functions</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">Required (data-validate="required")</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="required" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">Length (data-validate="length=4")</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="length=4" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">minLength (data-validate="minlength=4")</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="minlength=4" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">maxLength (data-validate="maxlength=4")</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="maxlength=4" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">min (data-validate="min=4")</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input type="number" data-validate="min=4" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">max (data-validate="max=4")</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input type="number" data-validate="max=4" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">email</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="email" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">domain</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="domain" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">url</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="url" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">date</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="date" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">number</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="number" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">integer</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="integer" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">safeInteger</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="safeinteger" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">float</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="float" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">digits</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="digits" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">hexColor</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="hexcolor" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">color (hex, hsl, hsv, ...)</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="color" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">pattern (regexp)</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="pattern=(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)" class="metro-input"/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Comparing fields</div>
+    <p class="text-muted">
+        To compare two fields:
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">compare to fields (using ==)</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input type="password" name="pass1" class="metro-input" placeholder="Enter password..."/>
+                    <input type="password" data-validate="compare=pass1" name="pass2" class="metro-input mt-1" placeholder="Confirm password..."/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">compare to fields (using !=)</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input type="password" name="pass1" class="metro-input" placeholder="Enter password..."/>
+                    <input type="password" data-validate="not=pass1" name="pass2" class="metro-input mt-1" placeholder="Confirm password..."/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">Equals to fields (using ===)</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input type="password" name="pass1" class="metro-input" placeholder="Enter password..."/>
+                    <input type="password" data-validate="equals=pass1" name="pass2" class="metro-input mt-1" placeholder="Enter second password..."/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="cell-md-6 cell-xl-4 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">compare to fields (using !==)</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input type="password" name="pass1" class="metro-input" placeholder="Enter password..."/>
+                    <input type="password" data-validate="notequals=pass1" name="pass2" class="metro-input mt-1" placeholder="Enter second password..."/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Custom validating</div>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-6 border bd-default p-4 border-radius-10">
+                <div class="box-title-secondary">custom</div>
+                <form action="javascript:" data-role="validator" data-on-submit="submit" data-clear-invalid="2000">
+                    <input data-validate="required custom=myCustomFn" class="metro-input" placeholder="Enter value between 35 and 45..."/>
+                    <div class="form-actions">
+                        <button type="submit" class="button primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function myCustomFn(val){
+        return val && (+val > 35 && +val < 45)
+    }
+    function submit(){
+        Metro.toast.create("Form is valid!", {
+            cls: "success",
+            position: "center",
+            timeout: 2000,
+            callback: () => {
+                $(this).find("input").removeClass("valid");
+            }
+        });
+    }
+</script>

@@ -1,0 +1,41 @@
+
+<script>window.PAGE_TITLE = 'Panda 1.0 | Hotkeys'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-center">
+        <h1>Hotkeys</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li class="active"><a href="#">Hotkeys</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        Metro UI lets you easily add handlers for keyboard events anywhere in your site.
+        To create <code>hotkey</code> add attribute <code>data-hotkey</code> to element.
+    </p>
+    <div class="mt-4">
+        <button data-hotkey="alt+ctrl+s" onclick="Metro.toast.create('Data Saved!', {position: 'top'})"><span class="icon mif-floppy-disk2"></span> Save (ctrl+alt+s)</button>
+    </div>
+    <div class="mt-4">
+        <input data-role="input" id="hotkey-input" placeholder="Type $100 and press alt+1"/>
+    </div>
+
+
+    <p class="mt-4">
+        Read more about Hotkeys in the <a href="https://v5.metroui.org.ua/components/hotkey/">documentation</a>.
+    </p>
+</div>
+
+<script>
+    (() => {
+        $('#hotkey-input').hotkey("alt+1", function(){
+            return this.value = this.value.replaceAll("$", "USD") 
+        });
+    })();
+</script>

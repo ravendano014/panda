@@ -1,0 +1,41 @@
+
+<script>window.PAGE_TITLE = 'UI Elements | Calendar'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Colors Selector</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">Color Selector</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function updateColorBox(color){
+        $('#color-box').css('background-color', color);
+    }
+</script>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        Create <code>color selector</code> with role <code>data-role="color-selector"</code>. Select color and pass values to the specified control.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-6">
+                <div data-role="color-selector" data-controller="#color-value" data-on-select-color="updateColorBox"></div>
+            </div>
+            <div class="cell-md-6">
+                <input id="color-value" type="text" data-role="input" class="mb-4" data-cls-input="mono text-upper" data-prepend="Color Value:"/>
+                <div class="box" style="height: 100px" id="color-box">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

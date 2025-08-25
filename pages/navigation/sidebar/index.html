@@ -1,0 +1,66 @@
+<script>window.PAGE_TITLE = 'Navigation | Sidebar'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Sidebar</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">Navigation</a></li>
+            <li class="active"><a href="#">Sidebar</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        The Sidebar component provides a collapsible side panel for navigation, settings, or other content. 
+        It can be positioned on either side of the screen and supports both static and dynamic modes.
+    </p>
+</div>
+
+<div class="box no-overflow" style="height: 600px">
+    <aside class="pos-absolute" data-role="sidebar" data-shift="#content" data-toggle="#sidebar-toggle" id="sb1">
+        <div class="sidebar-header">
+            <span class="action" onclick="Metro.sidebar.close('#sb1'); return false;"><span class="mif-arrow-left mif-2x"></span></span>
+            <div class="avatar">
+                <img data-role="gravatar" data-email="sergey@pimenov.com.ua" alt=""/>
+            </div>
+            <span class="title">Metro UI Library</span>
+            <span class="subtitle"> <span data-role="eval">{{ new Date().getFullYear() }}</span> &copy; Sergey Pimenov</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a><span class="mif-home icon"></span>Home</a></li>
+            <li class="active"><a><span class="mif-books icon"></span>Guide</a></li>
+            <li class="disabled"><a><span class="mif-files-empty icon"></span>Examples</a></li>
+            <li class="divider"></li>
+            <li><a>
+                <span class="mif-images icon"></span>
+                <span class="caption">Icons</span>
+            </a></li>
+            <li class="group-title">Group One</li>
+            <li><a>
+                <span class="mif-rocket icon"></span>
+                <span class="caption">Rocket</span>
+                <span class="hotkey">Ctrl+F</span>
+            </a></li>
+            <li><a><span class="mif-home icon"></span>Home</a></li>
+            <li><a><span class="mif-tools icon"></span>Product</a></li>
+            <li><a><span class="mif-contacts icon"></span>Contacts</a></li>
+        </ul>
+    </aside>
+
+    <div class="content" id="content">
+        <div class="h1 border-bottom bd-default pb-4"><button id="sidebar-toggle"><span class="mif-menu"></span></button> What is Lorem Ipsum?</div>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </div>
+</div>

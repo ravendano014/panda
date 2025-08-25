@@ -1,0 +1,40 @@
+
+<script>window.PAGE_TITLE = 'UI Elements | Countdown'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-center">
+        <h1>Countdown</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">Countdown</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        The countdown component is designed to visualize the countdown to a certain point in time.
+        With Metro UI, you can create countdown simple and easy with role <code>countdown</code>.
+        The countdown is ideal for displaying the time until a certain event, such as a sale or a promotion.
+    </p>
+    <div class="mt-4" lang="ua">
+        <div data-role="countdown" data-hours="3" data-animate="slide" data-font-size="48"></div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Animation type</div>
+    <p class="text-muted">
+        You can change an animation type with attribute <code>data-animate</code> and values: fade, slide, zoom, switch (default).
+    </p>
+    <div class="mt-4 d-flex flex-row">
+        <div data-role="countdown" data-hours="3" data-animate="switch"></div>
+        <div data-role="countdown" data-hours="3" data-animate="fade"></div>
+        <div data-role="countdown" data-hours="3" data-animate="slide"></div>
+        <div data-role="countdown" data-hours="3" data-animate="zoom"></div>
+    </div>
+</div>

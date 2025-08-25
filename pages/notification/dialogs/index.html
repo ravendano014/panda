@@ -1,0 +1,67 @@
+<script>window.PAGE_TITLE = 'Notification | Dialog'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Dialog</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li class="active"><a href="#">Dialog</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        The Dialog component provides a customizable modal dialog box for displaying messages, alerts, confirmations, or custom content. 
+        It supports various configurations, including custom buttons, overlay options, and positioning.
+    </p>
+</div>
+
+<div class="box">
+    <div  data-role="dialog"
+          data-title="Predefined Dialog"
+          data-overlay="true"
+          data-close-button="true"
+          data-overlay-click-close="true"
+          id="dialog"
+    >
+        <div class="dialog-content">
+            <p class="p-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequuntur fugit id mollitia ut? Dolores excepturi hic quaerat quas tenetur.
+            </p>
+        </div>
+    </div>
+    <div class="d-flex flex-center gap-4">
+        <button onclick="Metro.getPlugin('#dialog', 'dialog').open()">Open Dialog</button>
+        <button onclick="createDialog()">Create Dialog</button>
+    </div>
+</div>
+
+<script>
+    function createDialog() {
+        Metro.dialog.create({
+            title: "Dialog",
+            content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa dignissimos esse hic ipsa qui quidem rerum ullam! Ipsam, voluptatibus.</p>",
+            closeButton: true,
+            defaultActions: false,
+            customButtons: [
+                {
+                    text: "Yes, of course!",
+                    cls: "js-dialog-close alert",
+                    onclick: () => {
+                    }
+                },
+                {
+                    text: "No, cancel",
+                    cls: "js-dialog-close",
+                    onclick: () => {
+                    }
+                }
+            ]
+        })
+    }
+</script>

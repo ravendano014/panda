@@ -1,0 +1,199 @@
+<script>window.PAGE_TITLE = 'Samples | Email :: Inbox'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Email :: Inbox</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">Samples</a></li>
+            <li><a href="#">Email</a></li>
+            <li class="active"><a href="#">Inbox</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box p-4 no-overflow" style="height: calc(100% - 70px)">
+    <div class="layout-sidenav">
+        <nav class="inbox-sidebar h-100 z-1">
+            <h3 class="m-3"><span class="mif-panda mr-2"></span></h3>
+
+            <ul id="email-sidenav" data-role="sidenav" data-expand-point="lg" data-toggle="#sidenav-toggler" style="--sidenav-background: var(--default-background);">
+                <li><a href="#"><span class="mif-plus icon"></span><span class="caption">Create</span></a></li>
+                <li><a href="#">
+                    <span class="mif-inbox icon"></span>
+                    <span class="caption">Inbox</span>
+                    <span class="badge">200</span>
+                </a></li>
+                <li><a href="#"><span class="mif-star-empty icon"></span><span class="caption">Starred</span></a></li>
+                <li><a href="#"><span class="mif-more-time icon"></span><span class="caption">Postponed</span></a></li>
+                <li><a href="#"><span class="mif-send icon"></span><span class="caption">Sent</span></a></li>
+                <li><a href="#"><span class="mif-drafts icon"></span><span class="caption">Drafts</span></a></li>
+                <li><a href="#"><span class="mif-spam-outline icon"></span><span class="caption">Spam</span></a></li>
+                <li>
+                    <a href="#"><span class="mif-chevron-down icon"></span><span class="caption">More</span></a>
+                    <ul class="d-menu" data-role="collapse" data-collapsed="true">
+                        <li><a href="#"><span class="mif-schedule-send icon"></span><span class="caption">Planned</span></a></li>
+                        <li><a href="#"><span class="mif-layers icon"></span><span class="caption">All emails</span></a></li>
+                        <li><a href="#"><span class="mif-bin icon"></span><span class="caption">Deleted</span></a></li>
+                    </ul>
+                </li>
+
+                <li class="title">
+                    Labels
+                    <button class="flat cycle medium action">+</button>
+                </li>
+                <li><a href="#"><span class="mif-tag icon"></span><span class="caption">Important</span></a></li>
+                <li><a href="#"><span class="mif-tag icon"></span><span class="caption">Required Answer</span></a></li>
+            </ul>
+        </nav>
+        
+        <div class="inbox-content no-overflow w-100 p-2 z-2 h-100">
+            <div class="d-flex gap-10">
+                <div class="">
+                    <button id="sidenav-toggler" class="flat square"><span class="mif-menu"></span></button>
+                </div>
+                <div class="">
+                    <script>
+                        var inputSearchCustomButtons = [
+                            {
+                                text: '<span class="mif-equalizer2"></span>',
+                                title: 'Search',
+                                onclick: function(e){
+                                    alert('Settings clicked');
+                                }
+                            }
+                        ]
+                    </script>
+                    <input type="text" placeholder="Search mail" 
+                           data-role="input" 
+                           class="pill-input large" 
+                           data-prepend="<span class='mif-search'>" 
+                           data-custom-buttons="inputSearchCustomButtons" />
+                </div>
+                <div class="d-flex flex-align-center gap-2">
+                    <button class="flat large cycle" title="Help"><span class="mif-help"></span></button>
+                    <button class="flat large cycle" title="Settings..."><span class="mif-cog"></span></button>
+                    <button class="flat large cycle" title="Applications"><span class="mif-apps"></span></button>
+                </div>
+                <div class="ml-auto">
+                    <button class="large cycle" title="Profile"><span data-role="gravatar" class="avatar" data-size="38" data-email="serhii@pimenov.com.ua"></span></button>
+                </div>
+            </div>
+            
+            <div class="box inbox-data"  style="height: calc(100% - 50px)">
+                <div class="d-flex flex-align-center gap-2 border-bottom bd-default pb-2">
+                    <div class="split-button no-gap">
+                        <button class="bg-transparent bd-transparent cycle">
+                            <input type="checkbox" data-role="checkbox" />
+                        </button>
+                        <button class="split bg-transparent bd-transparent dropdown-toggle"></button>
+                        <ul class="d-menu place-left" data-role="dropdown">
+                            <li><a href="#">Mark as read</a></li>
+                            <li><a href="#">Mark as unread</a></li>
+                            <li><a href="#">Mark as important</a></li>
+                            <li><a href="#">Mark as not important</a></li>
+                            <li><a href="#">Move to folder</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="#">Spam</a></li>
+                            <li><a href="#">Not Spam</a></li>
+                            <li><a href="#">Archive</a></li>
+                        </ul>
+                    </div>
+                    <button class="flat large cycle" title="Refresh"><span class="mif-refresh"></span></button>
+                    <div class="d-flex flex-align-center ml-4 mr-4">
+                        <button class="flat cycle "><span class="mif-archive icon"></span></button>
+                        <button class="flat cycle "><span class="mif-report icon"></span></button>
+                        <button class="flat cycle "><span class="mif-bin icon"></span></button>
+                        <button class="flat cycle  ml-4"><span class="mif-mark-email-unread icon"></span></button>
+                        <button class="flat cycle "><span class="mif-access-time icon"></span></button>
+                        <button class="flat cycle "><span class="mif-add-task icon"></span></button>
+                        <button class="flat cycle  ml-4"><span class="mif-folder-outline icon"></span></button>
+                        <button class="flat cycle "><span class="mif-tag-empty icon"></span></button>
+                    </div>
+                    <div class="dropdown-button no-dropdown-caret">
+                        <button class="flat cycle "><span class="mif-more-vert icon"></span></button>
+                        <ul class="d-menu" data-role="dropdown">
+                            <li><a href="#"><span class="icon mif-mark-email-read"></span> Mark as read</a></li>
+                            <li><a href="#"><span class="icon mif-tag1"></span> Mark as important</a></li>
+                            <li><a href="#"><span class="icon mif-star-empty"></span> Add star</a></li>
+                            <li><a href="#"><span class="icon mif-add-post"></span> Add event</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="border-bottom bd-default" style="overflow-y: auto; height: calc(100% - 90px);">
+                    <table class="table row-border medium-padding row-hover" style="--table-body-font-size: 14px;">
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="mt-4">
+                    <div id="paging"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var items = [
+        ["Linkedin", "3 new connections for you", "12:45"],
+        ["GitHub", "[GitHub] Please verify your device", "11:30"],
+        ["Twitter", "Your Tweet got 50 likes", "10:15"],
+        ["Dropbox", "Your storage is almost full", "09:40"],
+        ["Slack", "New message in #general channel", "09:15"],
+        ["Amazon", "Your order has been shipped", "08:50"],
+        ["Netflix", "New shows added to your list", "08:30"],
+        ["Spotify", "Your Discover Weekly is ready", "08:00"],
+        ["Google", "Security alert: New sign-in", "07:45"],
+        ["Medium", "5 stories in your reading list", "07:30"],
+        ["PayPal", "You've received a payment", "07:15"],
+        ["Jira", "Task PAN-245 has been updated", "07:00"],
+        ["Confluence", "Changes to page \"Project Overview\"", "06:45"],
+        ["Zoom", "Meeting reminder: Daily Standup", "06:30"],
+        ["Facebook", "New post from <NAME>", "06:15"],
+        ["Apple", "New update for iPhone 11", "06:00"],
+        ["Microsoft", "New update for Windows 10", "05:45"],
+        ["Amazon", "Your order has been shipped", "05:30"],
+        ["Netflix", "New shows added to your list", "05:15"],
+        ["Spotify", "Your Discover Weekly is ready", "05:00"],
+        ["Google", "Security alert: New sign-in", "04:45"],
+        ["Medium", "5 stories in your reading list", "04:30"],
+        ["PayPal", "You've received a payment", "04:15"],
+        ["Jira", "Task PAN-245 has been updated", "04:00"],
+        ["Confluence", "Changes to page \"Project Overview\"", "03:45"],
+    ];
+    
+    var table = $(".table").find("tbody");
+    for(let item of items) {
+        const tr = $("<tr>").appendTo(table);
+        $("<td>").css({width: 30}).appendTo(tr).html(`<input type="checkbox"/>`);
+        $("<td>").css({width: 30}).appendTo(tr).html(`<div style="--border-color: transparent"><input type="checkbox" data-role="custom-checkbox" data-state-on="<span class='mif-star-full fg-orange'>" data-state-off="<span class='mif-star-empty'>" /></div>`);
+        $("<td>").appendTo(tr).html(item[0]);
+        $("<td>").appendTo(tr).html(item[1]);
+        $("<td>").css({width: 30}).appendTo(tr).html(item[2]);    
+    }
+    
+    Metro.pagination({
+        target: "#paging",
+        current: 1,
+        length: 2500,
+        rows: 25,
+    })
+</script>
+
+<style>
+    .sidenav-m3 {
+        .d-menu {
+            --d-menu-background: var(--default-background);
+            --d-menu-item-background-hover: var(--sidenav-m3-background-hover);
+            --d-menu-item-color-hover: var(--sidenav-m3-color-hover);
+        }
+        
+        .active-toggle {
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+</style>

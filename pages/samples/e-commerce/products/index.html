@@ -1,0 +1,457 @@
+<script>window.PAGE_TITLE = 'E-Commerce | Product List'</script>
+
+<div class="box landing p-0 container-query" style="height: 100%; overflow-y: auto; overflow-x: hidden;">
+    <nav class="bg-dark fg-white" data-role="app-bar" data-expand="true" style="--appbar-item-color: #fff; --appbar-item-background-hover: var(--color-indigo); --appbar-item-color-hover: var(--color-white);">
+        <div class="app-bar-container">
+            <button class="button-crimson" id="catalog-toggle" onclick="$('#stack-menu').toggleClass('open')">
+                <span class="mif-apps icon"></span>
+            </button>
+
+            <a href="#" class="app-bar-item-static">
+                <div class="text-leader text-weight-9 fg-white">Shop<span class="fg-crimson">Demo</span></div>
+            </a>
+        </div>
+
+        <div class="app-bar-container dark-side d-none d-flex-md ml-auto">
+            <input id="search-control" type="text" data-cls-search-button="button-crimson" placeholder="Search..." data-search-button-icon="<span class='mif-search'>">
+        </div>
+
+        <div class="app-bar-container ml-auto d-none d-flex-ld">
+            <a href="#" class="app-bar-item"><span class="mif-user-settings enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-justice enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-favorite-outline enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-shopping-cart enlarge-9"></span></a>
+        </div>
+
+<!--        <a href="/pages/fullscreen/showcase.html" target="_blank" class="app-bar-item ml-auto ml-10-md"><span class="mif-external enlarge-9"></span></a>-->
+    </nav>
+
+    <div id="stack-menu" class="pos-absolute" style="top: 52px; height: calc(100% - 52px);"
+         data-role="stack-menu"
+         data-root-title="Main Menu"
+         data-back-button-icon="<span class='mif-chevron-left'>"
+         data-size="320"
+
+    >
+        <div class="d-flex pr-3">
+            <div class="title"></div>
+            <button class="cycle ml-auto" onclick="$('#stack-menu').removeClass('open')"><span class="mif-cross"></span></button>
+        </div>
+        <ul>
+            <li><a href="#"><span class="mif-user-settings icon"></span> Enter to profile</a></li>
+            <li>
+                <a href="#" class="fg-crimson"><span class="mif-apps icon"></span> Product Catalog</a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Xiaomi_RED.svg" class="icon" loading="lazy">
+                            Xiaomi
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Smartphones</a>
+                                <ul>
+                                    <li><a href="#">Xiaomi 15</a></li>
+                                    <li><a href="#">Xiaomi 14T</a></li>
+                                    <li><a href="#">Readmi Note 14</a></li>
+                                    <li><a href="#">Readmi 13</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Health and sports</a></li>
+                            <li><a href="#">Tablets</a></li>
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Smart house</a></li>
+                            <li><a href="#">Multimedia</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Scooter.svg" class="icon" loading="lazy">
+                            Transport and cycling
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_1.svg" class="icon" loading="lazy">
+                            Smartphones and phones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_2.svg" class="icon" loading="lazy">
+                            TV and Multimedia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_3.svg" class="icon" loading="lazy">
+                            Home Appliances
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_4.svg" class="icon" loading="lazy">
+                            Laptops, PCs and Tablets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_16.svg" class="icon" loading="lazy">
+                            Gaming Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_5.svg" class="icon" loading="lazy">
+                            Smartwatches and Gadgets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_6.svg" class="icon" loading="lazy">
+                            Audio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_7.svg" class="icon" loading="lazy">
+                            Sports and Health
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_8.svg" class="icon" loading="lazy">
+                            Tourism and Fishing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_9.svg" class="icon" loading="lazy">
+                            Repair and Equipment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_10.svg" class="icon" loading="lazy">
+                            Cottage, Home and Garden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_11.svg" class="icon" loading="lazy">
+                            Pet Supplies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_12.svg" class="icon" loading="lazy">
+                            Children's Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_13.svg" class="icon" loading="lazy">
+                            Auto and Moto Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/trumaj_zarjad_black.svg" class="icon" loading="lazy">
+                            Keep Charged
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_14.svg" class="icon" loading="lazy">
+                            Clothing and Accessories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_15.svg" class="icon" loading="lazy">
+                            Perfumes, Care, Jewelry
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="mif-favorite-outline icon"></span> Favorites</a></li>
+            <li><a href="#"><span class="mif-justice icon"></span> Comparing</a></li>
+            <li><a href="#"><span class="mif-tag-sale icon"></span> Sales</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid mb-6 mt-6" id="product-about">
+        <ul class="breadcrumbs">
+            <li><a href="#"><span class="mif-home"></span></a></li>
+            <li><a href="#">Smartphones and phones</a></li>
+            <li><a href="#">Smartphones</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid d-flex flex-wrap">
+        <h2>
+            <button class="success" id="btn-show-filter" onclick="toggleFilterPanel()"><span class="mif-filter-list"></span>Filter</button>
+            <span class="">Smartphones</span> <small>(Found <span class="enlarge-2" id="goods-found">0</span> goods)</small>
+        </h2>
+        <div class="ml-auto mr-4">
+            <div class="d-flex flex-row gap-1">
+                <select id="sorting" class="medium"></select>
+                <select id="rows-count" class="medium"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex flex-row">
+        <div class="filters-container">
+            <div class="filters">
+                <div class="filter filter-seller">
+                    <div>Seller <span class="text-muted">2</span></div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Seller 1"><span class='text-weight-2'>(123)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Seller 2"><span class='text-weight-2'>(123)</span></li>
+                    </ul>
+                </div>
+
+                <div class="filter filter-seller">
+                    <div>Brand <span class="text-muted">10</span></div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Samsung"> <span class='text-weight-2'>(458)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Apple"> <span class='text-weight-2'>(367)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Sony"> <span class='text-weight-2'>(289)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="LG"> <span class='text-weight-2'>(234)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Philips"> <span class='text-weight-2'>(198)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Panasonic"> <span class='text-weight-2'>(167)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Xiaomi"> <span class='text-weight-2'>(145)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Huawei"> <span class='text-weight-2'>(134)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Asus"> <span class='text-weight-2'>(112)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Lenovo"> <span class='text-weight-2'>(98)</span></li>
+                    </ul>
+                </div>
+                
+                <div class="filter filter-price">
+                    <div>Price in $ (USD)</div>
+                    <div class="d-flex flex-row flex-center mt-4">
+                        <input type="text" id="min-price"> <span class="mif-minus"></span> <input type="text" id="max-price">
+                    </div>
+                    <input type="text" data-role="double-slider" data-min="0" data-max="1000000" data-on-change="filterPriceChange">
+                </div>
+                
+                <div class="filter filter-delivery">
+                    <div>Delivery <span class="text-muted">3</span></div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Ready to depart"><span class='text-weight-2'>(123)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Delivery to shop"><span class='text-weight-2'>(123)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Delivery to address"><span class='text-weight-2'>(123)</span></li>
+                    </ul>
+                </div>
+                
+                <div class="filter filter-delivery">
+                    <div>Option <span class="text-muted">3</span></div>
+                    <div data-role="button-group" data-mode="multiple" class="mt-4 flex-wrap gap-2">
+                        <button class="button outline square">1</button>
+                        <button class="button outline square">2</button>
+                        <button class="button outline square">3</button>
+                        <button class="button outline square">4</button>
+                        <button class="button outline square">5</button>
+                        <button class="button outline square">6</button>
+                        <button class="button outline square">7</button>
+                        <button class="button outline square">8</button>
+                        <button class="button outline square">9</button>
+                        <button class="button outline square">10</button>
+                    </div>
+                </div>
+                
+                <div class="filter filter-delivery">
+                    <div>Country manufacturer <span class="text-muted">10</span></div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Ukraine"><span class='text-weight-2'>(123)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="China"><span class='text-weight-2'>(456)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="USA"><span class='text-weight-2'>(345)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Germany"><span class='text-weight-2'>(234)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Japan"><span class='text-weight-2'>(189)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="South Korea"><span class='text-weight-2'>(167)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Taiwan"><span class='text-weight-2'>(145)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Vietnam"><span class='text-weight-2'>(134)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Malaysia"><span class='text-weight-2'>(112)</span></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="India"><span class='text-weight-2'>(98)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-query product-list w-100">
+            <div class="mt-4-minus" data-role="remote-dataset"
+                 data-key-offset="skip"
+                 data-key-data="products"
+                 data-key-limit="limit"
+                 data-key-total="total"
+                 data-key-sort="sortBy"
+                 data-key-order="order"
+                 data-key-search="q"
+                 data-url='https://dummyjson.com/products/category/smartphones'
+                 data-url-search='https://dummyjson.com/products/search'
+                 data-cls-body="d-flex flex-row flex-wrap gap-1 mt-4 flex-center"
+                 data-cls-pagination="mt-4 d-flex flex-justify-center"
+                 data-sort="rating:desc"
+                 data-sort-rules="price:asc:Price:<span class='mif-arrow-up'>,price:desc:Price:<span class='mif-arrow-down'>,rating:desc:By rating:<span class='mif-star-empty'>"
+                 data-on-draw-entry="drawEntry"
+                 data-rows="12"
+                 data-rows-steps="12, 24, 48, 96, 192"
+                 data-show-service-block="false"
+                 data-search-control="#search-control"
+                 data-sorting-control="#sorting"
+                 data-rows-count-control="#rows-count"
+                 data-on-load="onLoadData"
+            ></div>
+        </div>
+    </div>
+
+    <footer class="bg-dark pt-20 mt-20 w-100">
+        <div class="p-20 d-flex flex-column flex-center">
+            <ul class="h-menu bg-transparent fg-white">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="fg-white">
+                Copyright &copy; 2025. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<style>
+    .filters {
+        border-top: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+    }
+    
+    .filter {
+        padding: 10px;
+        border-bottom: 1px solid var(--border-color);
+        
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0;
+
+            .checkbox:hover {
+                span {
+                    color: var(--color-green)!important;
+                }
+            }
+        }
+    }
+    
+    .filters-container {
+        width: 320px;
+        opacity: 0;
+        position: fixed;
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
+        z-index: var(--z-index-fixed);
+        background: var(--default-background);
+        overflow-y: auto;
+        height: calc(100vh - 240px);
+        padding-bottom: 20px;
+        
+        &.open {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @container (width >= 800px) {
+        #btn-show-filter {
+            display: none;
+        }
+
+        .filters-container {
+            opacity: 1;
+            position: relative;
+            transform: translateX(0);
+            height: auto;
+        }
+    }
+    
+    .select:has( #sorting ) {
+        flex: 0 0 240px;
+    }
+    .select:has( #rows-count ) {
+        flex: 0 0 140px;
+    }
+</style>
+
+<script>
+    function changeView() {
+        $(".product-list").toggleClass("compact-view");
+    }
+
+    function onLoadData(data) {
+        $("#goods-found").html(data.total)
+        return data
+    }
+
+    function drawEntry(entry, index) {
+        const statuses = [
+            "<div class='fg-green product-status'>Ready to depart <span class=\"mif-truck-delivery icon\"></span></div>",
+            "<div class='fg-blue product-status'>In stock <span class=\"mif-transport icon\"></span></div>",
+            "<div class='fg-coral product-status'>Waiting for stock <span class=\"mif-truck2 icon\"></span></div>",
+            "<div class='fg-red product-status'>Out of stock</div>",
+        ]
+        
+        const status = statuses[Math.floor(Math.random() * statuses.length)];
+        
+        return `
+            <div class="product-card hovered h-100">
+                <div class="badge bg-transparent">
+                        <button class="square large flat"><span class="mif-favorite-outline enlarge-6 fg-orange"></span></button>                
+                </div>
+                <div class="product-image">
+                    <img src="${entry.thumbnail}" alt="${entry.title}"/>                
+                </div>            
+                <div class="product-info">
+                    <a href="#" class="product-title fg-sat-green-hover">
+                        ${entry.description}
+                    </a>
+                    <div class="product-rating" style="--rating-on-color: #ffa500; --rating-star-size: 14px">
+                        <input data-role="rating" data-static="true" data-value="${entry.rating}" />
+                        <div class="d-flex flex-align-center mt-1 gap-1"><span class="mif-chat-line"></span> ${entry.reviews.length}</div>
+                    </div>            
+                    ${status}
+                </div>
+                <div class="product-footer mt-auto">
+                    <div class="product-price">
+                        ${entry.discountPercentage ? "<div class='-old'>$"+(entry.price)+"</div>" : ""}
+                        <div class="fg-red">$${(entry.price - entry.price/100*entry.discountPercentage).toFixed(2)}</div>
+                    </div>
+                    <div class="ml-auto">
+                        <button class="square large flat ${status.includes('Out of stock') ? 'd-none' : ''}"><span class="mif-add-shopping-cart enlarge-6 fg-green"></span></button>
+                    </div>
+                </div>
+                <div class="product-props">
+                    <div class="product-desc">${entry.description}</div>
+                </div>
+            </div>        
+        `;
+    }
+    
+    function filterPriceChange(values) {
+        const [min, max] = values.toArray(",", "number");
+        $("#min-price").val(min);
+        $("#max-price").val(max);
+    }
+    
+    function toggleFilterPanel() {
+        $(".filters-container").toggleClass("open");
+    }
+</script>

@@ -1,0 +1,38 @@
+
+<script>window.PAGE_TITLE = 'Panda 1.0 | Touch &amp; Swipe'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Touch &amp; Swipe</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li class="active"><a href="#">Touch &amp; Swipe</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About Touch and Swipe</div>
+    <p class="">
+        Metro UI supports touch and swipe events. You can use the <code>data-role="swipe"</code> attribute to enable swipe events for the element.
+        You can use events <code>data-on-swipe</code>, <code>data-on-swipe-left</code>, <code>data-on-swipe-right</code>, <code>data-on-swipe-top</code>, and <code>data-on-swipe-bottom</code> to handle swipe events.
+    </p>
+    <p>
+        Swipe on red box to see the swipe log.
+    </p>
+</div>
+
+<div class="box d-flex flex-align-center flex-justify-center bg-red fg-white" style="height: 400px" data-role="swipe" data-on-swipe="swipe">
+    <div id="swipe-log" class="h1"></div>
+</div>
+
+<script>
+    (() => {
+        globalThis.swipe = (start, swipe, direction) =>{
+            let log = document.getElementById('swipe-log');
+            log.innerText = `${direction}`;
+        }
+    })();
+</script>

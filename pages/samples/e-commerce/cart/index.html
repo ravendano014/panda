@@ -1,0 +1,415 @@
+<script>window.PAGE_TITLE = 'Samples | Product'</script>
+
+<div class="box landing p-0 container-query" style="height: 100%; overflow-y: auto; overflow-x: hidden;">
+    <nav class="bg-dark fg-white" data-role="app-bar" data-expand="true" style="--appbar-item-color: #fff; --appbar-item-background-hover: var(--color-indigo); --appbar-item-color-hover: var(--color-white);">
+        <div class="app-bar-container">
+            <button class="button-crimson" id="catalog-toggle" onclick="$('#stack-menu').toggleClass('open')">
+                <span class="mif-apps icon"></span>
+            </button>
+
+            <a href="#" class="app-bar-item-static">
+                <div class="text-leader text-weight-9 fg-white">Shop<span class="fg-crimson">Demo</span></div>
+            </a>
+        </div>
+
+        <div class="app-bar-container dark-side d-none d-flex-md ml-auto">
+            <input type="text" data-role="input" class="" data-search-button="true" data-cls-search-button="button-crimson" placeholder="Search..." data-search-button-icon="<span class='mif-search'>">
+        </div>
+
+        <div class="app-bar-container ml-auto d-none d-flex-ld">
+            <a href="#" class="app-bar-item"><span class="mif-user-settings enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-justice enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-favorite-outline enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-shopping-cart enlarge-9"></span></a>
+        </div>
+
+        <!--        <a href="/pages/fullscreen/showcase.html" target="_blank" class="app-bar-item ml-auto ml-10-md"><span class="mif-external enlarge-9"></span></a>-->
+    </nav>
+
+    <div id="stack-menu" class="pos-absolute" style="top: 52px; height: calc(100% - 52px);"
+         data-role="stack-menu"
+         data-root-title="Main Menu"
+         data-back-button-icon="<span class='mif-chevron-left'>"
+         data-size="320"
+
+    >
+        <div class="d-flex pr-3">
+            <div class="title"></div>
+            <button class="cycle ml-auto" onclick="$('#stack-menu').removeClass('open')"><span class="mif-cross"></span></button>
+        </div>
+        <ul>
+            <li><a href="#"><span class="mif-user-settings icon"></span> Enter to profile</a></li>
+            <li>
+                <a href="#" class="fg-crimson"><span class="mif-apps icon"></span> Product Catalog</a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Xiaomi_RED.svg" class="icon" loading="lazy">
+                            Xiaomi
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Smartphones</a>
+                                <ul>
+                                    <li><a href="#">Xiaomi 15</a></li>
+                                    <li><a href="#">Xiaomi 14T</a></li>
+                                    <li><a href="#">Readmi Note 14</a></li>
+                                    <li><a href="#">Readmi 13</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Health and sports</a></li>
+                            <li><a href="#">Tablets</a></li>
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Smart house</a></li>
+                            <li><a href="#">Multimedia</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Scooter.svg" class="icon" loading="lazy">
+                            Transport and cycling
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_1.svg" class="icon" loading="lazy">
+                            Smartphones and phones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_2.svg" class="icon" loading="lazy">
+                            TV and Multimedia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_3.svg" class="icon" loading="lazy">
+                            Home Appliances
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_4.svg" class="icon" loading="lazy">
+                            Laptops, PCs and Tablets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_16.svg" class="icon" loading="lazy">
+                            Gaming Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_5.svg" class="icon" loading="lazy">
+                            Smartwatches and Gadgets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_6.svg" class="icon" loading="lazy">
+                            Audio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_7.svg" class="icon" loading="lazy">
+                            Sports and Health
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_8.svg" class="icon" loading="lazy">
+                            Tourism and Fishing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_9.svg" class="icon" loading="lazy">
+                            Repair and Equipment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_10.svg" class="icon" loading="lazy">
+                            Cottage, Home and Garden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_11.svg" class="icon" loading="lazy">
+                            Pet Supplies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_12.svg" class="icon" loading="lazy">
+                            Children's Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_13.svg" class="icon" loading="lazy">
+                            Auto and Moto Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/trumaj_zarjad_black.svg" class="icon" loading="lazy">
+                            Keep Charged
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_14.svg" class="icon" loading="lazy">
+                            Clothing and Accessories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_15.svg" class="icon" loading="lazy">
+                            Perfumes, Care, Jewelry
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="mif-favorite-outline icon"></span> Favorites</a></li>
+            <li><a href="#"><span class="mif-justice icon"></span> Comparing</a></li>
+            <li><a href="#"><span class="mif-tag-sale icon"></span> Sales</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid mb-6 mt-6" id="product-about">
+        <ul class="breadcrumbs">
+            <li><a href="#"><span class="mif-home"></span></a></li>
+            <li><a href="#">Shopping Cart</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid mt-6 mb-6">
+        <div class="box">
+            <div class="box-title text-weight-8">Your Cart:</div>
+            
+            <div class="cart-items">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td style="width: 100px"><div class="item-image"><img src="/images/396379084.webp"/></div></td>
+                        <td>
+                            <div class="item-name">
+                                <a href="#">
+                                    <span class="fg-default">Multipic TEFAL Easy Fry&Grill Window</span>
+                                </a>
+                            </div>
+                            <div class="item-seller">
+                                Seller: <span class="text-weight-8">Tefal</span>
+                            </div>
+                        </td>
+                        <td style="width: 160px">
+                            <input data-role="spinner" value="1" data-min-value="0" data-price="150" data-price-old="300"/>
+                        </td>
+                        <td style="width: 160px">
+                            <div class="item-price">
+                                <div class="-old">$300</div>
+                                <div class="-current fg-crimson">$150</div>
+                            </div>
+                        </td>
+                        <td style="width: 100px">
+                            <div class="dropdown-button no-dropdown-caret">
+                                <button class="flat square"><span class="mif-more-vert"></span></button>
+                                <ul class="d-menu" data-role="dropdown">
+                                    <li><a href="#"><span class="mif-bin icon"></span> Remove from cart</a></li>
+                                    <li><a href="#"><span class="mif-favorite-outline icon"></span> Add to favorites</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="additional-services border-top bd-default pt-6 mt-6">
+                <div class="h4 dropdown-toggle c-pointer" id="add-services">Additional Services <span class="mif-chevron-down"></span></div>
+                <div data-role="collapse" data-toggle-element="#add-services" data-collapsed="true">
+                    <ul class="unstyled-list">
+                        <li><input type="checkbox" class="medium" data-role="checkbox" data-caption="Lorem ipsum dolor sit amet" /></li>
+                        <li><input type="checkbox" class="medium" data-role="checkbox" data-caption="Lorem ipsum dolor sit amet" /></li>
+                        <li><input type="checkbox" class="medium" data-role="checkbox" data-caption="Lorem ipsum dolor sit amet" /></li>
+                        <li><input type="checkbox" class="medium" data-role="checkbox" data-caption="Lorem ipsum dolor sit amet" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid cart-total">
+        <div>
+            <button class="ml-4 large"><span class="mif-arrow-left icon"></span> Back to shopping</button>
+        </div>
+        <div class="cart-total-inner">
+            <div class="d2 gradient-text gradient-gray-mouse text-weight-8" id="total-sum">$150</div>
+            <button class="large success text-bold gradient-border animated-border-green"><span class="mif-order-details icon"></span> Place an order</button>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-6 mb-6">
+        <div class="container-query mt-12">
+            <div class="text-weight-8 h2 no-wrap">We also recommend:</div>
+            <div class="d-flex">
+                <div data-role="remote-dataset"
+                     data-key-offset="skip"
+                     data-key-data="products"
+                     data-key-limit="limit"
+                     data-key-total="total"
+                     data-key-sort="sortBy"
+                     data-key-order="order"
+                     data-key-search="q"
+                     data-url='https://dummyjson.com/products'
+                     data-url-search='https://dummyjson.com/products/search'
+                     data-cls-body="d-flex flex-wrap gap-2"
+                     data-cls-pagination="mt-4 d-flex flex-justify-center"
+                     data-on-draw-entry="drawProductEntry"
+                     data-rows="10"
+                     data-rows-steps="10,20"
+                     data-show-service-block="false"
+                     data-show-pagination="false"
+                     data-show-more="false"
+                ></div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer class="bg-dark pt-20 mt-6 w-100">
+        <div class="p-20 d-flex flex-column flex-center">
+            <ul class="h-menu bg-transparent fg-white">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="fg-white">
+                Copyright &copy; 2025. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<style>
+    .cart-items {
+        .item-image {
+            width: 100px;
+            height: 100px;
+            background-color: #eee;
+            border-radius: 5px;
+            overflow: hidden;
+            padding: 8px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        
+        .item-price {
+            text-align: right;
+            line-height: 1;
+            
+            .-old {
+                text-decoration: line-through;
+                color: #999;
+                font-size: 0.8em;
+                font-weight: 400;
+            }
+            .-current {
+                font-size: 1.2em;
+                font-weight: 800;
+            }
+        }
+    }
+    
+    .cart-total {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 10px;
+        
+        .cart-total-inner {
+            margin-left: auto;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 3rem;
+            padding: 1rem 3rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+    }
+</style>
+
+<script>
+    function drawProductEntry(entry, index, body) {
+        const statuses = [
+            "<div class='fg-green product-status'>Ready to depart <span class=\"mif-truck-delivery icon\"></span></div>",
+            "<div class='fg-blue product-status'>In stock <span class=\"mif-transport icon\"></span></div>",
+            "<div class='fg-coral product-status'>Waiting for stock <span class=\"mif-truck2 icon\"></span></div>",
+            "<div class='fg-red product-status'>Out of stock</div>",
+        ]
+
+        const status = statuses[Math.floor(Math.random() * statuses.length)];
+
+        return `
+            <div class="product-card h-100">
+                <div class="badge bg-transparent">
+                    <button class="square small flat"><span class="mif-favorite-outline enlarge-6 fg-orange"></span></button>
+                </div>
+                <div class="product-image">
+                    <img src="${entry.thumbnail}" alt="${entry.title}"/>                
+                </div>            
+                <div class="product-info">
+                    <a href="#" class="product-title fg-sat-green-hover">
+                        ${entry.description}
+                    </a>
+                    <div class="product-rating" style="--rating-on-color: #ffa500; --rating-star-size: 14px">
+                        <input class="small" data-role="rating" data-static="true" data-value="${entry.rating}" />
+                        <div class="d-flex flex-align-center mt-1 gap-1"><span class="mif-chat-line"></span> ${entry.reviews.length}</div>
+                    </div>            
+                    ${status}
+                </div>
+                <div class="product-footer mt-auto">
+                    <div class="product-price">
+                        ${entry.discountPercentage ? "<div class='-old'>$"+(entry.price)+"</div>" : ""}
+                        <div class="fg-red reduce-2">$${(entry.price - entry.price/100*entry.discountPercentage).toFixed(2)}</div>
+                    </div>
+                    <div class="ml-auto">
+                        <button class="square small flat"><span class="mif-add-shopping-cart enlarge-6 fg-green"></span></button>
+                    </div>
+                </div>
+            </div>        
+        `;
+    }
+
+    (() => {
+        const spinner = $('[data-role="spinner"]');
+        spinner.on('change', function (e) {
+            const input = $(e.target);
+            const price = input.attr('data-price');
+            const price_old = input.attr('data-price-old');
+            const total = $("#total-sum")
+            const c = input.closest("tr").find('.-current');
+            const o = input.closest("tr").find('.-old');
+            c.text('$' + (price * input.val()));
+            o.text('$' + (price_old * input.val()));
+            total.text('$' + (price * input.val()));
+        });
+    })()
+</script>

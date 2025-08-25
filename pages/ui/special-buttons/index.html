@@ -1,0 +1,624 @@
+<script>window.PAGE_TITLE = 'UI Elements | Special Buttons'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Special Buttons</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">UI</a></li>
+            <li class="active"><a href="#">Special Buttons</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Breadcrumbs</div>
+    <p class="text-muted">
+        You can create breadcrumbs with <code>.breadcrumbs</code> class anb the specifier <code>.arrow</code> or <code>.default</code>
+        to change the style of breadcrumbs.
+    </p>
+    <div class="mt-4">
+        <div class="text-bold">Default</div>
+        <ul class="breadcrumbs p-4 border bd-default" data-divider="/">
+            <li><a href="#"><span class="mif-home icon"></span>Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Data</a></li>
+            <li class="active"><a href="#">Bootstrap</a></li>
+        </ul>
+    </div>
+
+    <div class="mt-4">
+        <div class="text-bold">Custom Divider</div>
+        <ul class="breadcrumbs chevron p-4 border bd-default">
+            <li data-divider="вЂє"><a href="#"><span class="mif-home icon"></span>Home</a></li>
+            <li data-divider="вЂє"><a href="#">Library</a></li>
+            <li data-divider="вЂє"><a href="#">Data</a></li>
+            <li class="active"><a href="#">Bootstrap</a></li>
+        </ul>
+    </div>
+
+    <div class="mt-4">
+        <div class="text-bold">Arrow</div>
+        <ul class="breadcrumbs arrow p-4 border bd-default">
+            <li><a href="#"><span class="mif-home icon"></span>Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Data</a></li>
+            <li class="active"><a href="#">Bootstrap</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Toggle Button</div>
+    <div class="mt-4">
+        <div data-role="toggle-button">
+            <button class="button active" data-value="1">Editor</button>
+            <button class="button" data-value="2">Executions</button>
+            <button class="button" data-value="3">Evaluations</button>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Command Button</div>
+    <p class="text-muted">
+        Create a command button with <code>.command-button</code> class.
+    </p>
+    <div class="d-flex flex-wrap">
+        <button class="command-button">
+            <span class="icon">
+                <span class="mif-share"></span>
+            </span>
+            <span class="caption">
+                Share and connect
+                <small>Use this option for home or work</small>
+            </span>
+        </button>
+        <button class="command-button outline">
+            <span class="icon">
+                <span class="mif-printer"></span>
+            </span>
+            <span class="caption">
+                Setup Printer
+                <small>Add new printer...</small>
+            </span>
+        </button>
+        <button class="command-button alert">
+            <span class="icon">
+                <span class="mif-share"></span>
+            </span>
+            <span class="caption">
+                Share and connect
+                <small>Use this option for home or work</small>
+            </span>
+        </button>
+        <button class="command-button shadow">
+            <span class="icon">
+                <span class="mif-share"></span>
+            </span>
+            <span class="caption">
+                Share and connect
+                <small>Use this option for home or work</small>
+            </span>
+        </button>
+        <button class="command-button shift">
+            <span class="icon">
+                <span class="mif-share"></span>
+            </span>
+            <span class="caption">
+                Shift Effect
+                <small>Use this option for home or work</small>
+            </span>
+        </button>
+    </div>
+
+    <p class="text-muted">
+        You can use <code>soft-*</code> and <code>normal-*</code> classes to change button color.
+    </p>
+</div>
+
+<div class="box">
+    <div class="box-title">Action Button</div>
+    <p class="text-muted">
+        You can create an action button with role <code>action-button</code>.
+    </p>
+    <div class="mt-4 d-flex flex-center">
+        <div data-role="action-button">
+            <button>
+                <span class="icon"><span class="mif-git"></span></span>
+            </button>
+            <ul class="actions">
+                <li><a href="#"><span class="mif-git-branch"></span></a></li>
+                <li><a href="#"><span class="mif-git-clone"></span></a></li>
+                <li><a href="#"><span class="mif-git-commit"></span></a></li>
+                <li><a href="#"><span class="mif-git-compare"></span></a></li>
+                <li><a href="#"><span class="mif-git-diff"></span></a></li>
+                <li><a href="#"><span class="mif-git-draft"></span></a></li>
+                <li><a href="#"><span class="mif-git-fork"></span></a></li>
+                <li><a href="#"><span class="mif-git-pull"></span></a></li>
+                <li><a href="#"><span class="mif-git-push"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Image Button</div>
+    <p class="text-muted">
+        Create an image button with <code>.image-button</code> class.
+    </p>
+    <div class="mt-2">
+        <button class="image-button">
+            <span class="mif-share icon"></span>
+            <span class="caption">Default</span>
+        </button>
+        <button class="image-button primary">
+            <span class="mif-share icon"></span>
+            <span class="caption">Share it</span>
+        </button>
+    </div>
+    <div class="mt-2">
+        <button class="image-button mini">
+            <span class="mif-share icon"></span>
+            <span class="caption">Default</span>
+        </button>
+        <button class="image-button small">
+            <span class="mif-share icon"></span>
+            <span class="caption">Default</span>
+        </button>
+        <button class="image-button medium">
+            <span class="mif-share icon"></span>
+            <span class="caption">Default</span>
+        </button>
+        <button class="image-button">
+            <span class="mif-share icon"></span>
+            <span class="caption">Default</span>
+        </button>
+        <button class="image-button large">
+            <span class="mif-share icon"></span>
+            <span class="caption">Default</span>
+        </button>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Info Button</div>
+    <p class="text-muted">
+        Create an info button with <code>.info-button</code> class.
+    </p>
+    <div class="mt-2">
+        <div class="info-button">
+            <a href="#" class="title"><span class="mif-star-full icon"></span> Star</a>
+            <a href="#" class="value">5,547</a>
+        </div>
+        <div class="info-button primary">
+            <a href="#" class="title"><span class="mif-star-full icon"></span> Star</a>
+            <a href="#" class="value">5,547</a>
+        </div>
+    </div>
+    <div class="mt-2">
+        <div class="info-button mini">
+            <a href="#" class="title"><span class="mif-star-full icon"></span> Star</a>
+            <a href="#" class="value">5,547</a>
+        </div>
+        <div class="info-button small">
+            <a href="#" class="title"><span class="mif-star-full icon"></span> Star</a>
+            <a href="#" class="value">5,547</a>
+        </div>
+        <div class="info-button medium">
+            <a href="#" class="title"><span class="mif-star-full icon"></span> Star</a>
+            <a href="#" class="value">5,547</a>
+        </div>
+        <div class="info-button">
+            <a href="#" class="title"><span class="mif-star-full icon"></span> Star</a>
+            <a href="#" class="value">5,547</a>
+        </div>
+        <div class="info-button large">
+            <a href="#" class="title"><span class="mif-star-full icon"></span> Star</a>
+            <a href="#" class="value">5,547</a>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Shortcut</div>
+    <p class="text-muted">
+        Create a shortcut button with <code>.shortcut</code> class.
+    </p>
+    <div class="mt-2">
+        <button class="shortcut">
+            <span class="icon"><span class="mif-rocket"></span></span>
+            <span class="caption">Rocket</span>
+        </button>
+        <button class="shortcut outline">
+            <span class="icon"><span class="mif-share"></span></span>
+            <span class="caption">Share</span>
+        </button>
+        <button class="shortcut alert">
+            <span class="icon"><span class="mif-report"></span></span>
+            <span class="caption">Alert</span>
+        </button>
+        <button class="shortcut">
+            <span class="badge">10</span>
+            <span class="icon"><span class="mif-email"></span></span>
+            <span class="caption">Mails</span>
+        </button>
+        <button class="shortcut no-caption">
+            <span class="icon"><span class="mif-email"></span></span>
+        </button>
+    </div>
+
+    <p class="text-muted">
+        You can use <code>soft-*</code> and <code>normal-*</code> classes to change shortcut color.
+    </p>
+
+    <div class="mt-4">
+        <button class="shortcut soft-emerald">
+            <span class="badge">10</span>
+            <span class="icon"><span class="mif-email"></span></span>
+            <span class="caption">Mails</span>
+        </button>
+        <button class="shortcut normal-emerald">
+            <span class="badge">10</span>
+            <span class="icon"><span class="mif-email"></span></span>
+            <span class="caption">Mails</span>
+        </button>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Toolbar &amp; Tool Button</div>
+    <p class="text-muted">
+        You can use <code>.toolbar</code> and <code>.tool-button</code> classes to create toolbar.
+    </p>
+    <div class="mt-2">
+        <div class="toolbar movable">
+            <button class="tool-button">
+                <span class="icon mif-text-align-left"></span>
+            </button>
+            <button class="tool-button">
+                <span class="icon mif-text-align-center"></span>
+            </button>
+            <button class="tool-button">
+                <span class="icon mif-text-align-right"></span>
+            </button>
+            <button class="tool-button">
+                <span class="icon mif-text-align-justify"></span>
+            </button>
+        </div>
+    </div>
+
+    <p class="text-muted">
+        Use class <code>.outline</code> for button to create outline button.
+    </p>
+    <div class="mt-2">
+        <div class="toolbar movable">
+            <button class="tool-button outline">
+                <span class="icon mif-align-left"></span>
+            </button>
+            <button class="tool-button outline">
+                <span class="icon mif-align-center"></span>
+            </button>
+            <button class="tool-button outline">
+                <span class="icon mif-align-right"></span>
+            </button>
+        </div>
+    </div>
+
+    <p class="text-muted">
+        Add attribute <code>data-caption</code> to add caption to toolbar.
+    </p>
+    <div class="mt-4">
+        <div class="toolbar movable" data-caption="Text Align">
+            <button class="tool-button">
+                <span class="icon mif-align-left"></span>
+            </button>
+            <button class="tool-button">
+                <span class="icon mif-align-center"></span>
+            </button>
+            <button class="tool-button">
+                <span class="icon mif-align-right"></span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Dropdown Button</div>
+    <p class="text-muted">
+        Use <code>.dropdown-button</code> class to create dropdown button.
+    </p>
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-4">
+                <div class="dropdown-button">
+                    <button class="button dropdown-toggle">Dropdown</button>
+                    <ul data-role="dropdown" class="d-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="dropdown-button">
+                    <button class="button dropdown-toggle">Dropdown</button>
+                    <ul data-role="dropdown" class="d-menu place-right">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Split Button</div>
+    <p class="text-muted">
+        Use <code>.split-button</code> class to create split button.
+    </p>
+    
+    <div class="mt-4">
+        <div class="row">
+            <div class="cell-md-4">
+                <div class="split-button">
+                    <button class="button">Main Action</button>
+                    <button class="split dropdown-toggle"></button>
+                    <ul data-role="dropdown" class="d-menu">
+                        <li><a href="#">Secondary Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cell-md-4">
+                <div class="split-button no-gap">
+                    <button class="button">Main Action</button>
+                    <button class="split dropdown-toggle"></button>
+                    <ul data-role="dropdown" class="d-menu">
+                        <li><a href="#">Secondary Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-2">
+        <div class="split-button no-gap mini">
+            <button class="button">Main Action</button>
+            <button class="split dropdown-toggle"></button>
+            <ul data-role="dropdown" class="d-menu">
+                <li><a href="#">Secondary Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <div class="split-button no-gap small">
+            <button class="button">Main Action</button>
+            <button class="split dropdown-toggle"></button>
+            <ul data-role="dropdown" class="d-menu">
+                <li><a href="#">Secondary Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <div class="split-button no-gap medium">
+            <button class="button">Main Action</button>
+            <button class="split dropdown-toggle"></button>
+            <ul data-role="dropdown" class="d-menu">
+                <li><a href="#">Secondary Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <div class="split-button no-gap">
+            <button class="button">Main Action</button>
+            <button class="split dropdown-toggle"></button>
+            <ul data-role="dropdown" class="d-menu">
+                <li><a href="#">Secondary Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        <div class="split-button no-gap large">
+            <button class="button">Main Action</button>
+            <button class="split dropdown-toggle"></button>
+            <ul data-role="dropdown" class="d-menu">
+                <li><a href="#">Secondary Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Transform Button</div>
+    <p>
+        Use class <code>.transform-button</code> to create transform button.
+        For you available transform classes:
+        <code>.up</code>, <code>.down</code>, <code>.left</code>, <code>.right</code>, <code>.top-left</code>,
+        <code>.bottom-left</code>, <code>.top-right</code>, and <code>.bottom-right</code>.
+    </p>
+    <p class="text-muted">
+        Click the buttons below to view transform action.
+    </p>
+    <div class="mt-2">
+        <button class="transform-button up" onclick="$(this).toggleClass('transform')">
+            <span></span>
+        </button>
+        <button class="transform-button down" onclick="$(this).toggleClass('transform')">
+            <span></span>
+        </button>
+        <button class="transform-button right" onclick="$(this).toggleClass('transform')">
+            <span></span>
+        </button>
+        <button class="transform-button left" onclick="$(this).toggleClass('transform')">
+            <span></span>
+        </button>
+        <button class="transform-button top-left" onclick="$(this).toggleClass('transform')">
+            <span></span>
+        </button>
+        <button class="transform-button top-right" onclick="$(this).toggleClass('transform')">
+            <span></span>
+        </button>
+        <button class="transform-button bottom-left" onclick="$(this).toggleClass('transform')">
+            <span></span>
+        </button>
+        <button class="transform-button bottom-right" onclick="$(this).toggleClass('transform')">
+            <span></span>
+        </button>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Button Group</div>
+    <p class="text-muted">
+        Create a button group with <code>Button Group</code> component. You can create a group with radio state or multi state with attribute <code>data-mode="multi"</code>.
+    </p>
+    <div class="mt-4">
+        <div data-role="button-group">
+            <button class="button square active"><span class="mif-align-left"></span></button>
+            <button class="button square"><span class="mif-align-center"></span></button>
+            <button class="button square"><span class="mif-align-right"></span></button>
+        </div>
+        <div data-role="button-group" data-mode="multi">
+            <button class="button square active"><span class="mif-bold"></span></button>
+            <button class="button square"><span class="mif-italic"></span></button>
+            <button class="button square active"><span class="mif-underline"></span></button>
+            <button class="button square"><span class="mif-strikethrough-s"></span></button>
+        </div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Pagination</div>
+    <p class="text-muted">
+        Use <code>.pagination</code> to create pagination for your data.
+    </p>
+    <div class="mt-4">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item no-link"><a class="page-link">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item service"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+
+    <p class="text-muted">
+        Use <code>.no-gap</code> class to remove gap between pagination items.
+    </p>
+
+    <div class="mt-4">
+        <ul class="pagination no-gap">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item no-link"><a class="page-link">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item service"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+
+    <p class="text-muted">
+        Also, you can change pagination items size with classes <code>.size-large</code>, and <code>.size-small</code>.
+    </p>
+
+    <div class="mt-4">
+        <ul class="pagination size-large">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item no-link"><a class="page-link">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item service"><a class="page-link" href="#">Next</a></li>
+        </ul>
+        <ul class="pagination size-small">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item no-link"><a class="page-link">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item service"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+    
+    <div class="box-title-secondary">Color</div>
+    <p class="text-muted">
+        You can change pagination color with add color name class to <code>.pagination</code> class (for example below: <code>pagination sand</code>).
+    </p>
+    <div class="mt-4">
+        <ul class="pagination terracotta">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item no-link"><a class="page-link">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">7</a></li>
+            <li class="page-item"><a class="page-link" href="#">8</a></li>
+            <li class="page-item"><a class="page-link" href="#">9</a></li>
+            <li class="page-item service"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Audio Button</div>
+    <div class="mt-4">
+        <button data-role="audio-button" data-audio-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" onclick="$(this).toggleClass('loading animated-border-cyan')">
+            <span class="loader ani-spin">
+                <span class="mif-disc"></span>
+            </span>
+            <span class="caption">Play</span>
+        </button>
+    </div>
+</div>

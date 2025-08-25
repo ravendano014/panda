@@ -1,0 +1,42 @@
+
+<script>window.PAGE_TITLE = 'Widgets | Bar3D'</script>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Bar3D</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li><a href="#">Widgets</a></li>
+            <li class="active"><a href="#">Bar3D</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">About</div>
+    <p class="text-muted">
+        Bar3d is a component that creates a 3D bar chart visualization.
+    </p>
+</div>
+
+<div class="box">
+    <div class="d-flex flex-center gap-10" style="height: 300px">
+        <div data-role="bar3d" data-value="30" data-bar-color="#00d153" data-value-suffix="%" data-value-color="#fff"></div>
+        <div data-role="bar3d" data-value="30" data-bar-color="#e64fa8" data-value-suffix="%" data-value-color="#fff"></div>
+        <div data-role="bar3d" data-value="30" data-bar-color="#5bc0f1" data-value-suffix="%" data-value-color="#fff"></div>
+    </div>
+</div>
+
+<script>
+    (() => {
+        function run(){
+            for (let bar of $('[data-role="bar3d"]') ) {
+                $(bar).attr('data-value', Math.floor(Math.random() * 100))
+            }
+        }
+
+        setInterval(run, 5000)
+    })();
+</script>

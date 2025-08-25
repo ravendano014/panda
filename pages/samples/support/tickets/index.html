@@ -1,0 +1,285 @@
+<script>window.PAGE_TITLE = 'Samples | Ticket List'</script>
+
+<div class="box landing p-0 container-query" style="height: 100%; overflow-y: auto">
+    <nav data-role="app-bar" data-expand-point="xl">
+        <a href="#" class="app-bar-item-static">
+            <div class="text-leader text-weight-9">Help<span class="fg-crimson">Center</span></div>
+        </a>
+
+        <ul class="app-bar-menu ml-auto">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Faq</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid d-flex flex-wrap mt-6 mb-6">
+        <h2 class="ml-2 mr-2">
+            <button class="success" id="btn-show-filter" onclick="toggleFilterPanel()"><span class="mif-filter-list"></span>Filter</button>
+            <small>Found <span class="text-bold fg-default" id="tickets-found">0</span> tickets</small>
+        </h2>
+        <div class="ml-auto mr-4">
+            <div class="d-flex flex-row gap-1">
+                <select id="select-project" class="medium" data-role="select" data-prepend="<span class='mif-layout'>">
+                    <option value="all">All Projects</option>
+                    <option value="1">Project 1</option>
+                    <option value="2">Project 2</option>
+                    <option value="3">Project 3</option>
+                </select>
+                <select id="sorting" class="medium"></select>
+                <select id="rows-count" class="medium"></select>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex flex-row">
+        <div class="filters-container">
+            <div class="filters">
+                <div class="filter filter-seller">
+                    <div>Assignee</div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="olton"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="smith"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="johnson"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="williams"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="brown"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="davis"></li>
+                    </ul>
+                </div>
+
+                <div class="filter filter-seller">
+                    <div>Labels</div>
+                    <ul class="unstyled-list">
+                        <li><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="<span class='button mini cycle bg-red mr-1'></span> bug"></li>
+                        <li><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="<span class='button mini cycle bg-green mr-1'></span> feature"></li>
+                        <li><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="<span class='button mini cycle bg-yellow mr-1'></span> enhancement"></li>
+                        <li><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="<span class='button mini cycle bg-blue mr-1'></span> documentation"></li>
+                        <li><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="<span class='button mini cycle bg-purple mr-1'></span> help wanted"></li>
+                        <li><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="<span class='button mini cycle bg-orange mr-1'></span> priority"></li>
+                        <li><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="<span class='button mini cycle bg-cyan mr-1'></span> question"></li>
+                        <li><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="<span class='button mini cycle bg-brown mr-1'></span> invalid"></li>
+                        <li><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="<span class='button mini cycle bg-pink mr-1'></span> duplicate"></li>
+                        <li><input type="checkbox" data-role="checkbox" class="small mr-1" data-caption="<span class='button mini cycle bg-gray mr-1'></span> wontfix"></li>
+                    </ul>
+                </div>
+
+                <div class="filter filter-seller">
+                    <div>Milestone</div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="3.0.0"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="2.0.0"></li>
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="1.0.0"></li>
+                    </ul>
+                </div>
+
+                <div class="filter filter-seller">
+                    <div>Project</div>
+                    <ul class="unstyled-list">
+                        <li><input class="small" type="checkbox" data-role="checkbox" data-caption="Project 1"></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="container-query product-list w-100">
+            <div class="mt-4-minus" data-role="remote-dataset"
+                 data-key-offset="skip"
+                 data-key-data="posts"
+                 data-key-limit="limit"
+                 data-key-total="total"
+                 data-key-sort="sortBy"
+                 data-key-order="order"
+                 data-key-search="q"
+                 data-url='https://dummyjson.com/posts'
+                 data-cls-body="d-flex flex-column gap-2 mt-4 pl-4 pr-4"
+                 data-cls-pagination="mt-4 d-flex flex-justify-center"
+                 data-sort="rating:desc"
+                 data-sort-rules="date:asc:Date:<span class='mif-arrow-up'>,date:desc:Date:<span class='mif-arrow-down'>"
+                 data-on-draw-entry="drawEntry"
+                 data-rows="18"
+                 data-rows-steps="18, 36, 54"
+                 data-show-service-block="false"
+                 data-search-control="#search-control"
+                 data-sorting-control="#sorting"
+                 data-rows-count-control="#rows-count"
+                 data-on-load="onLoadTickets"
+                 data-show-more="false"
+            ></div>
+        </div>
+    </div>
+
+    <footer class="wavy-top bg-bronze pt-20 mt-20 w-100">
+        <div class="p-20 d-flex flex-column flex-center">
+            <ul class="h-menu bg-transparent fg-white">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="fg-white">
+                Copyright &copy; 2025. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</div>
+
+<style>
+    .filters {
+        border-top: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+    }
+
+    .filter {
+        padding: 10px;
+        border-bottom: 1px solid var(--border-color);
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0;
+
+            .checkbox:hover {
+                span {
+                    color: var(--color-green) !important;
+                }
+            }
+        }
+    }
+
+    .filters-container {
+        width: 320px;
+        opacity: 0;
+        position: fixed;
+        transform: translateX(-100%);
+        transition: 
+                transform 0.3s ease-in-out,
+                opacity 0.3s ease-in-out;
+        z-index: var(--z-index-fixed);
+        background: var(--default-background);
+        overflow-y: auto;
+        height: calc(100vh - 240px);
+        padding-bottom: 20px;
+
+        &.open {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @container (width >= 800px) {
+        #btn-show-filter {
+            display: none;
+        }
+
+        .filters-container {
+            opacity: 1;
+            position: relative;
+            transform: translateX(0);
+            height: auto;
+        }
+    }
+
+    .select:has( #sorting ) {
+        flex: 0 0 200px;
+    }
+
+    .select:has( #rows-count ) {
+        flex: 0 0 140px;
+    }
+    
+    .select:has( #select-project ) {
+        flex: 0 0 200px;
+    }
+    
+    .ticket-card {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 4px;
+        border-bottom: 1px solid var(--border-color);
+        
+        .ticket-checkbox, .ticket-bull {
+            flex: 0 0 50px;
+        }
+        
+        .ticket-author {
+            /*font-size: .8em;*/
+        }
+        
+        .ticket-secondary-info {
+            font-size: .8em;
+            gap: 4px;
+        }
+    }
+</style>
+
+<script>
+    function onLoadTickets(data) {
+        $("#tickets-found").html(data.total)
+        return data
+    }
+    
+    function drawEntry(entry, index) {
+        const bulls = ['dot', 'checkmark', 'cancel', 'pending']
+        const type = bulls[Math.floor(Math.random() * bulls.length)]
+        const bull_colors = {
+            dot: 'fc-indigo',
+            checkmark: 'fc-green',
+            cancel: 'fc-gray',
+            pending: 'fc-yellow'
+        }
+        const authors = ['olton', 'smith', 'johnson', 'williams', 'brown', 'davis']
+        const author = authors[Math.floor(Math.random() * authors.length)]
+        const labels = ['bug', 'feature', 'enhancement', 'documentation', 'help wanted', 'priority', 'question', 'invalid', 'duplicate', 'wontfix']
+        const label = labels[Math.floor(Math.random() * labels.length)]
+        const labels_colors = {
+            bug: 'bg-red fg-white',
+            feature: 'bg-green fg-white',
+            enhancement: 'bg-yellow fg-dark',
+            documentation: 'bg-blue fg-white',
+            "help wanted": 'bg-light-gray fg-dark',
+            priority: 'bg-orange fg-white',
+            question: 'bg-cyan fg-dark',
+            invalid: 'bg-brown fg-white',
+            duplicate: 'bg-pink fg-dark',
+        }
+        const label_color = labels_colors[label]
+        
+        return `
+            <div class="ticket-card">
+                <div class="ticket-checkbox">
+                    <input type="checkbox">                
+                </div>
+                <div class="ticket-bull">
+                    <span data-role="bull" data-type="${type}" class="${bull_colors[type]}"></span>
+                </div>            
+                <div class="ticket-title">
+                    <a href="#" class="fg-default">${entry.title}</a> <span class="badge ${label_color} ticket-label">${label}</span>
+                    <div class="ticket-secondary-info d-flex flex-row flex-align-center">
+                        <div class="ticket-id">#${entry.id}</div>
+                        <div class="ticket-author"><a href="#">${author}</a></div>                    
+                        <div class="ticket-date">opened on ${datetime().format("MMM DD, YYYY")}</div>                    
+                    </div>
+                </div>
+                <div class="replies ml-auto">
+                    <span class="mif-chat-line"></span>
+                    <span>${Math.floor(Math.random() * 50)}</span>
+                </div>
+            </div>
+        `
+    }
+
+    function toggleFilterPanel() {
+        $(".filters-container").toggleClass("open");
+    }
+
+</script>

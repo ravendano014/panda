@@ -1,0 +1,603 @@
+<script>window.PAGE_TITLE = 'Samples | Showcase (E-Commerce)'</script>
+
+<div class="box landing p-0 container-query" style="height: 100%; overflow-y: auto; overflow-x: hidden;">
+    <nav class="bg-dark fg-white" data-role="app-bar" data-expand="true" style="--appbar-item-color: #fff; --appbar-item-background-hover: var(--color-indigo); --appbar-item-color-hover: var(--color-white);">
+        <div class="app-bar-container">
+            <button class="button-crimson" id="catalog-toggle" onclick="$('#stack-menu').toggleClass('open')">
+                <span class="mif-apps icon"></span>
+            </button>
+
+            <a href="#" class="app-bar-item-static">
+                <div class="text-leader text-weight-9 fg-white">Shop<span class="fg-crimson">Demo</span></div>
+            </a>
+        </div>
+
+        <div class="app-bar-container dark-side d-none d-flex-md ml-auto">
+            <input type="text" data-role="input" class="" data-search-button="true" data-cls-search-button="button-crimson" placeholder="Search..." data-search-button-icon="<span class='mif-search'>">
+        </div>
+        
+        <div class="app-bar-container ml-auto d-none d-flex-ld">
+            <a href="#" class="app-bar-item"><span class="mif-user-settings enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-justice enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-favorite-outline enlarge-9"></span></a>
+            <a href="#" class="app-bar-item"><span class="mif-shopping-cart enlarge-9"></span></a>
+        </div>
+        
+        <a href="/pages/fullscreen/showcase.html" target="_blank" class="app-bar-item ml-auto ml-10-md"><span class="mif-external enlarge-9"></span></a>
+    </nav>
+
+    <div id="stack-menu" class="pos-absolute" style="top: 52px; height: calc(100% - 52px);"
+         data-role="stack-menu"
+         data-root-title="Main Menu"
+         data-back-button-icon="<span class='mif-chevron-left'>"
+         data-size="320"
+         
+    >
+        <div class="d-flex pr-3">
+            <div class="title"></div>
+            <button class="cycle ml-auto" onclick="$('#stack-menu').removeClass('open')"><span class="mif-cross"></span></button>
+        </div>
+        <ul>
+            <li><a href="#"><span class="mif-user-settings icon"></span> Enter to profile</a></li>
+            <li>
+                <a href="#" class="fg-crimson"><span class="mif-apps icon"></span> Product Catalog</a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Xiaomi_RED.svg" class="icon" loading="lazy">
+                            Xiaomi
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Smartphones</a>
+                                <ul>
+                                    <li><a href="#">Xiaomi 15</a></li>
+                                    <li><a href="#">Xiaomi 14T</a></li>
+                                    <li><a href="#">Readmi Note 14</a></li>
+                                    <li><a href="#">Readmi 13</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Health and sports</a></li>
+                            <li><a href="#">Tablets</a></li>
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Smart house</a></li>
+                            <li><a href="#">Multimedia</a></li>
+                            <li><a href="#">Lifestyle</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/Scooter.svg" class="icon" loading="lazy">
+                            Transport and cycling
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_1.svg" class="icon" loading="lazy">
+                            Smartphones and phones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_2.svg" class="icon" loading="lazy">
+                            TV and Multimedia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_3.svg" class="icon" loading="lazy">
+                            Home Appliances
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_4.svg" class="icon" loading="lazy">
+                            Laptops, PCs and Tablets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_16.svg" class="icon" loading="lazy">
+                            Gaming Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_5.svg" class="icon" loading="lazy">
+                            Smartwatches and Gadgets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_6.svg" class="icon" loading="lazy">
+                            Audio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_7.svg" class="icon" loading="lazy">
+                            Sports and Health
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_8.svg" class="icon" loading="lazy">
+                            Tourism and Fishing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_9.svg" class="icon" loading="lazy">
+                            Repair and Equipment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_10.svg" class="icon" loading="lazy">
+                            Cottage, Home and Garden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_11.svg" class="icon" loading="lazy">
+                            Pet Supplies
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_12.svg" class="icon" loading="lazy">
+                            Children's Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_13.svg" class="icon" loading="lazy">
+                            Auto and Moto Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/trumaj_zarjad_black.svg" class="icon" loading="lazy">
+                            Keep Charged
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_14.svg" class="icon" loading="lazy">
+                            Clothing and Accessories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_15.svg" class="icon" loading="lazy">
+                            Perfumes, Care, Jewelry
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#"><span class="mif-favorite-outline icon"></span> Favorites</a></li>
+            <li><a href="#"><span class="mif-justice icon"></span> Comparing</a></li>
+            <li><a href="#"><span class="mif-tag-sale icon"></span> Sales</a></li>
+        </ul>
+    </div>
+
+    <div class="container-fluid container-query mt-4 d-flex flex-row flex-nowrap">
+        <nav data-role="catalog-menu" class="z-2 d-none d-flex-md">
+            <ul class="catalog-list">
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/xiaomi-store/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/Xiaomi_RED.svg" class="icon" loading="lazy">
+                        Xiaomi                        
+                    </a>
+                    <div class="catalog-item-content">
+                        Xiaomi
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/monocikly-i-segvei/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/Scooter.svg" class="icon" loading="lazy">
+                        Transport and cycling                        
+                    </a>
+                    <div class="catalog-item-content">
+                        Transport and cycling
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/mobilnye-telefony-i-sredstva-svyazi/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_1.svg" class="icon" loading="lazy">
+                        Smartphones and phones                        
+                    </a>
+                    <div class="catalog-item-content">
+                        Smartphones and phones
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/televizory-i-mediapleery/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_2.svg" class="icon" loading="lazy">
+                        TV and Multimedia
+                    </a>
+                    <div class="catalog-item-content">
+                        TV and Multimedia
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/bytovaya-tehnika/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_3.svg" class="icon" loading="lazy">
+                        Home Appliances
+                    </a>
+                    <div class="catalog-item-content">
+                        Home Appliances
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/planshety-i-gadzhety/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_4.svg" class="icon" loading="lazy">
+                        Laptops, PCs and Tablets
+                    </a>
+                    <div class="catalog-item-content">
+                        Laptops, PCs and Tablets
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/game-zone/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_16.svg" class="icon" loading="lazy">
+                        Gaming Products
+                    </a>
+                    <div class="catalog-item-content">
+                        Gaming Products
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/gadzhety/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_5.svg" class="icon" loading="lazy">
+                        Smartwatches
+                    </a>
+                    <div class="catalog-item-content">
+                        Smartwatches and Gadgets
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/naushniki-i-akustika/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_6.svg" class="icon" loading="lazy">
+                        Audio
+                    </a>
+                    <div class="catalog-item-content">
+                        Audio
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/sport-i-zdorov-e/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_7.svg" class="icon" loading="lazy">
+                        Sports and Health
+                    </a>
+                    <div class="catalog-item-content">
+                        Sports and Health
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/turizm-i-rybalka/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_8.svg" class="icon" loading="lazy">
+                        Tourism and Fishing
+                    </a>
+                    <div class="catalog-item-content">
+                        Tourism and Fishing
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/santehnika-i-remont/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_9.svg" class="icon" loading="lazy">
+                        Repair and Equipment
+                    </a>
+                    <div class="catalog-item-content">
+                        Repair and Equipment
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/dom-sad-remont/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_10.svg" class="icon" loading="lazy">
+                        Home and Garden
+                    </a>
+                    <div class="catalog-item-content">
+                        Home and Garden
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/zootovary/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_11.svg" class="icon" loading="lazy">
+                        Pet Supplies
+                    </a>
+                    <div class="catalog-item-content">
+                        Pet Supplies
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/tovary-dlja-detej/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_12.svg" class="icon" loading="lazy">
+                        Children's Products
+                    </a>
+                    <div class="catalog-item-content">
+                        Children's Products
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/avtotovary/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_13.svg" class="icon" loading="lazy">
+                        Auto and Moto Products
+                    </a>
+                    <div class="catalog-item-content">
+                        Auto and Moto Products
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/al-ternativnye-istochniki-jenergii/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/trumaj_zarjad_black.svg" class="icon" loading="lazy">
+                        Keep Charged
+                    </a>
+                    <div class="catalog-item-content">
+                        Keep Charged
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/odezhda/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_14.svg" class="icon" loading="lazy">
+                        Clothing and Accessories
+                    </a>
+                    <div class="catalog-item-content">
+                        Clothing and Accessories
+                    </div>
+                </li>
+                <li class="catalog-item">
+                    <a href="https://allo.ua/ua/chasy-i-ukrashenija/" class="mm__a">
+                        <img src="https://i.allo.ua/media/catalog/category/mega_menu/file_15.svg" class="icon" loading="lazy">
+                        Perfumes, Care, Jewelry
+                    </a>
+                    <div class="catalog-item-content">
+                        Perfumes, Care, Jewelry
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="showcase-hero">
+            <div id="carousel"
+                 data-role="carousel" 
+                 data-effect="swirl" 
+                 data-duration="1000" 
+                 data-bullets-style="cycle" 
+                 data-bullets-size="mini"
+                 data-cls-controls="fg-white"
+                 data-auto-start="true"
+                 data-height="@(width >= 768px),100%|(width < 768px),200px"
+            >
+                
+                <div class="slide">
+                    <img src="/images/bigmac.avif" alt="" style="width: 100%; object-fit: cover;"/>
+                </div>
+                <div class="slide">
+                    <img src="/images/tv-adv.jpg" alt="" style="width: 100%; object-fit: cover;"/>
+                </div>
+                <div class="slide">
+                    <img src="/images/adv-1.jpg" alt="" style="width: 100%; object-fit: cover;"/>
+                </div>
+                <div class="slide">
+                    <img src="/images/adv-2.webp" alt="" style="width: 100%; object-fit: cover;"/>
+                </div>
+                <div class="slide">
+                    <img src="/images/phones.jpg" alt="" style="width: 100%; object-fit: cover;"/>
+                </div>
+                <div class="slide">
+                    <img src="/images/sale.jpg" alt="" style="width: 100%; object-fit: cover;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid container-query mt-12">
+        <div class="d-flex flex-row flex-wrap gap-2 flex-align-center">
+            <div class="text-weight-8 h2 m-0 no-wrap gradient-text gradient-radial-amber">SALES LEADERS</div>
+            <div class="ml-auto-ld d-flex flex-wrap gap-1">
+                <button class="medium outline alert">TOP</button>
+                <button class="medium outline">Smartphones</button>
+                <button class="medium outline">Hair styles</button>
+                <button class="medium outline">Moulching</button>
+            </div>
+        </div>
+        <div class="d-flex sales-leaders">
+            <div data-role="remote-dataset"
+                 data-key-offset="skip"
+                 data-key-data="products"
+                 data-key-limit="limit"
+                 data-key-total="total"
+                 data-key-sort="sortBy"
+                 data-key-order="order"
+                 data-key-search="q"
+                 data-url='https://dummyjson.com/products'
+                 data-url-search='https://dummyjson.com/products/search'
+                 data-cls-body="d-flex flex-row flex-wrap gap-1 mt-4"
+                 data-cls-pagination="mt-4 d-flex flex-justify-center"
+                 data-sort="rating:desc"
+                 data-sort-rules="price:asc:Price:<span class='mif-arrow-up'>,price:desc:Price:<span class='mif-arrow-down'>,rating:desc:By rating:<span class='mif-star-empty'>"
+                 data-on-draw-entry="drawEntry"
+                 data-rows="4"
+                 data-show-service-block="false"
+                 data-show-pagination="false"
+                 data-show-more="false"
+            ></div>
+        </div>
+    </div>
+    
+    <div class="container-fluid container-query mt-12">
+        <div class="d-flex flex-row flex-wrap gap-2 flex-align-center">
+            <div class="text-weight-8 h2 m-0 no-wrap gradient-text gradient-radial-crimson">BEST PRICE</div>
+            <div class="ml-auto-ld d-flex flex-wrap gap-1">
+                <button class="medium outline alert">TOP</button>
+                <button class="medium outline">Smartphones</button>
+                <button class="medium outline">Hair styles</button>
+                <button class="medium outline">Moulching</button>
+            </div>
+        </div>
+        <div class="d-flex sales-leaders">
+            <div data-role="remote-dataset"
+                 data-key-offset="skip"
+                 data-key-data="products"
+                 data-key-limit="limit"
+                 data-key-total="total"
+                 data-key-sort="sortBy"
+                 data-key-order="order"
+                 data-key-search="q"
+                 data-url='https://dummyjson.com/products'
+                 data-url-search='https://dummyjson.com/products/search'
+                 data-cls-body="d-flex flex-row flex-wrap gap-1 mt-4"
+                 data-cls-pagination="mt-4 d-flex flex-justify-center"
+                 data-sort="rating:desc"
+                 data-sort-rules="price:asc:Price:<span class='mif-arrow-up'>,price:desc:Price:<span class='mif-arrow-down'>,rating:desc:By rating:<span class='mif-star-empty'>"
+                 data-on-draw-entry="drawEntry"
+                 data-rows="4"
+                 data-show-service-block="false"
+                 data-show-pagination="false"
+                 data-show-more="false"
+            ></div>
+        </div>
+    </div>
+    
+    <div class="container-fluid container-query mt-12">
+        <div class="d-flex flex-row flex-wrap gap-2 flex-align-center">
+            <div class="text-weight-8 h2 m-0 no-wrap gradient-text gradient-radial-cobalt">NOVELTY</div>
+            <div class="ml-auto-ld d-flex flex-wrap gap-1">
+                <button class="medium outline alert">TOP</button>
+                <button class="medium outline">Smartphones</button>
+                <button class="medium outline">Hair styles</button>
+                <button class="medium outline">Moulching</button>
+            </div>
+        </div>
+        <div class="d-flex sales-leaders">
+            <div data-role="remote-dataset"
+                 data-key-offset="skip"
+                 data-key-data="products"
+                 data-key-limit="limit"
+                 data-key-total="total"
+                 data-key-sort="sortBy"
+                 data-key-order="order"
+                 data-key-search="q"
+                 data-url='https://dummyjson.com/products'
+                 data-url-search='https://dummyjson.com/products/search'
+                 data-cls-body="d-flex flex-row flex-wrap gap-1 mt-4"
+                 data-cls-pagination="mt-4 d-flex flex-justify-center"
+                 data-sort="rating:desc"
+                 data-sort-rules="price:asc:Price:<span class='mif-arrow-up'>,price:desc:Price:<span class='mif-arrow-down'>,rating:desc:By rating:<span class='mif-star-empty'>"
+                 data-on-draw-entry="drawEntry"
+                 data-rows="4"
+                 data-show-service-block="false"
+                 data-show-pagination="false"
+                 data-show-more="false"
+            ></div>
+        </div>
+    </div>
+
+    <footer class="bg-dark pt-20 mt-20 w-100">
+        <div class="p-20 d-flex flex-column flex-center">
+            <ul class="h-menu bg-transparent fg-white">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="fg-white">
+                Copyright &copy; 2025. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</div>
+
+<style>
+    .showcase-hero {
+        width: 100%;
+        flex-shrink: 1;
+        padding: 0 1rem;
+        display: block;
+        height: auto;
+        z-index: 0;
+    }
+    
+    @container (min-width: 440px) {
+        .product-card {
+            --product-card-font-size: 11px;
+            width: calc(50% - 4px);
+        }
+    }
+    
+    @container (min-width: 640px) {
+        .product-card {
+            --product-card-font-size: 12px;
+            width: calc(33% - 4px);
+        }
+    }
+    
+    @container (min-width: 768px) {
+        .product-card {
+            --product-card-font-size: 13px;
+            width: calc(25% - 4px);
+        }
+    }
+    
+    @container (min-width: 1200px) {
+        .product-card {
+            --product-card-font-size: 14px;
+            width: calc(20% - 4px);
+        }
+    }
+    
+</style>
+
+<script>
+    function changeView() {
+        $(".product-list").toggleClass("compact-view");
+    }
+
+    function drawEntry(entry, index, body) {
+        const statuses = [
+            "<div class='fg-green product-status'>Ready to depart <span class=\"mif-truck-delivery icon\"></span></div>",
+            "<div class='fg-blue product-status'>In stock <span class=\"mif-transport icon\"></span></div>",
+            "<div class='fg-coral product-status'>Waiting for stock <span class=\"mif-truck2 icon\"></span></div>",
+            "<div class='fg-red product-status'>Out of stock</div>",
+        ]
+
+        const status = statuses[Math.floor(Math.random() * statuses.length)];
+
+        return `
+            <div class="product-card h-100">
+                <div class="badge bg-transparent">
+                        <button class="square large flat"><span class="mif-favorite-outline enlarge-6 fg-orange"></span></button>                
+                </div>
+                <div class="product-image">
+                    <img src="${entry.thumbnail}" alt="${entry.title}"/>                
+                </div>            
+                <div class="product-info">
+                    <a href="#" class="product-title fg-sat-green-hover">
+                        ${entry.description}
+                    </a>
+                    <div class="product-rating" style="--rating-on-color: #ffa500;">
+                        <input data-role="rating" data-static="true" data-value="${entry.rating}" />
+                        <div class="d-flex flex-align-center mt-1 gap-1"><span class="mif-chat-line"></span> ${entry.reviews.length}</div>
+                    </div>            
+                    ${status}
+                </div>
+                <div class="product-footer mt-auto">
+                    <div class="product-price">
+                        ${entry.discountPercentage ? "<div class='-old'>$"+(entry.price)+"</div>" : ""}
+                        <div class="fg-red">$${(entry.price - entry.price/100*entry.discountPercentage).toFixed(2)}</div>
+                    </div>
+                    <div class="ml-auto">
+                        <button class="square large flat"><span class="mif-add-shopping-cart enlarge-6 fg-green"></span></button>
+                    </div>
+                </div>
+            </div>        
+        `;
+    }
+</script>
