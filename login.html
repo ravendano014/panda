@@ -1,0 +1,704 @@
+<!-- root -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="metro:smooth_scroll" content="true">
+    <title>Panda 1.0 - The template set built with Metro UI</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
+    <link rel="stylesheet" href="metroui/metro.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="shortcut icon" href="images/panda.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;            
+        }
+    </style>
+</head>
+<body class="cloak">
+<div id="navview" data-role="navview" data-expand-point="md">
+    <div class="navview-pane">
+        <div class="logo-container">
+            <button class="pull-button">
+                <span class="mif-menu"></span>
+            </button>
+            <a href="#" class="d-flex flex-align-center text-logo bg-transparent" style="width: calc(100% - 54px)">
+                <img src="images/panda.png" alt="logo" height="30" width="30" class="border-radius-half"/>
+                <div class="enlarge-2 ml-3 text-weight-9">Panda 1.0</div>
+            </a>
+        </div>
+
+        <ul class="navview-menu pad-second-level" id="side-menu">
+            <li>
+                <a href="welcome" class="z-1">
+                    <span class="icon"><span class="mif-star-empty"></span></span>
+                    <span class="caption">Welcome to Panda</span>
+                </a>
+            </li>
+
+            <li class="item-header">Demo Pages</li>
+            <li>
+                <a href="samples/todo">
+                    <span class="icon"><span class="mif-move-to-inbox"></span></span>
+                    <span class="caption">ToDo</span>
+                </a>
+            </li>
+            <li>
+                <a href="samples/desktop">
+                    <span class="icon"><span class="mif-desktop-windows"></span></span>
+                    <span class="caption">Desktop</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-vpn-lock"></span></span>
+                    <span class="caption">Authentication</span>
+                </a>
+                <ul class="navview-menu " data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="samples/auth/login">
+                            <span class="icon"><span class="mif-person"></span></span>
+                            <span class="caption">Login Form</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/auth/windows-login">
+                            <span class="icon"><span class="mif-person"></span></span>
+                            <span class="caption">Windows Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/auth/register">
+                            <span class="icon"><span class="mif-add-person"></span></span>
+                            <span class="caption">Signup Form</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/auth/lock">
+                            <span class="icon"><span class="mif-lock"></span></span>
+                            <span class="caption">Lock Screen</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-error"></span></span>
+                    <span class="caption">Errors &amp; Maintains</span>
+                </a>
+                <ul class="navview-menu" data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="samples/errors/404">
+                            <span class="icon"><span class="mif-error"></span></span>
+                            <span class="caption">404 Page</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/errors/500">
+                            <span class="icon"><span class="mif-error"></span></span>
+                            <span class="caption">500 Page</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/errors/maintenance">
+                            <span class="icon"><span class="mif-maintenance"></span></span>
+                            <span class="caption">Maintenance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/errors/under-construction">
+                            <span class="icon"><span class="mif-under-construction"></span></span>
+                            <span class="caption">Under Construction</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="samples/support" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-support-agent"></span></span>
+                    <span class="caption">Support &amp; Help</span>
+                </a>
+                <ul class="navview-menu" data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="samples/support/home">
+                            <span class="icon"><span class="mif-home"></span></span>
+                            <span class="caption">Home Page</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/support/tickets">
+                            <span class="icon"><span class="mif-tickets"></span></span>
+                            <span class="caption">Ticket List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/support/ticket-details">
+                            <span class="icon"><span class="mif-ticket"></span></span>
+                            <span class="caption">Ticket Details</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/support/create-ticket">
+                            <span class="icon"><span class="mif-ticket-outline"></span></span>
+                            <span class="caption">Create Ticket</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="samples/hosting" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-computer"></span></span>
+                    <span class="caption">Hosting &amp; Domains</span>
+                </a>
+                <ul class="navview-menu" data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="samples/hosting/home-hosting">
+                            <span class="icon"><span class="mif-roof"></span></span>
+                            <span class="caption">Hosting Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/hosting/server-dashboard">
+                            <span class="icon"><span class="mif-server-rack"></span></span>
+                            <span class="caption">Server Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="samples/e-commerce" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-add-shopping-cart"></span></span>
+                    <span class="caption">E-Commerce</span>
+                </a>
+                <ul class="navview-menu" data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="samples/e-commerce/showcase">
+                            <span class="icon"><span class="mif-shop"></span></span>
+                            <span class="caption">Showcase</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/e-commerce/products">
+                            <span class="icon"><span class="mif-list"></span></span>
+                            <span class="caption">Product List</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/e-commerce/product-details">
+                            <span class="icon"><span class="mif-product"></span></span>
+                            <span class="caption">Product Details</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/e-commerce/cart">
+                            <span class="icon"><span class="mif-shopping-cart"></span></span>
+                            <span class="caption">Cart</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/e-commerce/create-order">
+                            <span class="icon"><span class="mif-group-by"></span></span>
+                            <span class="caption">Create Order</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/e-commerce/dashboard">
+                            <span class="icon"><span class="mif-dashboard"></span></span>
+                            <span class="caption">Dashboard</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-email"></span></span>
+                    <span class="caption">Emails</span>
+                </a>
+                <ul class="navview-menu" data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="samples/email/inbox">
+                            <span class="icon"><span class="mif-inbox"></span></span>
+                            <span class="caption">Inbox</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/email/view">
+                            <span class="icon"><span class="mif-mail-read"></span></span>
+                            <span class="caption">View Letter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/email/write">
+                            <span class="icon"><span class="mif-email"></span></span>
+                            <span class="caption">Write Letter</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="samples/prices">
+                    <span class="icon"><span class="mif-tag-percent"></span></span>
+                    <span class="caption">Prices</span>
+                </a>
+            </li>
+            <li class="disabled">
+                <a href="samples/multimedia">
+                    <span class="icon"><span class="mif-youtube"></span></span>
+                    <span class="caption">Multimedia</span>
+                </a>
+            </li>
+            <li>
+                <a href="samples/home" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-roof"></span></span>
+                    <span class="caption">Homes</span>
+                </a>
+                <ul class="navview-menu" data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="samples/home/game-stream">
+                            <span class="icon"><span class="mif-gamepad"></span></span>
+                            <span class="caption">Game Stream</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/home/photograph">
+                            <span class="icon"><span class="mif-camera"></span></span>
+                            <span class="caption">Photograph</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/home/hosting">
+                            <span class="icon"><span class="mif-net-server"></span></span>
+                            <span class="caption">Hosting</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="samples/home/aistant">
+                            <span class="icon"><span class="mif-robot"></span></span>
+                            <span class="caption">Aistant</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="item-header">Common</li>
+            <li>
+                <a href="common/media-rules">
+                    <span class="icon"><span class="mif-air"></span></span>
+                    <span class="caption">Media Rules</span>
+                </a>
+            </li>
+            <li>
+                <a href="common/colors">
+                    <span class="icon"><span class="mif-palette"></span></span>
+                    <span class="caption">Colors</span>
+                </a>
+            </li>
+            <li>
+                <a href="common/themes">
+                    <span class="icon"><span class="mif-dark-light"></span></span>
+                    <span class="caption">Themes</span>
+                </a>
+            </li>
+            <li>
+                <a href="common/i18n">
+                    <span class="icon"><span class="mif-language"></span></span>
+                    <span class="caption">i18n</span>
+                </a>
+            </li>
+            <li>
+                <a href="common/touch-swipe">
+                    <span class="icon"><span class="mif-swipe"></span></span>
+                    <span class="caption">Touch and Swipe</span>
+                </a>
+            </li>
+            <li>
+                <a href="common/hotkeys">
+                    <span class="icon"><span class="mif-hotkey"></span></span>
+                    <span class="caption">Hotkeys</span>
+                </a>
+            </li>
+            <li>
+                <a href="common/css">
+                    <span class="icon"><span class="mif-css3"></span></span>
+                    <span class="caption">CSS</span>
+                </a>
+            </li>
+            <li>
+                <a href="common/js">
+                    <span class="icon"><span class="mif-javascript"></span></span>
+                    <span class="caption">JavaScript</span>
+                </a>
+            </li>
+
+            <li class="item-header">Elements</li>
+            <li>
+                <a href="grid">
+                    <span class="icon"><span class="mif-apps"></span></span>
+                    <span class="caption">Grid System</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-group-by"></span></span>
+                    <span class="caption">UI Elements</span>
+                </a>
+                <ul class="navview-menu " data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="ui/hero">
+                            <span class="icon"><span class="mif-special-button"></span></span>
+                            <span class="caption">Hero Blocks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/buttons">
+                            <span class="icon"><span class="mif-button"></span></span>
+                            <span class="caption">Buttons</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/special-buttons">
+                            <span class="icon"><span class="mif-special-button2"></span></span>
+                            <span class="caption">Special Buttons</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/labels">
+                            <span class="icon"><span class="mif-style"></span></span>
+                            <span class="caption">Labels &amp; Ribbons</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/tables">
+                            <span class="icon"><span class="mif-table"></span></span>
+                            <span class="caption">Tables</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/tiles">
+                            <span class="icon"><span class="mif-widgets"></span></span>
+                            <span class="caption">Tiles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/tabs">
+                            <span class="icon"><span class="mif-folder"></span></span>
+                            <span class="caption">Tabs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/page-control">
+                            <span class="icon"><span class="mif-tabs"></span></span>
+                            <span class="caption">PageControl</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/listview">
+                            <span class="icon"><span class="mif-list-bulleted"></span></span>
+                            <span class="caption">ListView</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/treeview">
+                            <span class="icon"><span class="mif-treeview"></span></span>
+                            <span class="caption">TreeView</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/timeline">
+                            <span class="icon"><span class="mif-timeline"></span></span>
+                            <span class="caption">Timeline</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/working-tree">
+                            <span class="icon"><span class="mif-tree"></span></span>
+                            <span class="caption">Working Tree</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/window">
+                            <span class="icon"><span class="mif-window"></span></span>
+                            <span class="caption">Window</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/splitter">
+                            <span class="icon"><span class="mif-page-break"></span></span>
+                            <span class="caption">Splitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/accordion">
+                            <span class="icon"><span class="mif-accordion"></span></span>
+                            <span class="caption">Accordion</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui/color-selector">
+                            <span class="icon"><span class="mif-palette"></span></span>
+                            <span class="caption">Color Selector</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-shapes"></span></span>
+                    <span class="caption">Forms</span>
+                </a>
+                <ul class="navview-menu " data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="forms/elements">
+                            <span class="icon"><span class="mif-insert-template"></span></span>
+                            <span class="caption">Form Elements</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="forms/layouts">
+                            <span class="icon"><span class="mif-layout"></span></span>
+                            <span class="caption">Layouts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="forms/validating">
+                            <span class="icon"><span class="mif-spell-check"></span></span>
+                            <span class="caption">Validating</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-menu-open"></span></span>
+                    <span class="caption">Navigation</span>
+                </a>
+                <ul class="navview-menu " data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="navigation/appbar">
+                            <span class="icon"><span class="mif-apps"></span></span>
+                            <span class="caption">Appbar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="navigation/ribbon-menu">
+                            <span class="icon"><span class="mif-bookmark"></span></span>
+                            <span class="caption">Ribbon Menu</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="navigation/menus">
+                            <span class="icon"><span class="mif-dropdown-menu"></span></span>
+                            <span class="caption">Menus</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="navigation/sidebar">
+                            <span class="icon"><span class="mif-sidebar"></span></span>
+                            <span class="caption">Sidebar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="navigation/sidenav">
+                            <span class="icon"><span class="mif-sidebar"></span></span>
+                            <span class="caption">Sidenav</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-chat-bubble-outline"></span></span>
+                    <span class="caption">Notification</span>
+                </a>
+                <ul class="navview-menu " data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="notification/dialogs">
+                            <span class="icon"><span class="mif-dynamic-feed"></span></span>
+                            <span class="caption">Dialogs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notification/hints">
+                            <span class="icon"><span class="mif-mark-chat-unread"></span></span>
+                            <span class="caption">Hints &amp; Popovers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notification/notify">
+                            <span class="icon"><span class="mif-notifications"></span></span>
+                            <span class="caption">Toast &amp; Notifies</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle">
+                    <span class="icon"><span class="mif-widgets"></span></span>
+                    <span class="caption">Widgets</span>
+                </a>
+                <ul class="navview-menu " data-role="collapse" data-collapsed="true">
+                    <li>
+                        <a href="widgets/bar3d">
+                            <span class="icon"><span class="mif-bar-chart"></span></span>
+                            <span class="caption">Bar3D</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/calendar">
+                            <span class="icon"><span class="mif-calendar"></span></span>
+                            <span class="caption">Calendar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/streamer">
+                            <span class="icon"><span class="mif-film"></span></span>
+                            <span class="caption">Streamer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/wizards">
+                            <span class="icon"><span class="mif-magic-wand"></span></span>
+                            <span class="caption">Wizards</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/chat">
+                            <span class="icon"><span class="mif-chat"></span></span>
+                            <span class="caption">Chat</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/cube">
+                            <span class="icon"><span class="mif-cube"></span></span>
+                            <span class="caption">Cube</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/counter">
+                            <span class="icon"><span class="mif-numbers"></span></span>
+                            <span class="caption">Counter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/countdown">
+                            <span class="icon"><span class="mif-countdown2"></span></span>
+                            <span class="caption">Countdown</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/progress">
+                            <span class="icon"><span class="mif-progress"></span></span>
+                            <span class="caption">Progress &amp; Activities</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/cards">
+                            <span class="icon"><span class="mif-assignment"></span></span>
+                            <span class="caption">Cards</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/directives">
+                            <span class="icon"><span class="mif-switch"></span></span>
+                            <span class="caption">Directives</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/remarks">
+                            <span class="icon"><span class="mif-quote1"></span></span>
+                            <span class="caption">Remarks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/package-manager">
+                            <span class="icon"><span class="mif-pnpm"></span></span>
+                            <span class="caption">Package Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/gauges">
+                            <span class="icon"><span class="mif-gauge"></span></span>
+                            <span class="caption">Gauges</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets/media">
+                            <span class="icon"><span class="mif-youtube-play"></span></span>
+                            <span class="caption">Media</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="item-header">Icons</li>
+            <li>
+                <a href="mif/core-pack">
+                    <span class="icon"><span class="mif-photo"></span></span>
+                    <span class="caption">Core Pack</span>
+                </a>
+            </li>
+
+            <li class="item-header mt-auto"></li>
+            <li>
+                <a href="https://pimenov.com.ua">
+                    <span class="icon"><span class="mif-earth2"></span></span>
+                    <span class="caption">About</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="navview-content">
+        <div data-role="appbar" class="container-query border-bottom bd-default" data-expand="true">
+            <div class="app-bar-item-static">
+                <div class="text-bold enlarge-2" id="content-title">[...]</div>
+            </div>
+
+            <div class="app-bar-container ml-auto">
+                <ul class="unstyled-list d-flex-ld m-0" style="display: none">
+                    <li class="app-bar-item"><a class="fg-default no-decor" href="https://metroui.org.ua">Get Panda</a></li>
+                    <li class="app-bar-item"><a class="fg-default no-decor" href="https://metroui.org.ua">Metro UI</a></li>
+                    <li class="app-bar-item"><a class="fg-default no-decor" href="https://docs.metroui.org.ua">Docs</a></li>
+                    <li class="app-bar-item"><a class="fg-default no-decor" href="https://pimenov.com.ua">Author</a></li>
+                    <li class="app-bar-item"><a class="fg-default no-decor" href="https://github.com/olton/metroui"><span class="mif-github mif-2x"></span></a></li>
+                </ul>
+
+                <div class="app-bar-item-static dropdown-button d-none-ld">
+                    <button class="small info dropdown-toggle fc-white">About...</button>
+                    <ul class="d-menu no-icon" data-role="dropmenu">
+                        <li><a href="#">Get Panda</a></li>
+                        <li><a href="https://metroui.org.ua">Metro UI</a></li>
+                        <li><a href="https://docs.metroui.org.ua">Metro UI Docs</a></li>
+                        <li><a href="https://pimenov.com.ua">Author</a></li>
+                        <li class="menu-title">GitHub</li>
+                        <li><a href="https://github.com/olton/metroui">Metro UI Library</a></li>
+                    </ul>
+                </div>
+                
+                <div class="app-bar-item-static">
+                    <input type="checkbox" data-role="theme-switcher" />
+                </div>
+            </div>
+        </div>
+
+        <main id="page-content"></main>
+    </div>
+</div>
+<script>
+    METRO_LIB_INFO = true;
+</script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="metroui/metro.js" type="module"></script>
+<script src="js/app.js" type="module"></script>
+</body>
+</html>
