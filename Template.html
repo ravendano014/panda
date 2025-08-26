@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="metro:smooth_scroll" content="true">
+    <title>Template</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
+    <link rel="stylesheet" href="metroui/metro.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="shortcut icon" href="images/panda.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;            
+        }
+    </style>
+</head>
+<body class="cloak">
+
+<div class="navview-content">
+    <div data-role="appbar" class="container-query border-bottom bd-default" data-expand="true">
+        <div class="app-bar-item-static">
+            <div class="text-bold enlarge-2" id="content-title">[Panda Template]</div>
+        </div>
+
+        <div class="app-bar-container ml-auto">
+            <ul class="unstyled-list d-flex-ld m-0" style="display: none">
+                <li class="app-bar-item"><a class="fg-default no-decor" href="https://metroui.org.ua">Get Panda</a></li>
+                <li class="app-bar-item"><a class="fg-default no-decor" href="https://metroui.org.ua">Metro UI</a></li>
+                <li class="app-bar-item"><a class="fg-default no-decor" href="https://docs.metroui.org.ua">Docs</a></li>
+                <li class="app-bar-item"><a class="fg-default no-decor" href="https://pimenov.com.ua">Author</a></li>
+                <li class="app-bar-item"><a class="fg-default no-decor" href="https://github.com/olton/metroui"><span class="mif-github mif-2x"></span></a></li>
+            </ul>
+
+            <div class="app-bar-item-static dropdown-button d-none-ld">
+                <button class="small info dropdown-toggle fc-white">About...</button>
+                <ul class="d-menu no-icon" data-role="dropmenu">
+                    <li><a href="#">Get Panda</a></li>
+                    <li><a href="https://metroui.org.ua">Metro UI</a></li>
+                    <li><a href="https://docs.metroui.org.ua">Metro UI Docs</a></li>
+                    <li><a href="https://pimenov.com.ua">Author</a></li>
+                    <li class="menu-title">GitHub</li>
+                    <li><a href="https://github.com/olton/metroui">Metro UI Library</a></li>
+                </ul>
+            </div>
+            
+            <div class="app-bar-item-static">
+                <input type="checkbox" data-role="theme-switcher" />
+            </div>
+        </div>
+    </div>
+    <main id="page-content">
+    <!-- Template -->
+           
+<script>window.PAGE_TITLE = 'Panda 1.0 | Colors'</script>
+
+<style>
+    .color-item {
+        --background-color: #ffffff;
+        background: var(--background-color);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        margin: 0;
+        
+        &.dark-color {
+            color: #ffffff;
+        }
+    }
+    
+    .demo-box {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        position: relative;
+        background: var(--default-background);
+    }
+    
+    .outline {
+        outline: 2px dotted;
+        outline-offset: 4px;
+        border-radius: 6px;
+    }
+    
+    .pseudo-demo {
+        &::before {
+            content: 'before';
+            margin-right: 10px;
+        }
+        &::after {
+            content: 'after';
+            margin-left: 10px;
+        }
+    }
+</style>
+
+<div class="row">
+    <div class="cell-md-6 d-flex flex-align-items-center">
+        <h1>Colors</h1>
+    </div>
+    <div class="cell-md-6 d-flex flex-justify-content-end-md flex-align-items-center">
+        <ul class="breadcrumbs default">
+            <li><a href="#">Panda 1.0</a></li>
+            <li class="active"><a href="#">Colors</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Color Variables</div>
+    <div class="text-muted">
+        You can use a palette of 32 built-in colors. Each color is manually generated without auto-generation. 
+        For each color, you can use three different variants:
+        <ul>
+            <li>light <code>--color-light-*</code></li>
+            <li>minor <code>--color-minor-*</code></li>
+            <li>main <code>--color-*</code></li>
+            <li>saturated <code>--color-sat-*</code></li>
+            <li>dark <code>--color-dark-*</code></li>
+        </ul>
+    </div>
+    <div class="mt-4">
+        <pre><code class="language-css">
+.box {
+    background: var(--color-light-red);
+}
+        </code></pre>
+    </div>
+</div>
+
+<div class="box container-query">
+    <div class="box-title">Color Palette</div>
+    <div class="row" id="color-palette"></div>
+</div>
+
+<div class="box">
+    <div class="box-title">Accents</div>
+    <p class="text-muted">
+        You have a set of colors to emphasize the user's attention: 
+            <code>.primary</code>, 
+            <code>.secondary</code>, 
+            <code>.success</code>, 
+            <code>.warning</code>, 
+            <code>.alert</code>,
+            and <code>.dark</code>.
+        These classes also add a color change when hovering over an element and set the <code>white</code> color for the text.
+    </p>
+    <div class="mt-4">
+        <button class="button primary">Primary</button>
+        <button class="button secondary">Secondary</button>
+        <button class="button success">Success</button>
+        <button class="button warning">Warning</button>
+        <button class="button alert">Alert</button>
+        <button class="button dark">Dark</button>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Background Colors</div>
+    <p class="text-muted">
+        Metro UI provides the user with various classes to set the background element.
+    </p>
+    
+    <div class="box-title-secondary">General Background</div>
+    <p class="text-muted">
+        Use classes <code>bg-***</code> to set the background color for the element. These classes change only the background color.
+    </p>
+    <div class="mt-4">
+        <div class="demo-box bg-red"></div>
+    </div>
+    
+    <div class="box-title-secondary">Opacity</div>
+    <p class="text-muted">
+        Use classes <code>op-***</code>, <code>.op-***-hi</code>, and <code>.op-***-low</code> to set the background color with opacity for the element.
+        The alpha value is: <code>.op-***</code> - <code>50%</code>, <code>.op-***-hi</code> - <code>20%</code>, and <code>.op-***-low</code> - <code>80%</code>.
+        These classes change only the background color.
+    </p>
+    <div class="mt-4 d-flex flex-row">
+        <div class="demo-box op-red"></div>
+        <div class="demo-box op-red-hi"></div>
+        <div class="demo-box op-red-low"></div>
+    </div>
+
+    <div class="box-title-secondary">Gradients</div>
+    <p class="text-muted">
+        Use classes <code>gr-***</code> to set the background color with a gradient. These classes change only the background color.
+        You can change gradient direction with css var <code>--gradient-direction</code>
+    </p>
+    <div class="mt-4 d-flex flex-row">
+        <div class="demo-box gr-light-red"></div>
+        <div class="demo-box gr-red"></div>
+        <div class="demo-box gr-dark-red"></div>
+    </div>
+
+    <div class="box-title-secondary">Ribbed</div>
+    <p class="text-muted">
+        Use classes <code>ribbed-***</code> to create a ribbed background. These classes change only the background color.
+        You can use CSS variables <code>--ribbed-size</code>, <code>--ribbed-alpha</code>, and <code>--ribbed-angle</code> to change visualizing. 
+    </p>
+    <div class="mt-4 d-flex flex-row">
+        <div class="demo-box ribbed-light-red"></div>
+        <div class="demo-box ribbed-red"></div>
+        <div class="demo-box ribbed-dark-red"></div>
+        <div class="demo-box ribbed-dark-red ml-2" style="--ribbed-angle: 45deg;"></div>
+    </div>
+    
+    <div class="box-title-secondary">Soft &amp; Normal</div>
+    <p class="text-muted">
+        You can use classes <code>soft-***</code> and <code>normal-***</code> to change the background, foreground, border and hover colors.
+        These classes usefulness for buttons.
+    </p>
+    <div class="mt-4">
+        <div class="button pill-button button-soft-red">soft-red</div>
+        <div class="button button-red">normal-red</div>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Text Color</div>
+    <p class="text-muted">
+        To change text color, you can use classes <code>fg-***</code>.
+    </p>
+    <div class="mt-4">
+        <span class="fg-red">This is a red message!</span>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Borders</div>
+    <p class="text-muted">
+        You can change border and outline colors with classes <code>bd-***</code> and <code>ol-***</code>.
+    </p>
+    <div class="box-title-secondary">Border Color</div>
+    <p class="text-muted">
+        To set a border color use classes <code>bd-***</code>.
+        A special classes <code>.animated-border</code>, <code>.animated-border-***</code> will add an animated border to your element.
+        To use animated border, the element must have a background and a parent element must have a <code>z-index</code>.
+    </p>
+    <div class="mt-4 d-flex flex-row gap-2 z-1"> 
+        <div class="demo-box border bd-red"></div>
+        <div class="demo-box bg-white rainbow-border"></div>
+        <div class="demo-box bg-white animated-border border-radius-10"></div>
+        <div class="demo-box bg-white border bd-cyan animated-border-cyan"></div>
+    </div>
+
+    <div class="box-title-secondary">Outline Color</div>
+    <p class="text-muted">
+        To set color for element's outline use classes <code>ol-***</code>.
+    </p>
+    <div class="mt-4">
+        <span class="outline ol-red">Text with red outline</span>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Fill &amp; Stroke</div>
+    <p class="text-muted">
+        You can use classes <code>fc-***</code> and <code>st-***</code> to change the fill and stroke color properties for svg elements.
+    </p>
+    <div class="mt-4">
+        <svg class="st-red fc-light-red">
+            <g stroke-width="10">
+                <circle cx="100" cy="100" r="40" />
+                <rect x="20" y="20" width="80" height="80" />
+            </g>
+        </svg>
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-title">Pseudo Elements</div>
+    <p class="text-muted">
+        With classes <code>.before-bg-***</code>, <code>.before-fg-***</code>, <code>.after-fg-***</code>, and <code>.after-fg-***</code> you can change colors for pseudo-elements. 
+    </p>
+    <div class="mt-4">
+        <div class="pseudo-demo before-fg-red after-fg-green">Element</div>
+    </div>
+</div>
+
+
+<script>
+    (function(){
+        const colors = [
+            'lime', 'green', 'emerald', 'blue', 'teal', 'cyan', 'cobalt', 'indigo', 'almost', 'violet', 'pink',
+            'magenta', 'crimson', 'red', 'clown', 'orange', 'amber', 'yellow', 'brown', 'olive', 'steel',
+            'mauve', 'taupe', 'champagne', 'khaki', 'charcoal', 'bronze', 'windstorm', 'nude',
+            'terracotta', 'coral', 'army', 'seashell', 'sand', 'gray', 'gray-blue', 'gray-mouse'
+        ]
+        
+        for (let c of colors) {
+            $("#color-palette")
+                .append(`<div class="cell-sm-one-fifth color-item light-color" style="background: var(--color-light-${c})">light</div>`)
+                .append(`<div class="cell-sm-one-fifth color-item minor-color" style="background: var(--color-minor-${c})">minor</div>`)
+                .append(`<div class="cell-sm-one-fifth color-item normal-color fg-white text-bold" style="background: var(--color-${c})">${c}</div>`)
+                .append(`<div class="cell-sm-one-fifth color-item dark-color" style="background: var(--color-sat-${c})">sat</div>`)
+                .append(`<div class="cell-sm-one-fifth color-item dark-color" style="background: var(--color-dark-${c})">dark</div>`)
+        }
+    })()
+</script>
+    <!-- Template -->
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script lang="JavaScript" src="metroui/metro.js"></script>
+
+</body>
+</html>
