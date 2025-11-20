@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../lib/metro.css" rel="stylesheet">
+    <link href="../lib/icons.css" rel="stylesheet">
+
+    <title>Linked Block - Metro UI :: Popular HTML, CSS and JS library</title>
+    <style>
+        .linked-block-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="cloak h-100-vh">
+<nav data-role="appbar" class="border-bottom bd-default" data-expand="true">
+    <div class="app-bar-item-static no-hover flex-center">
+        <div class="text-leader">Linked Block</div>
+        <div class="text-bold ml-2" id="mouse-position">0:0</div>
+    </div>
+    <div class="app-bar-container gap-2" style="position: absolute; left: 50%; transform: translateX(-50%);">
+        <button onclick="createBlocksSTop()">S Top</button>
+        <button onclick="createBlocksSBottom()">S Bottom</button>
+        <button onclick="createBlocksSSide()">S Side</button>
+        <button onclick="createBlocksCTop()">C Top</button>
+        <button onclick="createBlocksCBottom()">C Bottom</button>
+        <button onclick="createBlocksCSide()">C Side</button>
+    </div>
+    <div class="app-bar-item-static no-hover ml-auto">
+        <input type="checkbox" data-role="theme-switcher"/>
+    </div>
+</nav>
+
+<main id="container" class="h-100 pos-relative" style="--linked-block-point-color: #f00;"></main>
+
+<script>
+    window.metroLinkedBlockSetup = {
+        resizeHotkey: "alt+t",
+        dragHotkey: "alt+d",
+        width: 100,
+        height: 100,
+        minWidth: 100,
+        minHeight: 100,
+        maxWidth: 1000,
+        maxHeight: 1000,
+        showPoints: false,
+    }
+    
+    window.metroConnectorSetup = {
+        deleteButton: true,
+        arrow: "end",
+        // lineStyle: "dotted",
+        // type: 'zigzag'
+    }
+</script>
+<script src="../lib/metro.js"></script>
+<script>
+    const mousePosition = $('#mouse-position')
+    setInterval(() => {
+        mousePosition.html(`${Metro.globalMousePosition.x}:${Metro.globalMousePosition.y}`)
+    }, 100)
+    
+    $("main").hotkey("del", () => {
+        const activeBlock = $('.linked-block.active-block')
+        if (activeBlock.length > 0) {
+            Metro.linkedBlock.destroy(activeBlock)
+            return 
+        }
+        const activeConnector = $('.cl-curve.selected-path')
+        if (activeConnector.length > 0) {
+            Metro.connector.destroy(activeConnector.attr("data-conn-id"))
+        }
+    })
+    
+    var blockCount = 0;
+    var container = $('#container');
+    
+    function createBlocksSTop () {
+        blockCount++;
+        const block1 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 100,
+            left: 100,
+        });
+        block1.addPoint("north")
+
+        blockCount++;
+        const block2 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 100,
+            left: 300,
+        });
+        block2.addPoint("north")
+
+        block1.connect(block2, {
+            type: "step"
+        })
+    }
+    
+    function createBlocksSBottom () {
+        blockCount++;
+        const block1 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 100,
+            left: 500,
+        });
+        block1.addPoint("south")
+
+        blockCount++;
+        const block2 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 100,
+            left: 700,
+        });
+        block2.addPoint("south")
+
+        block1.connect(block2.element, {
+            type: "step"
+        })
+    }
+    
+    function createBlocksSSide () {
+        blockCount++;
+        const block1 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 100,
+            left: 900,
+        });
+
+        blockCount++;
+        const block2 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 50,
+            left: 1100,
+        });
+
+        block1.connect(block2.element, {
+            type: "step"
+        })
+    }
+    
+    function createBlocksCTop () {
+        blockCount++;
+        const block1 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 300,
+            left: 100,
+        });
+        block1.addPoint("north")
+
+        blockCount++;
+        const block2 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 300,
+            left: 300,
+        });
+        block2.addPoint("north")
+
+        block1.connect(block2.element, {
+            type: "curve"
+        })
+    }
+    
+    function createBlocksCBottom () {
+        blockCount++;
+        const block1 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 300,
+            left: 500,
+        });
+        block1.addPoint("south")
+
+        blockCount++;
+        const block2 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 300,
+            left: 700,
+        });
+        block2.addPoint("south")
+
+        block1.connect(block2.element, {
+            type: "curve"
+        })
+    }
+    
+    function createBlocksCSide () {
+        blockCount++;
+        const block1 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 300,
+            left: 900,
+        });
+
+        blockCount++;
+        const block2 = Metro.linkedBlock.create({
+            content: `Block ${blockCount}`,
+            container,
+            top: 350,
+            left: 1100,
+        });
+
+        block1.connect(block2.element, {
+            type: "curve"
+        })
+    }
+</script>
+</body>
+</html>
