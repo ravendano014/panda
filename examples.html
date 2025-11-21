@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de HTML – Metro Dark</title>
+
+    <!-- Metro UI CSS -->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/5.1.20/metro.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/5.1.20/icons.css">
+    <script src="https://cdn.metroui.org.ua/5.1.20/metro.js"></script>
+
+    <style>
+        body {
+            background-color: #1b1f23;
+            color: #e5e5e5;
+        }
+
+        .layout {
+            display: flex;
+            height: 100vh;
+        }
+
+        aside {
+            width: 280px;
+            background-color: #111418;
+            border-right: 1px solid #2a2d31;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .file-item {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+        }
+
+        .file-item:hover {
+            background-color: #2f3338;
+        }
+
+        .title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body class="h-vh-100">
+
+<div class="layout">
+    <aside>
+        <div class="title mb-3"><span class="mif-folder"></span> Archivos HTML</div>
+        <div id="fileList">Cargando...</div>
+    </aside>
+
+    <main>
+        <h1>Ejemplos – Metro Dark Mode</h1>
+        <p>Selecciona un archivo en el panel izquierdo para abrirlo.</p>
+    </main>
+</div>
+
+<script>
+/*
+   Intento de leer /examples/ desde el servidor.
+   IMPORTANTE: SOLO FUNCIONA si se ejecuta en servidor (http://localhost/)
+*/
+async function loadHTMLFiles() {
+    const listEl = document.getElementById("fileList");
+
+    try {
+        const response = await fetch("examples/");
+        const text = await response.text();
+
+        // Extrae nombres de archivos HTML
+        const parser = new DOMParser();
+        const html = parser.parseFromString(text, "text/html");
+        const links = [...html.querySelectorAll("a")];
+
+        let htmlFiles = links
+            .map(a => a.getAttribute("href"))
+            .filter(h => h && h.endsWith(".html"));
+
+        if (htmlFiles.length === 0) {
+            listEl.innerHTML = "<small>No se encontraron archivos HTML.</small>";
+            return;
+        }
+
+        listEl.innerHTML = "";
+        htmlFiles.forEach(file => {
+            const div = document.createElement("div");
+            div.className = "file-item";
+            div.innerHTML = `<span class="mif-file-html"></span> ${file}`;
+            div.onclick = () => window.location.href = "examples/" + file;
+            listEl.appendChild(div);
+        });
+
+    } catch (e) {
+        listEl.innerHTML = `<small>Error cargando archivos.<br>Ejecuta con servidor local.</small>`;
+    }
+}
+
+loadHTMLFiles();
+</script>
+
+</body>
+</html>
