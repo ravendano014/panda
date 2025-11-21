@@ -73,7 +73,7 @@ async function loadHTMLFiles() {
     const listEl = document.getElementById("fileList");
 
     try {
-        const response = await fetch("https://raw.githubusercontent.com/ravendano014/panda/refs/heads/main/examples/");
+        const response = await fetch("examples/");
         const text = await response.text();
 
         // Extrae nombres de archivos HTML
@@ -110,3 +110,4 @@ loadHTMLFiles();
 </body>
 
 </html>
+
