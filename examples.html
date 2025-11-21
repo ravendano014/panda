@@ -50,6 +50,32 @@
             font-size: 20px;
             margin-bottom: 10px;
         }
+        
+        .search-container {
+            margin-bottom: 15px;
+        }
+        
+        .search-input {
+            width: 100%;
+            background-color: #1b1f23;
+            border: 1px solid #2a2d31;
+            color: #e5e5e5;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+        }
+        
+        .no-results {
+            padding: 10px;
+            text-align: center;
+            color: #9ca3af;
+            font-style: italic;
+        }
     </style>
 </head>
 
@@ -58,6 +84,12 @@
 <div class="layout">
     <aside>
         <div class="title mb-3"><span class="mif-folder"></span> Archivos HTML</div>
+        
+        <!-- Campo de búsqueda -->
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Buscar archivos...">
+        </div>
+        
         <div id="fileList"></div>
     </aside>
 
@@ -143,10 +175,46 @@ function loadHTMLFiles() {
     });
 }
 
+// Función para filtrar archivos según la búsqueda
+function filterFiles() {
+    const searchTerm = document.getElementById("searchInput").value.toLowerCase();
+    const fileItems = document.querySelectorAll(".file-item");
+    let hasResults = false;
+    
+    fileItems.forEach(item => {
+        const fileName = item.textContent.toLowerCase();
+        if (fileName.includes(searchTerm)) {
+            item.style.display = "block";
+            hasResults = true;
+        } else {
+            item.style.display = "none";
+        }
+    });
+    
+    // Mostrar mensaje si no hay resultados
+    const listEl = document.getElementById("fileList");
+    let noResultsMsg = listEl.querySelector(".no-results");
+    
+    if (!hasResults) {
+        if (!noResultsMsg) {
+            noResultsMsg = document.createElement("div");
+            noResultsMsg.className = "no-results";
+            noResultsMsg.textContent = "No se encontraron archivos";
+            listEl.appendChild(noResultsMsg);
+        }
+    } else if (noResultsMsg) {
+        noResultsMsg.remove();
+    }
+}
+
 // Cargar los archivos cuando la página esté lista
-document.addEventListener("DOMContentLoaded", loadHTMLFiles);
+document.addEventListener("DOMContentLoaded", function() {
+    loadHTMLFiles();
+    
+    // Agregar evento de entrada al campo de búsqueda
+    document.getElementById("searchInput").addEventListener("input", filterFiles);
+});
 </script>
 
 </body>
 </html>
-
