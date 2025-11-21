@@ -1,84 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="../lib/metro.css" rel="stylesheet">
+    <title>Listado de HTML – Metro Dark</title>
 
-    <title>Test Accordion - Metro UI :: Popular HTML, CSS and JS library</title>
-    <script>
-        window.METRO_LIB_INFO = true
-    </script>
+    <!-- Metro UI CSS -->
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/5.1.20/metro.css">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/5.1.20/icons.css">
+    <script src="https://cdn.metroui.org.ua/5.1.20/metro.js"></script>
+
+    <style>
+        body {
+            background-color: #1b1f23;
+            color: #e5e5e5;
+        }
+
+        .layout {
+            display: flex;
+            height: 100vh;
+        }
+
+        aside {
+            width: 280px;
+            background-color: #111418;
+            border-right: 1px solid #2a2d31;
+            padding: 15px;
+            overflow-y: auto;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .file-item {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .file-item:hover {
+            background-color: #2f3338;
+        }
+
+        .title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-<body class="m4-cloak">
-<div class="container-fluid pos-sticky border-bottom bd-default">
-    <div class="container">
-        <nav data-role="appbar" data-expand-point="md">
-            <span class="brand">Accordion</span>
-            <div class="app-bar-item-static ml-auto">
-                <input type="checkbox" data-role="theme-switcher"/>
-            </div>
-        </nav>
-    </div>
+
+<body class="h-vh-100">
+
+<div class="layout">
+    <aside>
+        <div class="title mb-3"><span class="mif-folder"></span> Archivos HTML</div>
+        <div id="fileList"></div>
+    </aside>
+
+    <main>
+        <h1>Ejemplos – Metro Dark Mode</h1>
+        <p>Selecciona un archivo en el panel izquierdo para abrirlo.</p>
+    </main>
 </div>
-    <div class="container mt-10">
-        <h3>Using data-role</h3>
-        <div>
-            <button onclick="$('#a1').data('accordion').close(0)">Close Frame</button>
-            <button onclick="$('#a1').data('accordion').toggle(0)">Toggle Frame</button>
-        </div>
-        <div data-role="accordion" id="a1" data-save-state="true">
-            <div class="frame active">
-                <div class="heading" >Header 1</div>
-                <div class="content">
-                    <div class="p-2">Cur luba manducare? Pol, a bene ionicis tormento. Warm, sichuan-style pudding is best garnished with aged BBQ sauce.</div>
-                </div>
-            </div>
-            <div class="frame">
-                <div class="heading">Header 2</div>
-                <div class="content">
-                    <div class="p-2">Wildly open a starship. Belay, ye small wench- set sails for hunger! Springy, juicy pudding is best blended with whole ice water.</div>
-                </div>
-            </div>
-            <div class="frame">
-                <div class="heading">Header 3</div>
-                <div class="content">
-                    <div class="p-2">Bitter turkey can be made tasty by brushing with sweet chili sauce. Popcorn combines greatly with grey peanut butter.</div>
-                </div>
-            </div>
-        </div>
 
-        <br>
-        <h3>Runtime</h3>
+<script>
+// Lista de archivos HTML
+const htmlFiles = [
+    "accordion.html", "action-button.html", "activity.html", "adblock.html", 
+    "analog-clock-%7bsize%7d.html", "analog-clock.html", "animate-border.html", 
+    "any.html", "app-bar.html", "audio-button.html", "audio-player.html", 
+    "bar3d.html", "blocks.html", "bottom-sheet.html", "breadcrumbs.html", 
+    "bulls.html", "button-group.html", "buttons.html", "calendar-picker.html", 
+    "calendar-wide.html", "calendar-with-time.html", "calendar.html", 
+    "cards.html", "carousel.html", "catalog-menu.html", "charms.html", 
+    "chat.html", "checkbox.html", "chips.html", "clock.html", "code.html", 
+    "collapse.html", "color-palette.html", "color-picker.html", 
+    "color-selector.html", "colors.html", "container.html", "context-menu.html", 
+    "cookie-disclaimer.html", "cookie.html", "countdown.html", "counter.html", 
+    "cube.html", "custom-checkbox.html", "cutter.html", "d-menu.html", 
+    "date-picker.html", "datetime.html", "dialog.html", "directive.html", 
+    "directive2.html", "directive3.html", "donut.html", "double-select-box.html", 
+    "double-slider.html", "drag-items.html", "draggable-boundary-restriction.html", 
+    "draggable.html", "dropdown-button.html", "dropdown-%7bposition%7d.html", 
+    "dropdown.html", "dropmenu.html", "eval.html", "file.html", 
+    "form-elements.html", "form.html", "gauge.html", "github-box.html", 
+    "gradient-box.html", "gradients.html", "gravatar.html", "grid-new.html", 
+    "grid-%7benclosed).html", "grid.html", "h-menu.html", "h-tag.html", 
+    "hero1.html", "hero2.html", "hero3.html", "hero4.html", "hero5.html", 
+    "hero6.html", "hint.html", "hotkey.html", "hover-box.html", 
+    "html-container.html", "i18n.html", "icons.html", "image-box.html", 
+    "image-carousel.html", "image-compare.html", "image-grid.html", 
+    "image-magnifier.html", "image-placeholder.html", "info-box.html", 
+    "input-mask.html", "input.html", "jquery.html", "keypad.html", 
+    "lightbox.html", "linked-block.html", "list.html", "lists.html", 
+    "listview.html", "load-metro.html", "log.html", "marquee-sw.html", 
+    "marquee.html", "master.html", "material-input.html", "material-tabs.html", 
+    "model.html", "multicolor-gradients.html", "navview.html", "navview2.html", 
+    "notify.html", "package-manager.html", "page-control.html", 
+    "pagination.html", "panel.html", "patterns.html", "popover.html", 
+    "progress.html", "push-button.html", "quick-start.html", "radio.html", 
+    "rating.html", "remark.html", "remote-dataset.html", "remote-table.html", 
+    "resizable-container.html", "resizable.html", "resizer.html", 
+    "ribbon-menu.html", "ripple.html", "scrollbar.html", "select-2.html", 
+    "select-options.html", "select-%7bdata%7d.html", "select-%7breset%7d.html", 
+    "select-%7bsource%7d.html", "select-%7bval%7d.html", "select.html", 
+    "shadow-text.html", "shadow.html", "shapes.html", "shortcuts.html", 
+    "sidebar.html", "sidenav-counter.html", "sidenav.html", "slider.html", 
+    "sorter.html", "spinner.html", "splashscreen.html", "splitter.html", 
+    "stack-menu.html", "stepper.html", "storage.html", "streamer.html", 
+    "stroke-color.html", "swipe.html", "switch.html", "t-menu.html", 
+    "table-static.html", "table.html", "table2.html", "tabs-material.html", 
+    "tabs.html", "tag-input.html", "template.html", "textarea.html", 
+    "theme-switcher.html", "tile.html", "time-picker.html", "timeline.html", 
+    "toast.html", "toggle-button.html", "tokenizer.html", "touch.html", 
+    "treeview.html", "typer.html", "typography.html", "v-menu.html", 
+    "validator-%7brequired%7d.html", "validator-%7bsubmit%7d.html", 
+    "validator.html", "vegas.html", "video-player.html", "viewport-check.html", 
+    "window.html", "wizard-classic.html", "wizard.html"
+];
 
-        <div id="a2">
-            <div class="frame">
-                <div class="heading">Header 1</div>
-                <div class="content">
-                    <div class="p-2">Cur luba manducare? Pol, a bene ionicis tormento. Warm, sichuan-style pudding is best garnished with aged BBQ sauce.</div>
-                </div>
-            </div>
-            <div class="frame active">
-                <div class="heading">Header 2</div>
-                <div class="content">
-                    <div class="p-2">Wildly open a starship. Belay, ye small wench- set sails for hunger! Springy, juicy pudding is best blended with whole ice water.</div>
-                </div>
-            </div>
-            <div class="frame">
-                <div class="heading">Header 3</div>
-                <div class="content">
-                    <div class="p-2">Bitter turkey can be made tasty by brushing with sweet chili sauce. Popcorn combines greatly with grey peanut butter.</div>
-                </div>
-            </div>
-        </div>
-    </div>
+// Función para cargar los archivos HTML como enlaces
+function loadHTMLFiles() {
+    const listEl = document.getElementById("fileList");
+    const basePath = "https://raw.githubusercontent.com/ravendano014/panda/refs/heads/main/examples/";
+    
+    // Limpiar el contenido existente
+    listEl.innerHTML = "";
+    
+    // Crear enlaces para cada archivo
+    htmlFiles.forEach(fileName => {
+        const fileLink = document.createElement("a");
+        fileLink.className = "file-item";
+        fileLink.href = basePath + fileName;
+        fileLink.target = "_blank"; // Abrir en nueva pestaña
+        fileLink.innerHTML = `<span class="mif-file-html"></span> ${fileName}`;
+        
+        listEl.appendChild(fileLink);
+    });
+}
 
-    <script src="../lib/metro.js"></script>
-    <script>
-        $(function(){
-            Metro.makePlugin("#a2", "accordion");
-            console.log($("#a2").data("accordion"));
-        })
-    </script>
+// Cargar los archivos cuando la página esté lista
+document.addEventListener("DOMContentLoaded", loadHTMLFiles);
+</script>
+
 </body>
 </html>
