@@ -73,9 +73,6 @@ async function loadHTMLFiles() {
     const listEl = document.getElementById("fileList");
 
     try {
-        const response = await fetch("examples/");
-        const text = await response.text();
-
         // Extrae nombres de archivos HTML
         const parser = new DOMParser();
         const html = parser.parseFromString(text, "text/html");
@@ -84,11 +81,6 @@ async function loadHTMLFiles() {
         let htmlFiles = links
             .map(a => a.getAttribute("href"))
             .filter(h => h && h.endsWith(".html"));
-
-        if (htmlFiles.length === 0) {
-            listEl.innerHTML = "<small>No se encontraron archivos HTML.</small>";
-            return;
-        }
 
         listEl.innerHTML = "";
         htmlFiles.forEach(file => {
@@ -110,5 +102,6 @@ loadHTMLFiles();
 </body>
 
 </html>
+
 
 
