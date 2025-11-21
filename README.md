@@ -1,3 +1,3 @@
 # Examples
 
-[Examples](examples.html)
+[Examples](https://ravendano014.github.io/panda/examples.html)
